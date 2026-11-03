@@ -1,0 +1,138 @@
+
+%Results from the state-of-the-art strategies
+\setcounter{page}{1}
+\section{Material complementario}
+
+\subsection{Resultados de las estrategias de inferencia filogenética del estado del arte}\label{sec:state-of-the-art-Results}
+
+Las tablas \ref{tab:mostParsimonyAppendix} y \ref{tab:mostLikelihoodAppendix} muestran los resultados entregados por diferentes estrategias del estado del arte evaluando conjuntos de datos clasicos de la literatura: MO-MA \citep{VillalobosCid2019}, MO-ABC \citep{Santander-Jimenez2013}, iMO-ABC \citep{Santander-Jimenez2012}, IBEA \citep{Santander-Jimenez2016b}, MOEA-MC \citep{Zhang2020}, y IMOBA \citep{Santander-Jimenez2016b,Arco2020}. %These results can be considered as a preliminary reference. However, a fair comparison requires that all the strategies be tuned using the same parametrisation approach and tested considering equal evaluation numbers.
+
+\begin{sidewaystable}[htbp]
+  \small
+  \centering
+  \caption{Los mejores árboles respecto al criterio de Parsimonia entregado por diferentes estrategias del estado del arte. Los valores más altos han sido coloreados. Adicionalmente, una comparasión con otras estrategias se puede encontrar en \citep{VillalobosCid2019}.}
+  \captionsetup{skip=10pt}
+\begin{tabular}{lrrrrrrrrrrrrrr}
+  \toprule
+  
+  \multicolumn{13}{c}{Mejores árboles parsimoniosos} \\
+  
+  \midrule
+  
+  \multicolumn{1}{c}{\multirow{2}[2]{*}{Data set}} & \multicolumn{2}{c}{MO-MA} & \multicolumn{2}{c}{MO-ABC} & \multicolumn{2}{c}{iMO-ABC} & \multicolumn{2}{c}{IBEA} & \multicolumn{2}{c}{MOEA-MC} & \multicolumn{2}{c}{IMOBA } \\
+        & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Par}} & \multicolumn{1}{c}{\textsc{Lik}} \\
+  
+  \midrule
+  
+  primates\_14      & \cellcolor[rgb]{ .741,  .933,  .843}746     & -2,606.7   & --                                          & --          & --                                          & --          & --                                          & --    & --      & --    & --                                          & -- \\
+  rbcL\_55          & \cellcolor[rgb]{ .741,  .933,  .843}4,666   & -21,707.0  & 4,874                                       & -21,810.6   & 4,874                                       & -21,813.3   & 4,874                                       & --    & 4,978   & --    & 4,874                                       & -21,807.7  \\
+  HIV2\_72          & \cellcolor[rgb]{ .741,  .933,  .843}2,514   & -12,212.7  & 2,967                                       & -12,648.9   & --                                          & --          & --                                          & --    & --      & --    & --                                          & -- \\
+  membracidae1\_81  & \cellcolor[rgb]{ .741,  .933,  .843}5,041   & -29,507.1  & 5,224                                       & -29,883.8   & --                                          & --          & --                                          & --    & --      & --    & --                                          & -- \\
+  mtDNA\_186        & \cellcolor[rgb]{ .741,  .933,  .843}2,142   & -38,531.5  & 2,431                                       & -40,007.3   & 2,431                                       & -39,930.9   & 2,431                                       & --    & 2,459   & --    & 2,431                                       & -39,932.6  \\
+  HIV1\_192         & 4,263                                       & -21,693.2  & 6,091                                       & -23,485.8   & --                                          & --          & --                                          & --    & --      & --    & 6,091                                       & -23,476.8  \\
+  RDPII\_218        & \cellcolor[rgb]{ .741,  .933,  .843}33,688  & -133,885.2 & 41,488                                      & -136,379.8  & 41,488                                      & -136,319.8  & 41,517                                      & --    & --      & --    & 41,488                                      & -136,000.4  \\
+  ZILLA\_500        & 16,245                                      & -80,779.2  & \cellcolor[rgb]{ .741,  .933,  .843}16,218  & -81,358.2   & \cellcolor[rgb]{ .741,  .933,  .843}16,218  & -81,407.4   & \cellcolor[rgb]{ .741,  .933,  .843}16,218  & --    & 17,164  & --    & \cellcolor[rgb]{ .741,  .933,  .843}16,218  & -80,924.4  \\
+  
+  \bottomrule
+\end{tabular}%
+  \label{tab:mostParsimonyAppendix}%
+\end{sidewaystable}
+
+
+\begin{sidewaystable}[htbp]
+  \small
+  \centering
+  \caption{Los mejores árboles respecto al criterio de Verosimilitud entregado por diferentes estrategias del estado del arte. Los valores más altos han sido coloreados.}
+  \captionsetup{skip=10pt}
+    \begin{tabular}{lrrrrrrrrrrrrrr}
+  
+  \toprule
+  
+  \multicolumn{13}{c}{Mejores árboles verosímiles} \\
+  
+  \midrule
+  
+  \multicolumn{1}{c}{\multirow{2}[2]{*}{Data set}} & \multicolumn{2}{c}{MO-MA} & \multicolumn{2}{c}{MO-ABC} & \multicolumn{2}{c}{iMO-ABC} & \multicolumn{2}{c}{IBEA} & \multicolumn{2}{c}{MOEA-MC} & \multicolumn{2}{c}{IMOBA } \\
+        & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} & \multicolumn{1}{c}{\textsc{Par}} & \multicolumn{1}{c}{\cellcolor[rgb]{ .906,  .902,  .902}\textsc{Lik}} \\
+  
+  \midrule
+  
+  primates\_14        & 746     & \cellcolor[rgb]{ .741,  .933,  .843}-2,606.7  & --    & --    & --    & --    & --    & --    & --    & --    & --    & -- \\
+  rbcL\_55            & 4,677   & -21,683.1                                     & 4,885  & -21,791.2  & 4,891  & -21,781.1  & --    & -21,821 & --    & -22,145.0  & 4,885  & -21,781.7  \\
+  HIV2\_72            & 2,527   & -12,210.8                                     & 3,276  & -12,223.3  & --    & --    & --    & --    & --    & --    & --    & -- \\
+  membracidae1\_81    & 5,042   & \cellcolor[rgb]{ .741,  .933,  .843}-29,496.5 & 5,250  & -29,841.8  & --    & --    & --    & --    & --    & --    & --    & -- \\
+  mtDNA\_186          & 2,146   & \cellcolor[rgb]{ .741,  .933,  .843}-38,273.1 & 2,453  & -39,868.9  & 2,453  & -39,869.6  & --    & -39,888.1 & --    & -39,932.0  & 2,445  & -39,868.6  \\
+  HIV1\_192           & 4,263   & -21,693.2                                     & 10,926  & -21,673.5  & --    & --    & --    & --    & --    & --    & 11,040  & -21,656.7  \\
+  RDPII\_218          & 33,688  & -133,885.2                                    & 42,837  & -134,073.9  & 42,824  & -134,078.7  & --    & -134,260.3 & --    & --    & 42,813  & -134,071.0  \\
+  ZILLA\_500          & 16,329  & -80,609.0                                     & 16,320  & -80,585.0  & 16,317  & -80,599.4  & --    & -80,974.9 & --    & -84,674.0  & 16,306  & \cellcolor[rgb]{ .741,  .933,  .843}-80,566.2  \\
+  
+  \bottomrule
+  
+\end{tabular}
+
+  \label{tab:mostLikelihoodAppendix}
+
+\end{sidewaystable}
+
+
+% Anexo 2
+\newpage
+%Configure image names
+%\renewcommand{\thefigure}{\thesection \arabic{figure}}
+%\setcounter{figure}{0}
+
+%Configure table names
+%\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\setcounter{table}{0}
+\setcounter{page}{1}
+
+\subsection{Multi-objective memetic algorithm (MO-MA)}
+\label{sec:mo-ma}
+
+El algoritmo \ref{alg:memetic} muestra el pseudo-código presentado por \citep{VillalobosCid2019} para la estrategia MO-MA, donde $D$ es el conjunto de datos de entrada, $ps$ corresponde al tamaño de la población, $n$ es el número de generaciones a evaluar en una ejecución, $cr$ y $mr$ son las tasas de entrecruzamiento y de mutación respectivamente. El puntaje de parsimonia es calculado usando el algoritmo de Fitch \citep{Felsenstein2004}, y el puntaje de verosimilitud es obtenido usando el algoritmo de búsqueda estocástica de Nguyen et al. \citep{Nguyen2014}. Ambos criterios son calculados usando el paquete \textit{phangorn} de R \citep{Schliep2010}.\\
+
+
+\input{Algorithm/MOMA}
+
+\newpage
+\setcounter{page}{1}
+\section{Planificación de proyecto de título}
+\label{app:schedule}
+
+\subsection{Carta Gantt}
+\label{sec:gantt}
+
+A continuación se presenta la carta Gantt correspondiente al proyecto de título a desarrollar (Figura \ref{fig:gantt}). Este contempla una fecha de inicio para el día 16 de Agosto del 2023, y una fecha de finalización para el día 22 de Diciembre del 2023.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.6]{Images/image.png}
+    \caption{Carta gantt de proyecto de título}
+    \label{fig:gantt}
+\end{figure}
+
+\subsection{Cronograma}
+\label{sec:schedule}
+
+A continuación se presenta el detalle de los días y horas equivalentes correspondiente a las tareas de cada etapa del proyecto de título (Figura \ref{fig:schedule}). Además se contemplan los días en los cuales no contarán como días de trabajo, ya sea por feriados o recesos programados por la universidad (Figura \ref{fig:holidays}).
+
+Cabe mencionar que cada tarea correspondiente a una etapa considera 7 horas de trabajo y 3.5 horas cuando se realiza en paralelo con otra tarea, esto debido a que una hora corresponde a escritura de la memoria y así se completan las 8 horas de la jornada.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.5]{Images/scheduleV2.png}
+    \caption{Cronograma de proyecto de título}
+    \label{fig:schedule}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.5]{Images/holidaysV2.png}
+    \caption{Feriados y recesos programados a lo largo del proyecto de título}
+    \label{fig:holidays}
+\end{figure}
+
+
+
+
+

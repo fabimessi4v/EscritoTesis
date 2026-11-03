@@ -1,0 +1,1481 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{araujo_chile_2023}{book}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6fc99da24f4dd347667d7e4b2b73ac5e}{%
+           family={Araujo},
+           familyi={A\bibinitperiod},
+           given={Kathya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4afcfab83629da15305b2ce4b1dafe1f}{%
+           family={Garretón},
+           familyi={G\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abf43d86c2dd4a03ad07cc2c747713dd}{%
+           family={Figueroa},
+           familyi={F\bibinitperiod},
+           given={Alejandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49de8bf8828b9c719071782cf475f3fd}{%
+           family={Salazar},
+           familyi={S\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b646243dc87cd729e7875f8cf5ce3b3f}{%
+           family={Piquer},
+           familyi={P\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Consejo Nacional de Ciencia, Tecnología, Conocimiento e Innovación}%
+      }
+      \strng{namehash}{0a3bf570fe709e041c26f2e939fa5094}
+      \strng{fullhash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{bibnamehash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{authorbibnamehash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{authornamehash}{0a3bf570fe709e041c26f2e939fa5094}
+      \strng{authorfullhash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chile crea futuro: Reportes de expertos para cuatro grandes fenómenos de cambio}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://investigacion.utem.cl/wp-content/uploads/documentos/documento232/CTCI%20-%20REPORTES%20DE%20EXPERTOS%20PARA%20CUATR%20GRANDES%20FENOMENOS.pdf
+      \endverb
+      \verb{url}
+      \verb https://investigacion.utem.cl/wp-content/uploads/documentos/documento232/CTCI%20-%20REPORTES%20DE%20EXPERTOS%20PARA%20CUATR%20GRANDES%20FENOMENOS.pdf
+      \endverb
+    \endentry
+    \entry{constantinov_preliminary_2015}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fb2150672c9422123859e558af4c206d}{%
+           family={Constantinov},
+           familyi={C\bibinitperiod},
+           given={Calin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3de7d03c76249dc2820fb46c1e1fd4f0}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Paul\bibnamedelima Stefan},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa415edc6ad3c2cfce8303ec5aef7e84}{%
+           family={Poteras},
+           familyi={P\bibinitperiod},
+           given={Cosmin\bibnamedelima Marian},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb6e2c7e0adeb10a3a127b5a1ae9ed41}{%
+           family={Mocanu},
+           familyi={M\bibinitperiod},
+           given={Mihai\bibnamedelima Lucian},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cheile Gradistei, Romania}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{131c60caab4d4b20b49fa70bc38b9976}
+      \strng{fullhash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{bibnamehash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{authorbibnamehash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{authornamehash}{131c60caab4d4b20b49fa70bc38b9976}
+      \strng{authorfullhash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4799-8481-7}
+      \field{journaltitle}{2015 19th {International} {Conference} on {System} {Theory}, {Control} and {Computing} ({ICSTCC})}
+      \field{month}{10}
+      \field{title}{Preliminary results of a curriculum adjuster based on professional network analysis}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{860\bibrangedash 865}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICSTCC.2015.7321402
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/7321402/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/7321402/
+      \endverb
+    \endentry
+    \entry{cristea_artificial_2025}{book}{}
+      \name{editor}{5}{}{%
+        {{un=0,uniquepart=base,hash=2380ddacd84ab3ad93ab0f5dd08cdaea}{%
+           family={Cristea},
+           familyi={C\bibinitperiod},
+           given={Alexandra\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3230d92ca146876a07c56748d3a792d}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=618dfc15ed46244945f322553c021677}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7aa5b05574d182fab76b690e08f55ac5}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Olga\bibnamedelima C.},
+           giveni={O\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddbd4420293c6679bec91464f2e01b87}{%
+           family={Isotani},
+           familyi={I\bibinitperiod},
+           given={Seiji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{fullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{bibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editorbibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editornamehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{editorfullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-031-98413-6 978-3-031-98414-3}
+      \field{series}{Lecture {Notes} in {Computer} {Science}}
+      \field{shorttitle}{Artificial {Intelligence} in {Education}}
+      \field{title}{Artificial {Intelligence} in {Education}: 26th {International} {Conference}, {AIED} 2025, {Palermo}, {Italy}, {July} 22–26, 2025, {Proceedings}, {Part} {I}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{15877}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-031-98414-3
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-98414-3
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-98414-3
+      \endverb
+    \endentry
+    \entry{fan_identifying_2023}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ecbc0192f8dcea9069d595830425d140}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Zongwen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf02e48af20e9e09bbf3acc15c1042c5}{%
+           family={Chiong},
+           familyi={C\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{fullhash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{bibnamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authorbibnamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authornamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authorfullhash}{217342a6d1d639180c9d20297568ec9a}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract Digital capabilities have become increasingly important in this digital age. Within a university setting, digital capability assessment is key to curriculum design and curriculum mapping, given that digital capabilities not only can help students engage and communicate with others but also succeed at work. To the best of our knowledge, however, no previous studies in the relevant literature have reported the assessment of digital capabilities in courses across a university. It is extremely challenging to do so manually, as thousands of courses offered by the university would have to be checked. In this study, we therefore use machine learning classifiers to automatically identify digital capabilities in courses based on real-world university course rubric data. Through text analysis of course rubrics produced by course academics, decision makers can identify the digital capabilities that are formally assessed in university courses. This, in turn, would enable them to design and map curriculums to develop the digital capabilities of staff and students. Comprehensive experimental results reveal that the machine learning models tested in this study can effectively identify digital capabilities. Among the prediction models included in our experiments, the performance of support vector machines was the best, achieving accuracy and F-measure scores of 0.8535 and 0.8338, respectively.}
+      \field{issn}{1360-2357, 1573-7608}
+      \field{journaltitle}{Education and Information Technologies}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shorttitle}{Identifying digital capabilities in university courses}
+      \field{title}{Identifying digital capabilities in university courses: {An} automated machine learning approach}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{3937\bibrangedash 3952}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/s10639-022-11075-8
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/s10639-022-11075-8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/s10639-022-11075-8
+      \endverb
+    \endentry
+    \entry{latuz2024}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc20d5b8897e0cfb1b924bf73f7bf980}{%
+           family={Latuz\bibnamedelima Piña},
+           familyi={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Benjamín},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad de Chile}%
+      }
+      \strng{namehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{fullhash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{bibnamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authorbibnamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authornamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authorfullhash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inserción en la industria de nuevos ingenieros en computación}
+      \field{type}{Memoria de título}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://repositorio.uchile.cl/handle/2250/204814
+      \endverb
+      \verb{url}
+      \verb https://repositorio.uchile.cl/handle/2250/204814
+      \endverb
+    \endentry
+    \entry{miedema_data_2025}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=c77c626eb5126e28ccd2f4091a6f0dcf}{%
+           family={Miedema},
+           familyi={M\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e25ec6249f5d1a010fa5faa26a828d8}{%
+           family={Taipalus},
+           familyi={T\bibinitperiod},
+           given={Toni},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9b60fe4cbfda450296e19138b010964}{%
+           family={Ajanovski},
+           familyi={A\bibinitperiod},
+           given={Vangel\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f98cede37d30c29c1aa4974fbd560153}{%
+           family={Alawini},
+           familyi={A\bibinitperiod},
+           given={Abdussalam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e9a34f9337117ceaa92693330d1aa71}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68042778a6c1eef5e4b5068f25b77ec4}{%
+           family={Liut},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d0c6cee7397be2974bd2ba874862bee}{%
+           family={Peltsverger},
+           familyi={P\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ac2797deaa798ca005bcd7c166b015f}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Tiffany},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Milan Italy}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{1289cbd70d59c5a411c5c61380ddbb75}
+      \strng{fullhash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{bibnamehash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{authorbibnamehash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{authornamehash}{1289cbd70d59c5a411c5c61380ddbb75}
+      \strng{authorfullhash}{48a82ed13590ff5aa90c71075dbe118e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{979-8-4007-1208-1}
+      \field{journaltitle}{2024 {Working} {Group} {Reports} on {Innovation} and {Technology} in {Computer} {Science} {Education}}
+      \field{month}{1}
+      \field{shorttitle}{Data {Systems} {Education}}
+      \field{title}{Data {Systems} {Education}: {Curriculum} {Recommendations}, {Course} {Syllabi}, and {Industry} {Needs}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{95\bibrangedash 123}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1145/3689187.3709609
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3689187.3709609
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3689187.3709609
+      \endverb
+    \endentry
+    \entry{miura_automated_2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6ed668a05fc84f77e5c945e6c919b4e7}{%
+           family={Miura},
+           familyi={M\bibinitperiod},
+           given={Koki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=509b714dd2a917d07404a027b7ad744c}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Daisuke},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c1fc7ae490e47c7d868bdf278ea1350}{%
+           family={Washizaki},
+           familyi={W\bibinitperiod},
+           given={Hironori},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c869927df8045c33d6ee0c2e673dd7bf}{%
+           family={Fukazawa},
+           familyi={F\bibinitperiod},
+           given={Yoshiaki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Madrid, Spain}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7bc7351bed16d96b70fbb6928a20d16b}
+      \strng{fullhash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{bibnamehash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{authorbibnamehash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{authornamehash}{7bc7351bed16d96b70fbb6928a20d16b}
+      \strng{authorfullhash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are many lectures for students or working adults. Educational institutions have created a table that associates educational courses with learning standards in order to understand the content of these courses. Learning standards such as SFIA (Skills Framework for an Information Age) indicate the skills that learners should learn. The mapped table can make contents clear for students or other educational institutions.}
+      \field{isbn}{978-1-6654-2463-9}
+      \field{journaltitle}{2021 {IEEE} 45th {Annual} {Computers}, {Software}, and {Applications} {Conference} ({COMPSAC})}
+      \field{month}{7}
+      \field{title}{Automated {Educational} {Program} {Mapping} on {Learning} {Standards} in {Computer} {Science}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{1405\bibrangedash 1406}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/COMPSAC51774.2021.00206
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9529888/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9529888/
+      \endverb
+    \endentry
+    \entry{naseem_comprehensive_2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=88d3f1b75f756938113e439b70b8f245}{%
+           family={Naseem},
+           familyi={N\bibinitperiod},
+           given={Usman},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd387fe52d796956a92df0795137307c}{%
+           family={Razzak},
+           familyi={R\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1acc60fdef3798c20d72a4dcd3dc190a}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Shah\bibnamedelima Khalid},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68301785f41847cc41bbc2a5227c0016}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={Mukesh},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b2eab09b8d9321d60d57c2fab41ffa35}
+      \strng{fullhash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{bibnamehash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{authorbibnamehash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{authornamehash}{b2eab09b8d9321d60d57c2fab41ffa35}
+      \strng{authorfullhash}{0fd9dd91f572865a7df4c2709a44116e}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Word representation has always been an important research area in the history of natural language processing (NLP). Understanding such complex text data is imperative, given that it is rich in information and can be used widely across various applications. In this survey, we explore different word representation models and its power of expression, from the classical to modern-day state-of-the-art word representation language models (LMS). We describe a variety of text representation methods, and model designs have blossomed in the context of NLP, including SOTA LMs. These models can transform large volumes of text into effective vector representations capturing the same semantic information. Further, such representations can be utilized by various machine learning (ML) algorithms for a variety of NLP-related tasks. In the end, this survey briefly discusses the commonly used ML- and DL-based classifiers, evaluation metrics, and the applications of these word embeddings in different NLP tasks.}
+      \field{issn}{2375-4699, 2375-4702}
+      \field{journaltitle}{ACM Transactions on Asian and Low-Resource Language Information Processing}
+      \field{month}{9}
+      \field{number}{5}
+      \field{shorttitle}{A {Comprehensive} {Survey} on {Word} {Representation} {Models}}
+      \field{title}{A {Comprehensive} {Survey} on {Word} {Representation} {Models}: {From} {Classical} to {State}-of-the-{Art} {Word} {Representation} {Language} {Models}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{20}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1145/3434237
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3434237
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3434237
+      \endverb
+    \endentry
+    \entry{russell_e_mapping_2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=db835d67f3fcb18cb3d839b1cf0ffd77}{%
+           family={Russell\bibnamedelima E.},
+           familyi={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Walker},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Guatemala City, Guatemala}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{fullhash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{bibnamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authorbibnamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authornamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authorfullhash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Aligning STEM curricula with skills and occupations benefits students, employers, and educational institutions. However, manual curriculum mapping to assess alignment is labor-intensive and does not scale well. This study evaluated the use of natural language processing (NLP) to automate mapping curricula to skills and occupations. An opensource NLP tool was applied to extract skills from course descriptions in data science programs at two institutions, and from occupation descriptions from the US Department of Labor’s O*NET database. Occupations were ranked by similarity between curriculum and occupation skill sets. Occupations were classified as relevant or nonrelevant to data science and analytics, and the standard information retrieval metric of precision@N was calculated. Skill extraction identified an average of 5.3-10.4 skills/course, and precision@5 was 60\%100\%. There appears to be strong potential for using NLP of course descriptions to map curricula to skills and occupations, at least as a starting point for manual refinement.}
+      \field{isbn}{979-8-3503-4872-9}
+      \field{journaltitle}{2024 {IEEE} {World} {Engineering} {Education} {Conference} ({EDUNINE})}
+      \field{month}{3}
+      \field{title}{Mapping {Curricula} to {Skills} and {Occupations} {Using} {Course} {Descriptions}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/EDUNINE60625.2024.10500452
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10500452/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10500452/
+      \endverb
+    \endentry
+    \entry{subsecretaria_de_educacion_superior_evidencias_2025}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d555af63dd1a01d90116aa3807903e2}{%
+           family={{Subsecretaría de Educación Superior}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Ministerio de Educación, Gobierno de Chile}%
+      }
+      \strng{namehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{fullhash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{bibnamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authorbibnamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authornamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authorfullhash}{8d555af63dd1a01d90116aa3807903e2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Evidencias para la {Estrategia} de {Desarrollo} de la {Educación} {Superior} en {Chile}}
+      \field{type}{Informe técnico}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://educacionsuperior.mineduc.cl/wp-content/uploads/sites/49/2025/12/Evidencias-para-la-Estrategia-nov-2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://educacionsuperior.mineduc.cl/wp-content/uploads/sites/49/2025/12/Evidencias-para-la-Estrategia-nov-2025.pdf
+      \endverb
+    \endentry
+    \entry{cristea_course_2025}{inbook}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5e6ff28ce1afde0bd43181a220f65e42}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d55572d835038f2d672dcec1915df2a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xinjin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9dea6deb7bcc9f0a2d6e7a9a94f8f85c}{%
+           family={Huan},
+           familyi={H\bibinitperiod},
+           given={Yingqi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4a4dc5a5dfa5e57223ae5566af6b842}{%
+           family={Minaya},
+           familyi={M\bibinitperiod},
+           given={Veronica},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cbb678ff84cd9adf5b5f5eb49cdf71f}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Renzhe},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=2380ddacd84ab3ad93ab0f5dd08cdaea}{%
+           family={Cristea},
+           familyi={C\bibinitperiod},
+           given={Alexandra\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=c3230d92ca146876a07c56748d3a792d}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=618dfc15ed46244945f322553c021677}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7aa5b05574d182fab76b690e08f55ac5}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Olga\bibnamedelima C.},
+           giveni={O\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ddbd4420293c6679bec91464f2e01b87}{%
+           family={Isotani},
+           familyi={I\bibinitperiod},
+           given={Seiji},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{a57966a13dde6a970fe60cca832ca051}
+      \strng{fullhash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{bibnamehash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{authorbibnamehash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{authornamehash}{a57966a13dde6a970fe60cca832ca051}
+      \strng{authorfullhash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{editorbibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editornamehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{editorfullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Curricular analytics (CA) – systematic analysis of curricula data to inform program and course reﬁnement – becomes an increasingly valuable tool to help institutions align academic oﬀerings with evolving societal and economic demands. Large language models (LLMs) are promising for handling large-scale, unstructured curriculum data, but it remains uncertain how reliably LLMs can perform CA tasks. In this paper, we systematically evaluate four text alignment strategies based on LLMs or traditional NLP methods for skill extraction, a core task in CA. Using a stratiﬁed sample of 400 curriculum documents of diﬀerent types and a human-LLM collaborative evaluation framework, we ﬁnd that retrieval-augmented generation (RAG) is the top-performing strategy across all types of curriculum documents, while zero-shot prompting performs worse than traditional NLP methods in most cases. Our ﬁndings highlight the promise of LLMs in analyzing brief and abstract curriculum documents, but also reveal that their performance can vary signiﬁcantly depending on model selection and prompting strategies. This underscores the importance of carefully evaluating the performance of LLM-based strategies before large-scale deployment.}
+      \field{booktitle}{Artificial {Intelligence} in {Education}}
+      \field{isbn}{978-3-031-98464-8 978-3-031-98465-5}
+      \field{note}{Series Title: Lecture Notes in Computer Science}
+      \field{shorttitle}{From {Course} to {Skill}}
+      \field{title}{From {Course} to {Skill}: {Evaluating} {Large} {Language} {Model} {Performance} in {Curricular} {Analytics}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{15882}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{203\bibrangedash 211}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-031-98465-5_26
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-98465-5_26
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-98465-5_26
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{araujo_chile_2023}{book}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6fc99da24f4dd347667d7e4b2b73ac5e}{%
+           family={Araujo},
+           familyi={A\bibinitperiod},
+           given={Kathya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4afcfab83629da15305b2ce4b1dafe1f}{%
+           family={Garretón},
+           familyi={G\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abf43d86c2dd4a03ad07cc2c747713dd}{%
+           family={Figueroa},
+           familyi={F\bibinitperiod},
+           given={Alejandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49de8bf8828b9c719071782cf475f3fd}{%
+           family={Salazar},
+           familyi={S\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b646243dc87cd729e7875f8cf5ce3b3f}{%
+           family={Piquer},
+           familyi={P\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Consejo Nacional de Ciencia, Tecnología, Conocimiento e Innovación}%
+      }
+      \strng{namehash}{0a3bf570fe709e041c26f2e939fa5094}
+      \strng{fullhash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{bibnamehash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{authorbibnamehash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \strng{authornamehash}{0a3bf570fe709e041c26f2e939fa5094}
+      \strng{authorfullhash}{f680883fcb2ee23a4e5cc0662dbac11c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chile crea futuro: Reportes de expertos para cuatro grandes fenómenos de cambio}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://investigacion.utem.cl/wp-content/uploads/documentos/documento232/CTCI%20-%20REPORTES%20DE%20EXPERTOS%20PARA%20CUATR%20GRANDES%20FENOMENOS.pdf
+      \endverb
+      \verb{url}
+      \verb https://investigacion.utem.cl/wp-content/uploads/documentos/documento232/CTCI%20-%20REPORTES%20DE%20EXPERTOS%20PARA%20CUATR%20GRANDES%20FENOMENOS.pdf
+      \endverb
+    \endentry
+    \entry{constantinov_preliminary_2015}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fb2150672c9422123859e558af4c206d}{%
+           family={Constantinov},
+           familyi={C\bibinitperiod},
+           given={Calin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3de7d03c76249dc2820fb46c1e1fd4f0}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Paul\bibnamedelima Stefan},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa415edc6ad3c2cfce8303ec5aef7e84}{%
+           family={Poteras},
+           familyi={P\bibinitperiod},
+           given={Cosmin\bibnamedelima Marian},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb6e2c7e0adeb10a3a127b5a1ae9ed41}{%
+           family={Mocanu},
+           familyi={M\bibinitperiod},
+           given={Mihai\bibnamedelima Lucian},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cheile Gradistei, Romania}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{131c60caab4d4b20b49fa70bc38b9976}
+      \strng{fullhash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{bibnamehash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{authorbibnamehash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \strng{authornamehash}{131c60caab4d4b20b49fa70bc38b9976}
+      \strng{authorfullhash}{1c21eaa8b01f5b8c179d2bfedf7e22fb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4799-8481-7}
+      \field{journaltitle}{2015 19th {International} {Conference} on {System} {Theory}, {Control} and {Computing} ({ICSTCC})}
+      \field{month}{10}
+      \field{title}{Preliminary results of a curriculum adjuster based on professional network analysis}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{860\bibrangedash 865}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICSTCC.2015.7321402
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/7321402/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/7321402/
+      \endverb
+    \endentry
+    \entry{cristea_artificial_2025}{book}{}
+      \name{editor}{5}{}{%
+        {{un=0,uniquepart=base,hash=2380ddacd84ab3ad93ab0f5dd08cdaea}{%
+           family={Cristea},
+           familyi={C\bibinitperiod},
+           given={Alexandra\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3230d92ca146876a07c56748d3a792d}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=618dfc15ed46244945f322553c021677}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7aa5b05574d182fab76b690e08f55ac5}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Olga\bibnamedelima C.},
+           giveni={O\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddbd4420293c6679bec91464f2e01b87}{%
+           family={Isotani},
+           familyi={I\bibinitperiod},
+           given={Seiji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{fullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{bibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editorbibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editornamehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{editorfullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-031-98413-6 978-3-031-98414-3}
+      \field{series}{Lecture {Notes} in {Computer} {Science}}
+      \field{shorttitle}{Artificial {Intelligence} in {Education}}
+      \field{title}{Artificial {Intelligence} in {Education}: 26th {International} {Conference}, {AIED} 2025, {Palermo}, {Italy}, {July} 22–26, 2025, {Proceedings}, {Part} {I}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{15877}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-031-98414-3
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-98414-3
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-98414-3
+      \endverb
+    \endentry
+    \entry{fan_identifying_2023}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ecbc0192f8dcea9069d595830425d140}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Zongwen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf02e48af20e9e09bbf3acc15c1042c5}{%
+           family={Chiong},
+           familyi={C\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{fullhash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{bibnamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authorbibnamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authornamehash}{217342a6d1d639180c9d20297568ec9a}
+      \strng{authorfullhash}{217342a6d1d639180c9d20297568ec9a}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract Digital capabilities have become increasingly important in this digital age. Within a university setting, digital capability assessment is key to curriculum design and curriculum mapping, given that digital capabilities not only can help students engage and communicate with others but also succeed at work. To the best of our knowledge, however, no previous studies in the relevant literature have reported the assessment of digital capabilities in courses across a university. It is extremely challenging to do so manually, as thousands of courses offered by the university would have to be checked. In this study, we therefore use machine learning classifiers to automatically identify digital capabilities in courses based on real-world university course rubric data. Through text analysis of course rubrics produced by course academics, decision makers can identify the digital capabilities that are formally assessed in university courses. This, in turn, would enable them to design and map curriculums to develop the digital capabilities of staff and students. Comprehensive experimental results reveal that the machine learning models tested in this study can effectively identify digital capabilities. Among the prediction models included in our experiments, the performance of support vector machines was the best, achieving accuracy and F-measure scores of 0.8535 and 0.8338, respectively.}
+      \field{issn}{1360-2357, 1573-7608}
+      \field{journaltitle}{Education and Information Technologies}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shorttitle}{Identifying digital capabilities in university courses}
+      \field{title}{Identifying digital capabilities in university courses: {An} automated machine learning approach}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{3937\bibrangedash 3952}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/s10639-022-11075-8
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/s10639-022-11075-8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/s10639-022-11075-8
+      \endverb
+    \endentry
+    \entry{latuz2024}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc20d5b8897e0cfb1b924bf73f7bf980}{%
+           family={Latuz\bibnamedelima Piña},
+           familyi={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Benjamín},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad de Chile}%
+      }
+      \strng{namehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{fullhash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{bibnamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authorbibnamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authornamehash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \strng{authorfullhash}{bc20d5b8897e0cfb1b924bf73f7bf980}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inserción en la industria de nuevos ingenieros en computación}
+      \field{type}{Memoria de título}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://repositorio.uchile.cl/handle/2250/204814
+      \endverb
+      \verb{url}
+      \verb https://repositorio.uchile.cl/handle/2250/204814
+      \endverb
+    \endentry
+    \entry{miedema_data_2025}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=c77c626eb5126e28ccd2f4091a6f0dcf}{%
+           family={Miedema},
+           familyi={M\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e25ec6249f5d1a010fa5faa26a828d8}{%
+           family={Taipalus},
+           familyi={T\bibinitperiod},
+           given={Toni},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9b60fe4cbfda450296e19138b010964}{%
+           family={Ajanovski},
+           familyi={A\bibinitperiod},
+           given={Vangel\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f98cede37d30c29c1aa4974fbd560153}{%
+           family={Alawini},
+           familyi={A\bibinitperiod},
+           given={Abdussalam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e9a34f9337117ceaa92693330d1aa71}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68042778a6c1eef5e4b5068f25b77ec4}{%
+           family={Liut},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d0c6cee7397be2974bd2ba874862bee}{%
+           family={Peltsverger},
+           familyi={P\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ac2797deaa798ca005bcd7c166b015f}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Tiffany},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Milan Italy}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{1289cbd70d59c5a411c5c61380ddbb75}
+      \strng{fullhash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{bibnamehash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{authorbibnamehash}{48a82ed13590ff5aa90c71075dbe118e}
+      \strng{authornamehash}{1289cbd70d59c5a411c5c61380ddbb75}
+      \strng{authorfullhash}{48a82ed13590ff5aa90c71075dbe118e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{979-8-4007-1208-1}
+      \field{journaltitle}{2024 {Working} {Group} {Reports} on {Innovation} and {Technology} in {Computer} {Science} {Education}}
+      \field{month}{1}
+      \field{shorttitle}{Data {Systems} {Education}}
+      \field{title}{Data {Systems} {Education}: {Curriculum} {Recommendations}, {Course} {Syllabi}, and {Industry} {Needs}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{95\bibrangedash 123}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1145/3689187.3709609
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3689187.3709609
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3689187.3709609
+      \endverb
+    \endentry
+    \entry{miura_automated_2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6ed668a05fc84f77e5c945e6c919b4e7}{%
+           family={Miura},
+           familyi={M\bibinitperiod},
+           given={Koki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=509b714dd2a917d07404a027b7ad744c}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Daisuke},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c1fc7ae490e47c7d868bdf278ea1350}{%
+           family={Washizaki},
+           familyi={W\bibinitperiod},
+           given={Hironori},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c869927df8045c33d6ee0c2e673dd7bf}{%
+           family={Fukazawa},
+           familyi={F\bibinitperiod},
+           given={Yoshiaki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Madrid, Spain}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7bc7351bed16d96b70fbb6928a20d16b}
+      \strng{fullhash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{bibnamehash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{authorbibnamehash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \strng{authornamehash}{7bc7351bed16d96b70fbb6928a20d16b}
+      \strng{authorfullhash}{8fd3ad1a63d4c11e7a6cf7fac5181180}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are many lectures for students or working adults. Educational institutions have created a table that associates educational courses with learning standards in order to understand the content of these courses. Learning standards such as SFIA (Skills Framework for an Information Age) indicate the skills that learners should learn. The mapped table can make contents clear for students or other educational institutions.}
+      \field{isbn}{978-1-6654-2463-9}
+      \field{journaltitle}{2021 {IEEE} 45th {Annual} {Computers}, {Software}, and {Applications} {Conference} ({COMPSAC})}
+      \field{month}{7}
+      \field{title}{Automated {Educational} {Program} {Mapping} on {Learning} {Standards} in {Computer} {Science}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{1405\bibrangedash 1406}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/COMPSAC51774.2021.00206
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9529888/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9529888/
+      \endverb
+    \endentry
+    \entry{naseem_comprehensive_2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=88d3f1b75f756938113e439b70b8f245}{%
+           family={Naseem},
+           familyi={N\bibinitperiod},
+           given={Usman},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd387fe52d796956a92df0795137307c}{%
+           family={Razzak},
+           familyi={R\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1acc60fdef3798c20d72a4dcd3dc190a}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Shah\bibnamedelima Khalid},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68301785f41847cc41bbc2a5227c0016}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={Mukesh},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b2eab09b8d9321d60d57c2fab41ffa35}
+      \strng{fullhash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{bibnamehash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{authorbibnamehash}{0fd9dd91f572865a7df4c2709a44116e}
+      \strng{authornamehash}{b2eab09b8d9321d60d57c2fab41ffa35}
+      \strng{authorfullhash}{0fd9dd91f572865a7df4c2709a44116e}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Word representation has always been an important research area in the history of natural language processing (NLP). Understanding such complex text data is imperative, given that it is rich in information and can be used widely across various applications. In this survey, we explore different word representation models and its power of expression, from the classical to modern-day state-of-the-art word representation language models (LMS). We describe a variety of text representation methods, and model designs have blossomed in the context of NLP, including SOTA LMs. These models can transform large volumes of text into effective vector representations capturing the same semantic information. Further, such representations can be utilized by various machine learning (ML) algorithms for a variety of NLP-related tasks. In the end, this survey briefly discusses the commonly used ML- and DL-based classifiers, evaluation metrics, and the applications of these word embeddings in different NLP tasks.}
+      \field{issn}{2375-4699, 2375-4702}
+      \field{journaltitle}{ACM Transactions on Asian and Low-Resource Language Information Processing}
+      \field{month}{9}
+      \field{number}{5}
+      \field{shorttitle}{A {Comprehensive} {Survey} on {Word} {Representation} {Models}}
+      \field{title}{A {Comprehensive} {Survey} on {Word} {Representation} {Models}: {From} {Classical} to {State}-of-the-{Art} {Word} {Representation} {Language} {Models}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{20}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1145/3434237
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3434237
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3434237
+      \endverb
+    \endentry
+    \entry{russell_e_mapping_2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=db835d67f3fcb18cb3d839b1cf0ffd77}{%
+           family={Russell\bibnamedelima E.},
+           familyi={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Walker},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Guatemala City, Guatemala}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{fullhash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{bibnamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authorbibnamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authornamehash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \strng{authorfullhash}{db835d67f3fcb18cb3d839b1cf0ffd77}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Aligning STEM curricula with skills and occupations benefits students, employers, and educational institutions. However, manual curriculum mapping to assess alignment is labor-intensive and does not scale well. This study evaluated the use of natural language processing (NLP) to automate mapping curricula to skills and occupations. An opensource NLP tool was applied to extract skills from course descriptions in data science programs at two institutions, and from occupation descriptions from the US Department of Labor’s O*NET database. Occupations were ranked by similarity between curriculum and occupation skill sets. Occupations were classified as relevant or nonrelevant to data science and analytics, and the standard information retrieval metric of precision@N was calculated. Skill extraction identified an average of 5.3-10.4 skills/course, and precision@5 was 60\%100\%. There appears to be strong potential for using NLP of course descriptions to map curricula to skills and occupations, at least as a starting point for manual refinement.}
+      \field{isbn}{979-8-3503-4872-9}
+      \field{journaltitle}{2024 {IEEE} {World} {Engineering} {Education} {Conference} ({EDUNINE})}
+      \field{month}{3}
+      \field{title}{Mapping {Curricula} to {Skills} and {Occupations} {Using} {Course} {Descriptions}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/EDUNINE60625.2024.10500452
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10500452/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10500452/
+      \endverb
+    \endentry
+    \entry{subsecretaria_de_educacion_superior_evidencias_2025}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d555af63dd1a01d90116aa3807903e2}{%
+           family={{Subsecretaría de Educación Superior}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Ministerio de Educación, Gobierno de Chile}%
+      }
+      \strng{namehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{fullhash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{bibnamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authorbibnamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authornamehash}{8d555af63dd1a01d90116aa3807903e2}
+      \strng{authorfullhash}{8d555af63dd1a01d90116aa3807903e2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Evidencias para la {Estrategia} de {Desarrollo} de la {Educación} {Superior} en {Chile}}
+      \field{type}{Informe técnico}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://educacionsuperior.mineduc.cl/wp-content/uploads/sites/49/2025/12/Evidencias-para-la-Estrategia-nov-2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://educacionsuperior.mineduc.cl/wp-content/uploads/sites/49/2025/12/Evidencias-para-la-Estrategia-nov-2025.pdf
+      \endverb
+    \endentry
+    \entry{cristea_course_2025}{inbook}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5e6ff28ce1afde0bd43181a220f65e42}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d55572d835038f2d672dcec1915df2a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xinjin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9dea6deb7bcc9f0a2d6e7a9a94f8f85c}{%
+           family={Huan},
+           familyi={H\bibinitperiod},
+           given={Yingqi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4a4dc5a5dfa5e57223ae5566af6b842}{%
+           family={Minaya},
+           familyi={M\bibinitperiod},
+           given={Veronica},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cbb678ff84cd9adf5b5f5eb49cdf71f}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Renzhe},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=2380ddacd84ab3ad93ab0f5dd08cdaea}{%
+           family={Cristea},
+           familyi={C\bibinitperiod},
+           given={Alexandra\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=c3230d92ca146876a07c56748d3a792d}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=618dfc15ed46244945f322553c021677}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7aa5b05574d182fab76b690e08f55ac5}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Olga\bibnamedelima C.},
+           giveni={O\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ddbd4420293c6679bec91464f2e01b87}{%
+           family={Isotani},
+           familyi={I\bibinitperiod},
+           given={Seiji},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{a57966a13dde6a970fe60cca832ca051}
+      \strng{fullhash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{bibnamehash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{authorbibnamehash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{authornamehash}{a57966a13dde6a970fe60cca832ca051}
+      \strng{authorfullhash}{a787ab5e1260963a765c77f0ba7d6964}
+      \strng{editorbibnamehash}{abfe321cd197908859e8e109b4aabd3f}
+      \strng{editornamehash}{2355a681ff8f12bca91963ddce377c87}
+      \strng{editorfullhash}{abfe321cd197908859e8e109b4aabd3f}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Curricular analytics (CA) – systematic analysis of curricula data to inform program and course reﬁnement – becomes an increasingly valuable tool to help institutions align academic oﬀerings with evolving societal and economic demands. Large language models (LLMs) are promising for handling large-scale, unstructured curriculum data, but it remains uncertain how reliably LLMs can perform CA tasks. In this paper, we systematically evaluate four text alignment strategies based on LLMs or traditional NLP methods for skill extraction, a core task in CA. Using a stratiﬁed sample of 400 curriculum documents of diﬀerent types and a human-LLM collaborative evaluation framework, we ﬁnd that retrieval-augmented generation (RAG) is the top-performing strategy across all types of curriculum documents, while zero-shot prompting performs worse than traditional NLP methods in most cases. Our ﬁndings highlight the promise of LLMs in analyzing brief and abstract curriculum documents, but also reveal that their performance can vary signiﬁcantly depending on model selection and prompting strategies. This underscores the importance of carefully evaluating the performance of LLM-based strategies before large-scale deployment.}
+      \field{booktitle}{Artificial {Intelligence} in {Education}}
+      \field{isbn}{978-3-031-98464-8 978-3-031-98465-5}
+      \field{note}{Series Title: Lecture Notes in Computer Science}
+      \field{shorttitle}{From {Course} to {Skill}}
+      \field{title}{From {Course} to {Skill}: {Evaluating} {Large} {Language} {Model} {Performance} in {Curricular} {Analytics}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{15882}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{203\bibrangedash 211}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-031-98465-5_26
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-98465-5_26
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-98465-5_26
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

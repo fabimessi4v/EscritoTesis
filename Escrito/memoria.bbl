@@ -1,0 +1,74 @@
+\begin{thebibliography}{}
+
+\bibitem[{Cc2020 Task Force}, 2020]{cc2020_task_force_computing_2020}
+{Cc2020 Task Force} (2020).
+\newblock {\em Computing {Curricula} 2020: {Paradigms} for {Global} {Computing} {Education}}.
+\newblock ACM, New York, NY, USA.
+
+\bibitem[Constantinov et~al., 2015]{constantinov_preliminary_2015}
+Constantinov, C., Popescu, P.~S., Poteras, C.~M., and Mocanu, M.~L. (2015).
+\newblock Preliminary results of a curriculum adjuster based on professional network analysis.
+\newblock In {\em 2015 19th {International} {Conference} on {System} {Theory}, {Control} and {Computing} ({ICSTCC})}, pages 860--865, Cheile Gradistei, Romania. IEEE.
+
+\bibitem[Contreras and Perez, 2017]{contreras_diseno_nodate}
+Contreras, M.~V. and Perez, G. (2017).
+\newblock Dise{\~n}o y evaluaci{\'o}n de una asignatura de integraci{\'o}n curricular para ingenieros de primer ciclo de formaci{\'o}n a partir de {Project-Oriented Learning}.
+\newblock {\em Revista de Educaci{\'o}n en Ingenier{\'i}a}, 12(24):45--56.
+
+\bibitem[D{\'i}az-Quezada et~al., 2019]{diaz-quezada_rediseno_2019}
+D{\'i}az-Quezada, V., Poblete-Letelier, {\'A}., and Gallardo-Gonz{\'a}lez, M. (2019).
+\newblock Redise{\~n}o curricular por competencias: experiencia en la formaci{\'o}n inicial universitaria en {Chile}.
+\newblock {\em Revista Iberoamericana de Educaci{\'o}n Superior}, pages 72--91.
+
+\bibitem[Duarte et~al., 2023]{duarte_broader_2023}
+Duarte, R., Lacerda~Nobre, {\^A}., Pimentel, F., and Jacquinet, M. (2023).
+\newblock Broader {Terms} {Curriculum} {Mapping}: {Using} {Natural} {Language} {Processing} and {Visual}-{Supported} {Communication} to {Create} {Representative} {Program} {Planning} {Experiences}.
+\newblock {\em Applied System Innovation}, 7(1):7.
+
+\bibitem[Fan and Chiong, 2023]{fan_identifying_2023}
+Fan, Z. and Chiong, R. (2023).
+\newblock Identifying digital capabilities in university courses: {An} automated machine learning approach.
+\newblock {\em Education and Information Technologies}, 28(4):3937--3952.
+
+\bibitem[Latuz~Piña, 2024]{latuz_pina_2024}
+Latuz~Piña, B.~I. (2024).
+\newblock Inserción en la industria de nuevos ingenieros en computación.
+\newblock Memoria para optar al título de ingeniero civil en computación, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas, Departamento de Ciencias de la Computación, Santiago de Chile.
+
+\bibitem[Miura et~al., 2021]{miura_automated_2021}
+Miura, K., Saito, D., Washizaki, H., and Fukazawa, Y. (2021).
+\newblock Automated {Educational} {Program} {Mapping} on {Learning} {Standards} in {Computer} {Science}.
+\newblock In {\em 2021 {IEEE} 45th {Annual} {Computers}, {Software}, and {Applications} {Conference} ({COMPSAC})}, pages 1405--1406, Madrid, Spain. IEEE.
+
+\bibitem[Naseem et~al., 2021]{naseem_comprehensive_2021}
+Naseem, U., Razzak, I., Khan, S.~K., and Prasad, M. (2021).
+\newblock A {Comprehensive} {Survey} on {Word} {Representation} {Models}: {From} {Classical} to {State}-of-the-{Art} {Word} {Representation} {Language} {Models}.
+\newblock {\em ACM Transactions on Asian and Low-Resource Language Information Processing}, 20(5):1--35.
+
+\bibitem[Remadi et~al., 2024]{remadi_prompt_2024}
+Remadi, A., El~Hage, K., Hobeika, Y., and Bugiotti, F. (2024).
+\newblock To prompt or not to prompt: {Navigating} the use of {Large} {Language} {Models} for integrating and modeling heterogeneous data.
+\newblock {\em Data \& Knowledge Engineering}, 152:102313.
+
+\bibitem[Russell~E., 2024]{russell_e_mapping_2024}
+Russell~E., W. (2024).
+\newblock Mapping {Curricula} to {Skills} and {Occupations} {Using} {Course} {Descriptions}.
+\newblock In {\em 2024 {IEEE} {World} {Engineering} {Education} {Conference} ({EDUNINE})}, pages 1--6, Guatemala City, Guatemala. IEEE.
+
+\bibitem[{Subsecretar{\'i}a de Educaci{\'o}n Superior}, 2025]{subsecretaria_de_educacion_superior_evidencias_2025}
+{Subsecretar{\'i}a de Educaci{\'o}n Superior} (2025).
+\newblock Evidencias para la {Estrategia} de {Desarrollo} de la {Educaci{\'o}n} {Superior} en {Chile}.
+\newblock Informe t{\'e}cnico, Ministerio de Educaci{\'o}n, Gobierno de Chile.
+
+\bibitem[Xu et~al., 2025a]{cristea_course_2025}
+Xu, Z., Li, X., Huan, Y., Minaya, V., and Yu, R. (2025a).
+\newblock From {Course} to {Skill}: {Evaluating} {Large} {Language} {Model} {Performance} in {Curricular} {Analytics}.
+\newblock In Cristea, A.~I., Walker, E., Lu, Y., Santos, O.~C., and Isotani, S., editors, {\em Artificial {Intelligence} in {Education}}, volume 15882, pages 203--211. Springer Nature Switzerland, Cham.
+\newblock Series Title: Lecture Notes in Computer Science.
+
+\bibitem[Xu et~al., 2025b]{cristea_artificial_2025}
+Xu, Z., Minaya, V., Cristea, A.~I., and Yu, R. (2025b).
+\newblock Generative {AI} as a {Curriculum} {Co-Reviewer}: {Evaluating} {LLM} {Skill} {Mapping} in {Higher} {Education}.
+\newblock In Cristea, A.~I., Walker, E., Lu, Y., Santos, O.~C., and Isotani, S., editors, {\em Artificial {Intelligence} in {Education}: 26th {International} {Conference}, {AIED} 2025, {Palermo}, {Italy}, {July} 22–26, 2025, {Proceedings}}, volume 15877, pages 180--195, Cham. Springer Nature Switzerland.
+
+\end{thebibliography}

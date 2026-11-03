@@ -1,0 +1,563 @@
+\hypersetup{pageanchor=false}
+\thispagestyle{cartastyle}
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\vspace*{-0.8cm}
+\noindent
+\begin{minipage}[c]{0.72\textwidth}
+	{\bf \small UNIVERSIDAD DE SANTIAGO DE CHILE}\\
+	{\bf \small FACULTAD DE INGENIERÍA}\\
+	{\bf \small DEPARTAMENTO DE INGENIERÍA INFORMÁTICA}
+\end{minipage}%
+\begin{minipage}[c]{0.28\textwidth}
+	\raggedleft
+	\includegraphics[scale=0.22]{Images/LogoUsach.pdf}
+\end{minipage}
+
+\vspace{0.4cm}
+
+\begin{flushright}
+	\textbf{Santiago, 11 de agosto de 2026}
+\end{flushright}
+
+\vspace{0.3cm}
+
+\noindent
+\textbf{Seminario de Titulación / Propuesta de Trabajo de Titulación}\\
+\textbf{Comisión Evaluadora:} Prof. Pamela Landeros, Prof. Víctor Araya\\
+\textbf{Departamento de Ingeniería Informática}\\
+\textbf{Universidad de Santiago de Chile}\\
+\textbf{Correo electrónico de contacto:} fabian.ibarra.n@usach.cl
+
+\vspace{0.8cm}
+
+\noindent
+\textbf{Estimados Profesores:}\\
+\textbf{Miembros de la Comisión Evaluadora}
+
+\vspace{0.4cm}
+
+Me dirijo respetuosamente a ustedes por medio de la presente carta para expresar mi sincero agradecimiento por la detallada y rigurosa revisión realizada a la propuesta de mi Trabajo de Titulación titulado: \textbf{“Método computacional basado en procesamiento de lenguaje natural para analizar la alineación curricular de Ingeniería Informática en Chile con estándares ACM/IEEE y necesidades de la industria”}.
+
+Las valiosas sugerencias y observaciones formuladas por la comisión han permitido precisar la terminología empleada, delimitar los objetos curriculares de análisis (centrándose en mallas curriculares y perfiles de egreso declarados), clarificar la metodología computacional de representación vectorial semántica y clustering enfocada en las diferencias de mallas, fundamentar la validez del marco de evaluación externa, y robustecer la consistencia integral del documento.
+
+He revisado minuciosamente cada uno de los 18 puntos planteados en su evaluación y he incorporado las adecuaciones y aclaraciones correspondientes en el cuerpo del informe. A continuación, presento la respuesta punto por punto a las observaciones emitidas.
+
+Confío en que la presente respuesta y las correcciones integradas en el escrito satisfagan plenamente las requerimientos planteados por la comisión evaluadora.
+
+\vspace{1.2cm}
+
+\begin{flushleft}
+	Atentamente,\\
+	\vspace{1.5cm}
+	\textbf{Fabián Ibarra Norambuena}\\
+	Estudiante de Ingeniería en Ejecución en Computación e Informática\\
+	Departamento de Ingeniería Informática\\
+	Universidad de Santiago de Chile\\
+	Av. Víctor Jara 3659, Estación Central, Santiago
+\end{flushleft}
+
+\newpage
+
+\begin{center}
+	{\Large \textbf{Carta de Respuesta a las Observaciones de la Comisión Evaluadora}}
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent
+A continuación se detallan las respuestas puntuales y las modificaciones incorporadas al documento de propuesta de Trabajo de Titulación en atención a cada uno de los comentarios planteados por la comisión evaluadora:
+
+\vspace{0.4cm}
+
+\definecolor{quoteframe}{RGB}{230, 235, 245}
+
+% --- OBSERVACIÓN 1 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#1 — Título, método computacional vs. metodología y objetos curriculares:}\\
+\small
+\textit{La propuesta se titula como: ``Metodología basada en procesamiento de lenguaje natural...''. Al parecer lo que está proponiendo es un ¿método computacional (en vez de una metodología) basado en PLN para analizar la ``heterogeneidad de las mallas (o programas/contenidos)'' de la carrera de Ingeniería Informática en Chile y compararla con estándares ACM/IEEE y necesidades de la industria?. También puede decir ``heterogeneidad estructural de las mallas (o programas, etc)''. Lo importante es que su escrito aclare a qué se refiere con ``estructural'' si es que la usa, y por sobre todo, use las palabras correctas sobre qué objeto curricular se va a realizar su análisis: ¿mallas? y/o ¿programas/contenidos? y/o ¿perfiles de egreso?, y/o ¿otros?.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Distinción entre método computacional y metodología:} se concuerda plenamente con la comisión. La contribución técnica central del proyecto corresponde a un \textbf{método computacional} de procesamiento de lenguaje natural y agrupamiento semántico no supervisado, el cual se articula dentro de un marco metodológico general de evaluación curricular. Se ha precisado este matiz en la redacción del resumen, introducción y objetivos.
+	\item \textbf{Delimitación del objeto curricular de análisis (exclusivamente mallas curriculares y perfiles de egreso):} se eliminó la consideración de programas analíticos extensos (sílabos) y se explicita formalmente que el análisis computacional se realizará \textbf{única y exclusivamente sobre dos objetos curriculares declarados}:
+	      \begin{itemize}
+		      \item \textbf{Mallas curriculares:} constituyen el \textbf{objeto primario de análisis computacional}. Representan la estructura modular, nomenclatura de asignaturas, distribución de créditos, nivel semestral y grafos de prerrequisitos de cada plan de estudios.
+		      \item \textbf{Perfiles de egreso declarados:} documentos normativos e institucionales que declaran formalmente las competencias finales del egresado de cada carrera.
+	      \end{itemize}
+	\item \textbf{Definición de ``heterogeneidad estructural'' (enfoque en diferencias de mallas):} el término ``heterogeneidad estructural'' se define y utiliza en el escrito refiriéndose \textbf{principalmente a las diferencias existentes entre las mallas curriculares} de las distintas universidades. Específicamente, se analiza la variación en: (a) la distribución de asignaturas y créditos entre las áreas del conocimiento, (b) la presencia o ausencia de bloques de asignaturas en el itinerario de la malla, y (c) la topología y densidad del grafo de prerrequisitos semestrales entre mallas.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 2 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#2 — Alcance de ``abordar la heterogeneidad'' y foco en mallas curriculares:}\\
+\small
+\textit{Cuando dice ``abordar la heterogeneidad existente'' se entiende que usted va a desarrollar un método que mejore (o elimine) la heterogeneidad de los programas existentes. Creo que usted no va a desarrollar eso. Este párrafo dice explícitamente que su objeto curricular son los programas, pero luego dice mallas y descripciones de asignatura. ¿A qué se refiere con ``descripciones''?. Luego dice que su método realizará una representación vectorial semántica de los ``contenidos formativos'' ¿?. Aclare bien a qué se refiere y use estas palabras en todo su escrito.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Alcance del proyecto respecto a la heterogeneidad:} se aclara que el objetivo del proyecto \textbf{no es estandarizar coercitivamente ni eliminar} la diversidad de mallas en Chile. El propósito es \textbf{caracterizar, cuantificar, mapear y visibilizar} objetivamente las diferencias entre las mallas curriculares mediante evidencia basada en datos textuales. Se reemplazó la expresión ``abordar la heterogeneidad'' por ``caracterizar y analizar cuantitativamente las diferencias de mallas curriculares''.
+	\item \textbf{Eliminación de ``descripciones'' y enfoque en mallas curriculares:} se eliminaron los términos ambiguos ``descripciones'' y ``programas analíticos''. El análisis computacional procesa directamente la nomenclatura, descriptores modulares y áreas temáticas contenidas en las \textbf{mallas curriculares} y en los \textbf{perfiles de egreso declarados}.
+	\item \textbf{Representación vectorial de las asignaturas de la malla:} se especifica que la ``representación vectorial semántica'' transforma los títulos y descriptores de cada asignatura de la malla curricular (junto a las oraciones de los perfiles de egreso) en vectores densos en un espacio latente continuo $\mathbb{R}^d$ mediante modelos de lenguaje (Sentence-Transformers).
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 3 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#3 — Ejemplos de patrones estructurales de mallas y perfiles formativos:}\\
+\small
+\textit{Su método computacional identificará ``patrones estructurales'' y ``perfiles formativos''. Ponga entre paréntesis ejemplos de esos ``patrones estructurales'' que podría identificar su método para comprender a qué se refiere con ``estructural''. ¿Cómo podría su método identificar estos ``perfiles formativos''? Ponga entre paréntesis ejemplos de ``perfiles formativos'' que podrían ser identificados.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Ejemplos de patrones estructurales en las mallas:} se incorporaron explícitamente en el escrito ejemplos concretos centrados en las mallas: \textit{(e.g., mayor o menor concentración de asignaturas de ciencias básicas en los primeros semestres versus especialización temprana en la malla; profundidad de las cadenas de prerrequisitos en la línea de programación; presencia o ausencia de asignaturas explícitas de ciberseguridad, ciencia de datos o ingeniería de software en la malla)}.
+	\item \textbf{Mecanismo de identificación de perfiles formativos desde las mallas:} las asignaturas de cada malla curricular son vectorizadas y agrupadas en el espacio semántico. El ``perfil formativo computacional'' de una carrera surge del análisis de densidad y centroide de las asignaturas constituyentes de su malla en las distintas regiones disciplinares.
+	\item \textbf{Ejemplos de perfiles formativos identificables:} se añadieron ejemplos ilustrativos entre paréntesis: \textit{(e.g., malla con perfil orientado a desarrollo e ingeniería de software; malla con perfil enfocado en ciencia de datos e inteligencia artificial; malla con perfil de infraestructura, redes y sistemas operativos; malla con perfil de computación teórica y algoritmos)}. La diferencia entre las mallas de distintas universidades refleja objetivamente la heterogeneidad del sistema nacional.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 4 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#4 — Perfiles de egreso vs. perfiles formativos, espacio vectorial latente común y áreas disciplinares:}\\
+\small
+\textit{¿``Perfiles de egreso'' se refiere al perfil declarado por la institución (uno por carrera)?. ¿Es lo mismo que ``perfiles formativos''?. ¿Va a realizar una representación vectorial semántica del mercado laboral (LinkedIn) y de los estándares internacionales?. ¿El análisis comparativo se hace sobre los resultados que arroje su método propuesto?. Indique a qué se refiere con ``áreas disciplinares'' (¿provienen de los estándares, las define usted o las identifica el método?).}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Diferenciación entre perfil de egreso declarado y perfil formativo de la malla:}
+	      \begin{itemize}
+		      \item \textbf{Perfil de egreso declarado:} corresponde al documento normativo e institucional único promulgado por cada universidad para su carrera.
+		      \item \textbf{Perfil formativo de la malla:} corresponde al perfil empírico resultante del agrupamiento semántico de las asignaturas efectivamente presentes en la malla curricular. La comparación entre ambos mide la alineación entre lo que la institución \textit{declara} en su perfil y lo que su \textit{malla curricular} estructura modularmente.
+	      \end{itemize}
+	\item \textbf{Proyección en un espacio vectorial latente común ($\mathbb{R}^d$):} efectivamente, \textbf{todas las fuentes de datos}—(1) asignaturas de mallas curriculares y perfiles de egreso, (2) estándares internacionales ACM/IEEE CS2013 y CC2020, y (3) ofertas laborales de LinkedIn—se proyectan dentro del \textbf{mismo espacio vectorial latente multilingüe}. Esto permite efectuar el análisis comparativo directamente calculando similitud de coseno ($\cos \theta$) y distancias semánticas entre vectores de asignaturas de las mallas, centroides de estándares y demandas laborales.
+	\item \textbf{Origen de las ``áreas disciplinares'':} las áreas disciplinares provienen taxonómicamente de las \textit{Knowledge Areas (KA)} definidas formalmente en los estándares de referencia ACM/IEEE CS2013 y CC2020 (e.g., \textit{Software Development Fundamentals}, \textit{Information Management}, \textit{Architecture and Organization}, \textit{Intelligent Systems}, \textit{Information Assurance and Security}).
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 5 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#5 — Definición de ACM, Ground Truth para ARI/NMI/Pureza y Métricas de Alineación:}\\
+\small
+\textit{¿Qué es la clasificación ACM?. Si se refiere a usar métricas externas como ARI y NMI, estas métricas requieren la etiqueta (clase) del conjunto de datos usado para el clustering, pero sus fuentes de datos creo que no la tienen. ¿Cómo se obtiene la clase/etiqueta de referencia?. ¿Qué métricas específicas usará para evaluar la alineación?. Aclare bien por favor.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Definición de ACM:} ACM corresponde a la \textit{Association for Computing Machinery}. En el proyecto refiere a la taxonomía formal de áreas del conocimiento del \textit{ACM Computing Classification System (CCS)} y de las guías curriculares ACM/IEEE CS2013 y CC2020.
+	\item \textbf{Generación del ground truth (etiquetas de referencia) para ARI, NMI y pureza:}
+	      dado que las mallas universitarias no poseen etiquetas disciplinares de fábrica, la generación de las etiquetas de referencia se realizó mediante un \textbf{curado manual} de la totalidad de las 747 asignaturas pertenecientes a los 16 programas que forman parte del corpus del informe, clasificando cada asignatura según las 18 \textit{Knowledge Areas} de los estándares ACM/IEEE. Esta anotación actúa como clase o etiqueta de referencia de verdad de terreno (\textit{ground truth}) para evaluar el agrupamiento algorítmico no supervisado con $ARI$, $NMI$ y pureza.
+	\item \textbf{Métricas específicas de evaluación de alineación de mallas:}
+	      la alineación de las mallas con los estándares y el mercado se mide mediante:
+	      \begin{itemize}
+		      \item \textbf{Similitud de coseno semántica ($\cos \theta$):} calculada entre los vectores de las asignaturas de la malla y los vectores de las \textit{Knowledge Areas} de ACM/IEEE o de los perfiles de LinkedIn.
+		      \item \textbf{Tasa de cobertura de la malla ($\% \text{Cobertura}$):} porcentaje de conceptos clave del estándar o del mercado representados semánticamente en las asignaturas de la malla ($\cos \theta \ge 0.60$).
+		      \item \textbf{Índice de brecha semántica ($1 - \cos \theta$):} distancia vectorial que cuantifica la ausencia o déficit de asignaturas en la malla respecto a requerimientos de la industria.
+	      \end{itemize}
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 6 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#6 — Sección Contexto (1.1), respaldos bibliográficos en Chile y referencia CC2020:}\\
+\small
+\textit{Revise la sección ``1.1 Contexto'' para que las referencias citadas respalden realmente lo que menciona acerca de la desconexión entre la academia y lo requerido por el campo laboral en Chile. Lo mismo al decir: ``Esta desconexión se agrava por la heterogeneidad...''. ¿Con esto queda claro que usted no entregará resultados con respecto a la heterogeneidad ya que se da por sentado que ya fue analizada?. En la misma sección dice: ``Para abordar esta fragmentación, organizaciones internacionales como ACM e IEEE... No obstante, su adopción en Chile ha sido desigual...''. ¿Esta referencia (CC2020) realmente respalda lo que menciona de lo que pasa en Chile?}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Respaldos bibliográficos del contexto chileno:} se reestructuró la Sección 1.1 incorporando citas bibliográficas de estudios en el contexto de la educación superior en Chile (e.g., informe SIEF de la Subsecretaría de Educación Superior, 2025; publicaciones sobre mallas e ingeniería chilena como Díaz-Quezada, 2019, y Latuz \& Piña, 2024).
+	\item \textbf{Aclaración sobre la heterogeneidad de mallas como premisa y objeto de medición:} se explicita en el texto que la heterogeneidad nominal y estructural de las mallas de informática en Chile (coexistencia de títulos de Ejecución, Civil, Informática, Computación) es un antecedente cualitativo documentado en la literatura nacional. Lo que este trabajo aporta como novedad \textbf{no es descubrir cualitativamente que las mallas son distintas}, sino proveer el \textbf{método computacional para medir, cuantificar semánticamente y comparar dichas diferencias de mallas de manera sistemática y reproducible}.
+	\item \textbf{Contextualización de la cita CC2020:} se ajustó la redacción para clarificar que \textit{CC2020 Task Force} (2020) fundamenta el marco internacional de competencias, mientras que la adopción desigual en Chile se sustenta en los informes del Consejo Nacional de Educación (CNED) y literatura local.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 7 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#7 — Motivación y fundamentación de la ``Metodología Bidireccional'':}\\
+\small
+\textit{Aterrice bien lo que realmente va a desarrollar ya que creo que decir que su propuesta pretende ser una metodología bidireccional entre teoría educativa y dinámica de mercado no aclara su propuesta de desarrollo real. Además aquí menciona que del ámbito académico usará directrices ACM/IEEE pero no menciona mallas/programas/perfiles. ¿Entonces su trabajo consiste en desarrollar una herramienta computacional que entregará resultados acerca del alineamiento entre ``algo'' de la academia y el mercado (LinkedIn) y que permitirá medir qué tan pertinentes son los planes de estudio?}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Aterrizaje del enfoque ``bidireccional'':} se reformuló la sección de motivación para precisar el alcance técnico exacto. El carácter ``bidireccional'' significa que el método realiza una evaluación analítica en dos vertientes complementarias:
+	      \begin{itemize}
+		      \item \textbf{Vertiente académico-normativa (top-down):} compara la estructura y asignaturas de las mallas curriculares nacionales frente a los estándares normativos internacionales ACM/IEEE CS2013/CC2020.
+		      \item \textbf{Vertiente mercado-laboral (bottom-up):} compara las asignaturas de las mallas y perfiles de egreso declarados frente a las demandas técnicas reales extraídas dinámicamente de vacantes laborales de LinkedIn.
+	      \end{itemize}
+	\item \textbf{Insumos académicos explícitos y producto entregable:} se explicita que la fuente de datos académica comprende las mallas curriculares y perfiles de egreso declarados de 16 programas universitarios chilenos. El resultado concreto es una \textbf{herramienta computacional (pipeline analítico + dashboard web interactivo)} que procesa estos insumos y entrega índices cuantitativos de alineación, matrices de brechas de mallas y mapas semánticos.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 8 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#8 — Diferencia de la propuesta con el trabajo de Russell E. (2024):}\\
+\small
+\textit{¿Cuál es la diferencia de su propuesta con el trabajo de Russell E. (2024) (mencionado en la tabla comparativa del anexo B) que no sea la cobertura del número de instituciones académicas? ¿lo que usted va a utilizar como fuente de información aumenta la profundidad de la habilidad enseñada que usó Russell?.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Diferencia en cobertura geográfica y sistemática de mallas:} el trabajo de Russell et al. (2024) evalúa de forma acotada un solo campo (Ciencia de Datos) en únicamente 2 instituciones de EE.UU. Nuestra propuesta abarca el sistema de educación superior chileno en Ingeniería Informática (16 mallas curriculares, 747 asignaturas), abordando la especificidad del idioma español y la heterogeneidad de títulos locales (Civil vs. Ejecución).
+	\item \textbf{Mayor profundidad en el procesamiento de mallas y perfiles:} Russell et al. utilizaron únicamente descripciones breves de cursos de un párrafo con técnicas léxicas/reglas (SkillNER + TF-IDF). Nuestra propuesta utiliza modelos de lenguaje de representación contextual profunda basadas en transformadores (SBERT / MPNet) aplicados sobre los títulos y descriptores de las asignaturas de las mallas y los perfiles de egreso declarados, capturando la semántica disciplinar completa.
+	\item \textbf{Triangulación simultánea de tres fuentes (vs. mapeo único):} mientras Russell et al. mapean cursos de forma unidireccional hacia la base O*NET, nuestro método computacional realiza una \textbf{triangulación tripartita simultánea}: \textit{Mallas curriculares} $\leftrightarrow$ \textit{Estándares ACM/IEEE} $\leftrightarrow$ \textit{Demanda laboral de LinkedIn}.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 9 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#9 — Propósito del Dashboard y Análisis de Asignaturas de la Malla:}\\
+\small
+\textit{El propósito de su propuesta dice: ``El dashboard integra mapas semánticos... para apoyar decisiones académicas operativas (actualización de contenidos prácticos)...'' ¿por qué dice que los resultados que mostrará el dashboard podría apoyar decisiones como por ejemplo actualizar sus contenidos prácticos si usted va a trabajar con los nombres de las asignaturas y no con los contenidos?. Un nombre de asignatura, por ejemplo: ``Base de datos'' no nos dice nada acerca de las habilidades desarrolladas... Si la asignatura enseña bases de datos SQL (relacional) no estaría para nada alineado con NoSQL MongoDB.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Alcance del dashboard como herramienta de apoyo humano a la toma de decisiones:} se concuerda plenamente con la observación de la comisión. Al trabajar a nivel de mallas curriculares y perfiles de egreso declarados, los resultados presentados en la plataforma constituyen exclusivamente un \textbf{insumo de apoyo para la toma de decisiones} académicas tácticas y estratégicas (tales como la identificación de vacíos o ausencias de asignaturas completas en la malla, desbalances de créditos entre áreas de la ACM y actualización de líneas formativas). Se enfatiza explícitamente que este sistema \textbf{no busca en ningún caso reemplazar el juicio de las personas, docentes ni comités académicos}, sino proveer evidencia analítica objetiva basada en datos para enriquecer y respaldar las deliberaciones humanas en los procesos de rediseño curricular.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 10 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#10 — Brecha tecnológica planteada en la propuesta:}\\
+\small
+\textit{En la ``Brecha tecnológica'' dice ``no existe una plataforma automatizada implantada que evalúe y compare objetivamente los programas de estudio''. ¿Ninguno de los trabajos de la tabla que muestra en el anexo B disminuyen esta brecha?.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Análisis de las soluciones de la literatura (Anexo B):} los trabajos revisados en el Anexo B abordan únicamente piezas parciales del problema. Por ejemplo: Miura et al. (2021) se acota a mapear currículos de computación hacia el estándar japonés ITSS+ en inglés; Constantinov et al. (2015) utiliza diccionarios estáticos; Fan et al. (2023) requiere etiquetado manual exhaustivo de rúbricas.
+	\item \textbf{Justificación de la brecha persistente:} ninguna de las soluciones existentes ofrece un \textbf{sistema integrado, automatizado, abierto y adaptado al español} que combine en una misma plataforma: (a) ingesta masiva de mallas curriculares y perfiles de egreso de educación superior, (b) mapeo semántico continuo hacia estándares internacionales (ACM/IEEE CS2013 y CC2020), (c) contraste dinámico con vacantes en tiempo real de LinkedIn, y (d) visualización mediante un dashboard interactivo enfocado en la comparación de mallas.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 11 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#11 — Ambigüedad en la pregunta de investigación y ``diferencias estructurales'':}\\
+\small
+\textit{Su pregunta de investigación dice: ¿Cuáles son las similitudes y diferencias estructurales entre los diversos programas de Ingeniería Informática en Chile, y cómo se alinean sus perfiles formativos tanto con los estándares internacionales IEEE/ACM como con las competencias demandadas por el mercado laboral en el sector TI?. Se resolverá la ambigüedad de esta pregunta cuando resuelva los puntos anteriores. Aquí aparece un nuevo término clave ``diferencias estructurales'' ¿a qué se refiere?}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Definición precisa de ``diferencias estructurales de mallas'':} el término ``diferencias estructurales'' se refiere explícitamente en el escrito a las variaciones cuantitativas observadas entre las \textbf{mallas curriculares} en la organización de su itinerario formativo:
+	      \begin{itemize}
+		      \item \textbf{Eje de cobertura disciplinar en la malla:} presencia y distribución diferencial de asignaturas pertenecientes a las distintas \textit{Knowledge Areas} de los estándares ACM/IEEE en cada plan de estudios.
+		      \item \textbf{Eje de balance modular:} proporción de asignaturas obligatorias del núcleo disciplinar versus asignaturas electivas o de formación general en la malla.
+	      \end{itemize}
+	\item \textbf{Reformulación de la pregunta de investigación:} la pregunta se ajustó en la Sección 2.2 para reflejar la precisión de los términos: \textit{“¿En qué medida difieren cuantitativamente la distribución disciplinar y la estructura de las mallas curriculares de Ingeniería Informática en Chile, y cuál es el grado de alineación semántica de sus asignaturas y perfiles de egreso declarados respecto a las directrices de los estándares internacionales ACM/IEEE (CS2013 y CC2020) y a las competencias tecnológicas demandadas por el mercado laboral local extraídas de LinkedIn?”}
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 12 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#12 — Enunciado del problema, tipos de planes, año de corte y mapeo con LinkedIn:}\\
+\small
+\textit{El enunciado del problema presenta una ``conjetura'', pero no clarifica los tipos de planes de estudio que usará (de corte tecnológico, tradicionales o ambos). ¿Usará planes que hayan sido re-diseñados hasta qué año?. Tampoco describe la relación entre asignaturas con los avisos de LinkedIn. Vuelva a formular el problema por favor.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Tipos de mallas incluidas en el corpus:} se especifica  en la Sección 2.2 y Anexo C que el corpus abarca \textbf{ambas modalidades de formación en informática existentes en Chile}: (a) mallas de corte tradicional de ciclo largo (\textit{Ingeniería Civil en Informática / Computación}, 5.5 a 6 años) y (b) mallas de corte tecnológico o de ejecución (\textit{Ingeniería de Ejecución en Computación e Informática / Ingeniería Informática}, 4 a 4.5 años).
+	\item \textbf{Criterio temporal y año de corte de las mallas:} se establece que el corpus considera las mallas curriculares e itinerarios formativos \textbf{vigentes y oficialmente dictados en el período 2018–2026} por las instituciones de la muestra.
+	\item \textbf{Mecanismo de relación entre asignaturas de la malla y avisos de LinkedIn:} las secciones de requisitos técnicos y funciones de las vacantes de LinkedIn son procesadas mediante NLP para generar vectores de requerimientos laborales $\mathbf{v}_{\text{job}}$. Dichos vectores se comparan directamente contra los vectores de las asignaturas de la malla $\mathbf{v}_{\text{asig}}$ mediante la similitud de coseno en el espacio vectorial compartido.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 13 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#13 — Justificación del enfoque de agrupamiento (K-Means, Jerárquico, DBSCAN):}\\
+\small
+\textit{En la justificación del enfoque está describiendo los métodos existentes pero no justifica el método que usted utilizará: ¿por qué utilizará K-Means y no otro?. Usted menciona que ``Por este motivo, este trabajo selecciona una estrategia comparativa tripartita que integra K Means, Agrupamiento Jerárquico y DBSCAN para proveer segmentaciones matemáticamente robustas y visualmente interpretables...''. ¿Otros métodos de agrupamiento no lo hacen?}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Justificación técnica de la estrategia tripartita complementaria:} se profundizó la fundamentación en la Sección 4.1. La elección combinada de K-Means, Agrupamiento Jerárquico y DBSCAN responde a que cada algoritmo resuelve una necesidad analítica distinta e insustituible sobre las mallas curriculares:
+	      \begin{itemize}
+		      \item \textbf{K-Means:} proporciona particiones convexas con centroides explícitos $\mathbf{c}_k$, ideales para calcular de forma directa los vectores promedio de las áreas disciplinares de la malla.
+		      \item \textbf{Agrupamiento jerárquico (Hierarchical Clustering):} genera dendrogramas que reflejan la taxonomía anidada de las mallas y las relaciones de sub-disciplina entre asignaturas.
+		      \item \textbf{DBSCAN:} algoritmo basado en densidad que \textbf{identifica explícitamente asignaturas atípicas o de ruido (\textit{outliers})}, es decir, asignaturas singulares en mallas de ciertas universidades que no encajan en grupos estándar.
+	      \end{itemize}
+	\item \textbf{Ventaja de la comparación tripartita:} la combinación de los tres provee un diagnóstico integral de mallas verificado mediante métricas de concordancia intrínseca.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 14 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#14 — Descripción del producto y pseudocódigo del método:}\\
+\small
+\textit{En la sección descripción del producto tiene que describir su método y el resultado entregado en su trabajo (dashboard). Como el método es computacional podría presentar por ejemplo un algoritmo en pseudocódigo que lo describa.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Descripción del método computacional y dashboard de mallas:} se reestructuró la Sección 5 describiendo el pipeline algorítmico de backend (ingesta de mallas y perfiles declarados, embebido SBERT, reducción UMAP) y la arquitectura del dashboard web interactivo en React enfocado en la comparación visual de mallas curriculares.
+	\item \textbf{Inclusión del algoritmo en pseudocódigo:} se incorporó en la Sección 5.1 el bloque formal de algoritmo en pseudocódigo (\textit{Algoritmo 1: Pipeline computacional de análisis semántico y comparación de mallas curriculares}), el cual se transcribe a continuación:
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\begin{algorithm}[H]
+	\caption{Pipeline computacional de análisis semántico y comparación de mallas curriculares}
+	\label{alg:pipeline_mallas}
+	\small
+	\begin{algorithmic}[1]
+		\Require Corpus de mallas $\mathcal{M} = \{M_1, M_2, \dots, M_n\}$, Perfiles de Egreso $\mathcal{P}$, Estándares $\mathcal{S}$ (ACM/IEEE KAs), Vacantes LinkedIn $\mathcal{L}$, Modelo SBERT $\mathcal{E}$
+		\Ensure Representaciones vectoriales, Clústeres de mallas, Matrices de Similitud $S$ y Dashboard en React
+		\Statex
+		\Procedure{PipelineAnalisisCurricular}{$\mathcal{M}, \mathcal{P}, \mathcal{S}, \mathcal{L}, \mathcal{E}$}
+			\State \textbf{Fase 1: Preprocesamiento y limpieza}
+			\For{cada asignatura $a \in M_i \in \mathcal{M}$}
+				\State $a_{\text{clean}} \leftarrow \text{NormalizarOrtografia}(\text{RemoverStopWords}(a.\text{nombre} \cup a.\text{descriptor}))$
+			\EndFor
+			\For{cada $p \in \mathcal{P}$, $s \in \mathcal{S}$, $l \in \mathcal{L}$}
+				\State $p_{\text{clean}} \leftarrow \text{LimpiezaTexto}(p)$, \quad $s_{\text{clean}} \leftarrow \text{LimpiezaTexto}(s)$, \quad $l_{\text{clean}} \leftarrow \text{LimpiezaTexto}(l)$
+			\EndFor
+			
+			\Statex
+			\State \textbf{Fase 2: Generación de embeddings multilingües}
+			\State $\mathbf{V}_{\mathcal{M}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{M}_{\text{clean}})$, \quad $\mathbf{V}_{\mathcal{P}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{P}_{\text{clean}})$
+			\State $\mathbf{V}_{\mathcal{S}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{S}_{\text{clean}})$, \quad $\mathbf{V}_{\mathcal{L}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{L}_{\text{clean}})$
+			
+			\Statex
+			\State \textbf{Fase 3: Modelamiento y agrupamiento semántico (clustering)}
+			\State $\mathcal{C}_{\text{kmeans}} \leftarrow \text{KMeans}(\mathbf{V}_{\mathcal{M}}, k)$, \quad $\mathcal{C}_{\text{hier}} \leftarrow \text{HierarchicalClustering}(\mathbf{V}_{\mathcal{M}})$
+			\State $\mathcal{O}_{\text{dbscan}} \leftarrow \text{DBSCAN}(\mathbf{V}_{\mathcal{M}}, \epsilon, \text{min\_pts})$ \Comment{Aislamiento de asignaturas atípicas}
+			
+			\Statex
+			\State \textbf{Fase 4: Comparación y alineación vectorial}
+			\For{cada programa $M_i \in \mathcal{M}$}
+				\State $S_{\text{ACM}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{\mathcal{S}})$ \Comment{Alineación con estándar ACM/IEEE}
+				\State $S_{\text{LinkedIn}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{\mathcal{L}})$ \Comment{Alineación con mercado TI}
+				\State $S_{\text{Perfil}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{P_i})$ \Comment{Alineación malla vs perfil}
+			\EndFor
+			
+			\Statex
+			\State \textbf{Fase 5: Despliegue en dashboard React}
+			\State Exportar matrices $\{S_{\text{ACM}}, S_{\text{LinkedIn}}, S_{\text{Perfil}}\}$ y coordenadas UMAP a formato JSON
+			\State Renderizar mapas semánticos interactivos y matrices de diferencias de mallas en React
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\newpage
+
+% --- OBSERVACIÓN 15 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#15 — Metodología, actividades por fase, objetivos específicos e hitos:}\\
+\small
+\textit{En su metodología ``capítulo 6 o 7'' debe definir claramente las actividades por fase y relacionar cada actividad con los objetivos específicos. Además, en la planificación debe indicar y describir los hitos (entregables/resultados explícitos y cuándo lo entregará) por fase.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Matriz de actividades por fase relacionadas con objetivos específicos:} en las Secciones 6 y 7 se detalló de manera explícita la correspondencia 1-a-1 entre fases metodológicas, actividades técnicas y Objetivos Específicos (OE1 a OE5).
+	\item \textbf{Definición de hitos y entregables explícitos por fase:} se incorporó en la Sección 7 una tabla formal de \textbf{Hitos de proyecto}, con los entregables verificables centrados en el análisis de mallas curriculares y perfiles de egreso declarados:
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\begin{table}[H]
+	\centering
+	\small
+	\renewcommand{\baselinestretch}{1.0}\selectfont
+	\caption{Hitos, entregables explícitos y vinculación con Objetivos Específicos.}
+	\label{tab:hitos_carta}
+	\captionsetup{skip=6pt}
+	\begin{tabularx}{\textwidth}{c p{3.2cm} X c c}
+		\toprule
+		\textbf{Hito} & \textbf{Fase CRISP-DM} & \textbf{Entregable / Resultado explícito} & \textbf{OE} & \textbf{Semana} \\
+		\midrule
+		\textbf{H1} & 1. Comprensión & Corpus crudo compilado (16 mallas curriculares, 747 asignaturas, perfiles de egreso, ACM, 200 vacantes LinkedIn). & OE1 & Sem 2 \\
+		\textbf{H2} & 2. Preparación & Dataset de mallas y perfiles estructurado y normalizado en JSON/SQL. & OE1 & Sem 4 \\
+		\textbf{H3} & 3. Modelamiento & Matriz de \textit{embeddings} SBERT de asignaturas de mallas y modelo de \textit{clustering}. & OE2, OE3 & Sem 8 \\
+		\textbf{H4} & 4. Evaluación & Reporte cuantitativo de métricas (Silhouette, Davies-Bouldin, ARI, NMI) y matriz de diferencias de mallas. & OE3, OE4 & Sem 12 \\
+		\textbf{H5} & 5. Despliegue & Dashboard interactivo de comparación de mallas desplegado en React y reporte de validación cualitativa por expertos. & OE4, OE5 & Sem 16 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\newpage
+
+% --- OBSERVACIÓN 16 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#16 — Coherencia entre título, pregunta de investigación, objetivos y alcance del trabajo:}\\
+\small
+\textit{En el contexto de los comentarios anteriores, se requiere verificar la coherencia entre el título del trabajo, la pregunta de investigación, el objetivo y lo declarado a hacer. En particular, los primero tres elementos parecen declarar acciones más complejas de las que es posible lograr a lo largo de un trabajo de titulación y escapan a lo que se declara como acciones concretas a realizar durante este.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Alineación integral y delimitación del alcance real:} se concuerda con la apreciación de la comisión evaluadora. Se ha realizado una revisión rigurosa del documento para garantizar la perfecta alineación entre el título del trabajo, la pregunta de investigación, el objetivo general y los objetivos específicos. Se explicita formalmente que la propuesta no pretende abarcar acciones complejas de intervención o rediseño curricular amplio a nivel nacional, sino desarrollar y validar empíricamente un \textbf{método computacional analítico-descriptivo} delimitado a un corpus representativo de 16 programas de educación superior.
+	\item \textbf{Precisión en la redacción de objetivos y acciones concretas:} se ajustaron las formulaciones en los Capítulos 2 y 3, sustituyendo expresiones generalistas por acciones concretas, operables y medibles dentro del horizonte temporal de un trabajo de titulación: (a) estructuración del corpus de mallas curriculares y perfiles de egreso, (b) generación de representaciones vectoriales mediante Sentence-BERT, (c) análisis de agrupamiento no supervisado y cálculo de distancias semánticas, y (d) desarrollo de un dashboard interactivo como herramienta de soporte visual.
+	\item \textbf{Verificación de coherencia de los componentes principales:} se verificó que el título refleje fielmente la técnica computacional empleada, que la pregunta de investigación indague sobre las métricas de alineación y diferencias entre mallas, y que cada objetivo específico responda directamente a una fase metodológica con entregables verificables.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- OBSERVACIÓN 17 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#17 — Revisión del contexto, formulación del problema y comprensión del trasfondo educativo:}\\
+\small
+\textit{Se debe revisar las afirmaciones realizadas en el contexto y formulación del problemas, dado que se abordan sin un conocimiento del ``negocio''. Afirmar la heterogeneidad y la obsolescencia de los diseños de planes de estudio, así como la necesidad de automatizar procesos curriculares sin entender el trasfondo educativo es un problema serio de la propuesta.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Revisión de juicios de valor y ajuste del tono conceptual:} se reestructuraron la Introducción (Sección 1.1) y la Formulación del Problema (Sección 2), eliminando aseveraciones sesgadas sobre la ``obsolescencia'' de los planes de estudio y la necesidad de una ``automatización'' rígida de la gestión curricular.
+	\item \textbf{Reconocimiento de la naturaleza del negocio educativo y la autonomía curricular:} se incorporó en el marco de la propuesta la consideración pedagógica e institucional del trasfondo educativo. Se explicita que la diversidad o heterogeneidad entre mallas curriculares responde legítimamente a la autonomía universitaria, a sellos formativos institucionales y a modelos educativos diferenciados (e.g., enfoque investigativo vs. tecnológico aplicativo), y no necesariamente a deficiencias del sistema.
+	\item \textbf{Rol del método computacional como insumo de apoyo human-in-the-loop:} se reformuló la utilidad del método computacional propuesto: este no pretende reemplazar los procesos reflexivos de diseño curricular ni la labor de las comisiones académicas, sino servir como un \textbf{instrumento de análisis descriptivo basado en evidencia empírica}, orientado a facilitar diagnósticos objetivos y visibilizar patrones de contenido para la deliberación informada de los especialistas educativos.
+\end{enumerate}
+
+\newpage
+
+% --- OBSERVACIÓN 18 ---
+\noindent
+\fcolorbox{gray!40}{quoteframe}{
+\parbox{0.96\linewidth}{
+\textbf{Observación \#18 — Criterios de selección de convocatorias de LinkedIn e inclusión de diversos sectores:}\\
+\small
+\textit{Se debe precisar los criterios de selección de las 200 convocatorias laborales de LinkedIn. Se considera importante incluir ofertas del mundo TI así como de empresas que su ámbito de trabajo sea distinto.}
+}
+}
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Respuesta y aclaración:}
+\begin{enumerate}[leftmargin=*]
+	\item \textbf{Explicitación de los criterios de selección y muestreo:} se detallaron en la Sección 4.1 y Anexo C los criterios sistemáticos de inclusión para las 200 convocatorias laborales recolectadas de LinkedIn: (a) ofertas publicadas en Chile durante el periodo 2024–2026, (b) presencia explícita de requisitos técnicos, competencias exigidas y descripción del rol, (c) ofertas dirigidas a perfiles del ámbito de la computación e informática (desarrollo de software, análisis de datos, ciberseguridad, infraestructura TI, gestión de proyectos tecnológicos), y (d) eliminación de ofertas duplicadas o ambiguas.
+	\item \textbf{Estratificación de la muestra (sector TI vs. empresas no-TI):} atendiendo al requerimiento de la comisión, se equilibró la muestra de 200 convocatorias dividiéndola formalmente en dos grandes estratos:
+	      \begin{itemize}
+		      \item \textbf{Sector tecnológico (mundo TI):} vacantes provenientes de empresas cuyo giro principal es la tecnología, desarrollo de software, consultoría TI e integración de sistemas (e.g., empresas de software, consultoras TI, startups tecnológicas).
+		      \item \textbf{Sector no-TI (industria usuaria de tecnologías):} vacantes de gerencias o áreas de informática en empresas de rubros no tecnológicos (e.g., banca y servicios financieros, minería, retail, telecomunicaciones, salud y sector público).
+	      \end{itemize}
+	\item \textbf{Valor del análisis comparativo estratificado:} esta diferenciación permite cuantificar si las mallas curriculares de las universidades chilenas presentan mayor alineación semántica con los requerimientos especializados de la industria del software o con las necesidades de digitalización de la industria no tecnológica tradicional.
+\end{enumerate}
+
+\vspace{0.6cm}
+\newpage
+\hypersetup{pageanchor=true}

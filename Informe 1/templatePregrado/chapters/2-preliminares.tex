@@ -1,0 +1,58 @@
+%--------Preliminares
+%--------Emir Muñoz Jiménez
+%--------13-10-2010
+
+\chapter{Planteamiento del problema}
+\label{cap:planteamiento}
+
+
+\section{Tecnologías del estado del arte}
+\label{cap:tecnologias}
+
+Previamente, diversas investigaciones han propuesto enfoques computacionales para abordar el análisis y la alineación curricular. 
+Uno de los procesos fundamentales comienza con la recopilación y gestión sistemática de datos, reuniendo información tanto de los entornos educativos como de las demandas del sector profesional \parencite{constantinov_preliminary_2015}. En este ámbito, se emplean algoritmos que transforman el texto crudo en vectores cuantificables. 
+Las metodologías abarcan desde ponderaciones clásicas como TF-IDF (Frecuencia de Término - Frecuencia Inversa de Documento) para identificar palabras clave, 
+hasta modelos de incrustación de palabras (Word Embeddings) de carácter continuo, tales como Word2Vec, GloVe o FastText, los cuales modelan relaciones semánticas y sintácticas proyectando las palabras en un espacio dimensional \parencite{naseem_comprehensive_2021}.
+
+
+Para evaluar la alineación entre los programas académicos y las demandas del entorno, las investigaciones utilizan métricas matemáticas de distancia, destacando la "similitud del coseno", la cual permite medir la correspondencia semántica entre los vectores de las asignaturas y los de los estándares industriales \parencite{miura_automated_2021}. 
+Más recientemente, la evolución hacia Modelos de Lenguaje Grande (LLMs) y arquitecturas basadas en transformadores (como BERT o RoBERTa) ha posibilitado aplicar metodologías de cero disparos (Zero-shot) y esquemas híbridos como la Generación Aumentada por Recuperación (RAG), que vinculan bases de datos vectoriales para filtrar habilidades de forma automatizada y contextual \parencite{cristea_course_2025}.
+
+La literatura  contrasta frecuentemente el rendimiento de distintos enfoques para automatizar el análisis curricular. 
+\textcite{fan_identifying_2023} comparan algoritmos clásicos de aprendizaje automático como Redes Neuronales Artificiales (ANN), Random Forest, XGBoost y Máquinas de Vectores de Soporte (SVM), demostrando que SVM es el método más efectivo y consistente para identificar capacidades digitales en rúbricas universitarias, logrando una exactitud de 0.8535 y un F1-score de 0.8338 cuando se utiliza un conjunto óptimo de características extraídas mediante TF-IDF \parencite{fan_identifying_2023}.
+Por otro lado, al evaluar la transición hacia arquitecturas neuronales semánticas, \textcite{miura_automated_2021} evidencian que el aprendizaje supervisado con representaciones distribuidas (word embeddings) captura mejor la abstracción de los documentos educativos, superando ampliamente en la medida F (0.571) al enfoque tradicional Bag-of-Words (0.333) \parencite{miura_automated_2021}.
+
+
+
+
+
+
+
+
+
+
+\section{Brecha tecnológica}
+\label{cap:brecha}
+ A pesar de los significativos avances en el campo de la analítica curricular (Curriculum Analytics), persiste una desconexión crítica entre la sofisticación de los algoritmos de vanguardia y
+  su implementación práctica en las instituciones educativas. El proceso de ajuste curricular sigue siendo, en gran medida, una tarea predominantemente manual y propenso a
+  sesgos subjetivos, lo que impide su escalabilidad y una actualización ágil en respuesta al escenario tecnológico cambiante..
+
+  En el contexto local, se observa una ausencia de herramientas y estudios específicos adaptados al ecosistema chileno. Esta carencia es especialmente crítica en la carrera
+  de Ingeniería en Informática, un área caracterizada por una volatilidad tecnológica  donde los lenguajes, frameworks y metodologías cambian a un ritmo que los procesos de rediseño curricular tradicionales no logran seguir. 
+  Actualmente, no existe una plataforma automatizada que permita a las facultades de ingeniería en Chile contrastar su oferta académica con las
+  demandas reales de la industria local de manera sistemática.
+
+  A nivel metodológico, la revisión del estado del arte evidencia una brecha significativa: la falta de estandarización en los procesos analíticos. Cada autor y estudio aborda la extracción y
+  comparación de competencias utilizando flujos de trabajo (pipelines) ad-hoc, creados específicamente para un conjunto de datos aislado. La ausencia de una arquitectura de datos estandarizada o un pipeline replicable imposibilita realizar comparaciones objetivas entre diferentes instituciones o contrastar estudios a lo largo del tiempo. 
+
+
+
+
+
+
+
+\section{Enunciado del problema}
+\label{cap:enunciado}
+Dado el contexto anterior, surge la siguiente interrogante: ¿Cuáles son las similitudes y diferencias estructurales entre los diversos programas de Ingeniería         
+Informática en Chile, y cómo se alinean sus perfiles formativos tanto con los estándares internacionales IEEE/ACM como con las competencias demandadas por el mercado laboral en el
+sector TI? 

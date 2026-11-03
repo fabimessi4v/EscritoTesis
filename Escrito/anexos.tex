@@ -1,0 +1,273 @@
+
+%Results from the state-of-the-art strategies
+%\setcounter{page}{1}
+\subsection{Resumen comparativo de trabajos relacionados sobre alineación curricular automatizada.}
+\begin{landscape}
+\footnotesize
+\renewcommand{\baselinestretch}{1.0}\selectfont
+\renewcommand{\arraystretch}{1.2}
+\begin{xltabular}{\linewidth}{p{2.2cm} X X X X}
+    \caption{Análisis comparativo de objetivos, metodologías, resultados y limitaciones de la literatura de mapeo curricular.} \label{tab:estado_arte} \\
+    \toprule
+    \textbf{Referencia} &
+    \textbf{Objetivo}   &
+    \textbf{Metodología} &
+    \textbf{Resultados principales} &
+    \textbf{Limitaciones identificadas} \\
+    \midrule
+    \endhead
+
+    \citep{russell_e_mapping_2024} & 
+    Automatizar el mapeo de planes de estudio hacia habilidades y ocupaciones de la industria utilizando descripciones de cursos. & 
+    Procesamiento de Lenguaje Natural (NLP) usando SkillNER, extracción de características con ponderación TF-IDF y similitud del coseno para emparejar con O*NET. & 
+    Extracción promedio de 5.3 a 10.4 habilidades por curso. Fuerte precisión (precision@5 del 60\% al 100\%). Fuerte señal de habilidades incluso en textos breves. & 
+    Evaluación limitada a un campo (ciencia de datos) y dos instituciones. Falsos positivos por coincidencia léxica. Falta información sobre la profundidad de la habilidad enseñada. \\
+    \addlinespace
+    
+    \citep{cristea_course_2025} & 
+    Evaluar el rendimiento de LLM frente a métodos NLP tradicionales en la extracción de habilidades para la analítica curricular. & 
+    Comparación de estrategias: Generación Aumentada por Recuperación (RAG), prompting Zero-shot (GPT, Llama, Gemini, Claude), modelos basados en embeddings (SBERT) y TF-IDF en 400 documentos. & 
+    RAG fue la estrategia con mejor desempeño en todos los documentos. El prompting Zero-shot tuvo peor rendimiento que métodos NLP tradicionales en la mayoría de los casos. & 
+    El rendimiento varía significativamente según el modelo seleccionado y las estrategias de prompting. Requiere diseño y ajuste cuidado antes de implementaciones a gran escala. \\
+    \addlinespace
+    
+    \citep{cristea_artificial_2025} & 
+    Evaluar el rol de la IA Generativa (LLMs) como co-revisor curricular para generar mapeos ponderados de habilidades en evaluaciones. & 
+    Uso de GPT-4.0 frente a métodos ML (BERT, TF-IDF) para mapear 7 habilidades empresariales. Uso del alfa de Krippendorff para comparar resultados con el juicio de expertos. & 
+    Los mapeos generados por LLM se alinearon más con el juicio experto (alfa 0.76) que los métodos ML (0.65). Alta precisión en competencias como Comunicación Oral y Trabajo en Equipo. & 
+    Limitado a un solo LLM y programa de estudios. Desempeño débil en habilidades que se infieren del contexto (ej. Comunicación escrita) y no se detallan en el texto. \\
+    \addlinespace
+    
+    \citep{fan_identifying_2023} & 
+    Identificar capacidades digitales evaluadas en rúbricas de cursos universitarios de manera automatizada utilizando Machine Learning. & 
+    Extracción de características mediante TF-IDF. Comparación de clasificadores: Redes Neuronales (ANN), Máquinas de Vectores de Soporte (SVM), Random Forest y XGBoost. & 
+    SVM obtuvo el mejor rendimiento (exactitud 0.8535 y F1-score 0.8338). El rendimiento mejora y luego decae al aumentar las características extraídas. & 
+    Dependencia de la intervención humana para etiquetar los datos de entrenamiento (solo 1.735 muestras etiquetadas). Los algoritmos probados no pueden utilizar pesos difusos para mitigar ruido. \\
+    \addlinespace
+    
+    \citep{duarte_broader_2023} & 
+    Generar representaciones visuales comprensibles de los planes de estudio para reducir brechas de comunicación entre los actores. & 
+    Clasificación usando índices de Wikipedia, NLP (tokenización y normalización), y visualización mediante ideogramas circulares y grafos de red. & 
+    El mapeo apoyó con evidencia visual las debilidades del programa. Las representaciones cuantitativas empoderan el entendimiento entre diferentes grupos de interés. & 
+    Las representaciones agrupan conceptos pero no trazan rutas de aprendizaje precisas o de precedencia detalladas, requiriendo revisión y otras herramientas para detalles exactos. \\
+    \addlinespace
+    
+    \citep{miura_automated_2021} & 
+    Mapear automáticamente programas educativos de ciencias de la computación frente a estándares de aprendizaje (ITSS+) para reducir costos manuales. & 
+    Representación de texto usando Bag-of-Words (BoW) y Word Embeddings (Word2Vec). Emparejamiento usando similitud del coseno y algoritmos de aprendizaje supervisado. & 
+    El aprendizaje supervisado con Word Embeddings alcanzó la mayor medida F (0.571), superando ampliamente a enfoques tradicionales como BoW (0.333) al capturar semántica abstracta. & 
+    Requiere aumentar los datos de entrenamiento y cuantificar más correctamente características ponderando partes importantes del material didáctico. \\
+    \addlinespace
+    
+    \citep{constantinov_preliminary_2015} & 
+    Ajustar un currículo de ingeniería extrayendo las demandas del mercado laboral a través de redes profesionales. & 
+    Pipeline de datos para Análisis de Redes Profesionales (PNA) con perfiles de LinkedIn. Extracción de habilidades en sílabos mediante TF-IDF y diccionarios personalizados. & 
+    El sistema identificó habilidades del plan de estudios obsoletas en la industria y habilidades muy demandadas en el trabajo que el programa académico no estaba cubriendo. & 
+    Metodología basada en diccionarios personalizados estáticos y extracción mediante palabras clave sin abordajes semánticos complejos o contextuales de modelado de lenguaje. \\
+  
+    \bottomrule
+\end{xltabular}
+\end{landscape}
+
+
+
+
+% Anexo 3
+\subsection{Descripción del corpus de datos}
+\label{app:corpus}
+ \begin{table}[H]
+        \centering
+        \small
+        % interlineado simple dentro de la tabla (1.0)
+        \renewcommand{\baselinestretch}{1.0}\selectfont
+        \caption{Planes de estudio y asignaturas recopiladas por universidad.}
+        \label{tab:corpus_universidades}
+        \captionsetup{skip=8pt}                                                                                              
+                                                                                                                             
+        % Definimos el contador de filas (se resetea al inicio de la tabla)
+        \newcounter{contadorFilas}
+        \setcounter{contadorFilas}{0}
+        
+        % Comando para terminar la fila incrementando el contador y dibujando una línea horizontal
+        \newcommand{\finFila}{%
+          \stepcounter{contadorFilas}%
+          \\ \hline%
+        }
+        
+        % Definición de columnas con alineación a la izquierda (raggedright) para evitar espacios gigantes
+        \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X c}                                                                              
+            \toprule                                                                                                         
+            \textbf{Universidad} &                                                                                           
+            \textbf{Carrera / Programa} &                                                                                    
+            \textbf{N\textsuperscript{o} Asignaturas} \\                                                                                    
+            \midrule                                                                                                         
+                                                                                                                             
+            % Fila 1                                                                                              
+            Universidad de Santiago de Chile &                                                                               
+            Ingeniería de Ejecución en Computación e Informática &                                                                                
+            43 \finFila                                                                                       
+                                                                                                                             
+            % Fila 2                                                                                              
+            Universidad de Santiago de Chile &                                                                                           
+            Ingeniería Civil en Informática &                                                                                
+            58 \finFila
+            
+            % Fila 3 
+            Universidad de Chile & 
+            Ingeniería Civil en Computación & 
+            54 \finFila
+            
+            % Fila 4
+            Universidad Andrés bello & 
+            Ingeniería en Computación e informática & 
+            41 \finFila
+            
+            % Fila 5
+            Universidad de Magallanes & 
+            Ingeniería en Computación e Informática & 
+            41 \finFila
+
+            % Fila 6
+            Universidad Tecnológica Metropolitana & 
+            Ingeniería en Informática & 
+            44 \finFila
+
+            % Fila 7
+            Universidad de Concepción & 
+            Ingeniería Civil Informática & 
+            54 \finFila
+
+            % Fila 8
+            Universidad Técnica Federico Santa María & 
+            Ingeniería en Informática & 
+            42 \finFila
+
+            % Fila 9
+            Pontificia Universidad Catolica de Valparaiso  & 
+            Ingeniería Informática & 
+            44 \finFila
+
+            % Fila 10
+            DuocUC  & 
+            Ingeniería Informática & 
+            33 \finFila
+
+            % Fila 11
+            Universidad San Sebastián  & 
+            Ingeniería Civil en Informática & 
+            50 \finFila
+
+            % Fila 12
+            Universidad Santo Tomás   & 
+            Ingeniería Civil en Informatica y Sistemas Inteligentes  & 
+            60 \finFila
+
+            % Fila 13
+            Universidad de la Frontera   & 
+            Ingeniería Civil Informática  & 
+            57 \finFila
+
+            % Fila 14
+            Universidad del Bío-Bío   & 
+            Ingeniería de Ejecución en Computación e Informática  & 
+            46 \finFila
+
+            % Fila 15
+            Universidad de Talca   & 
+            Ingeniería Civil en Computación  & 
+            43 \finFila
+
+            % Fila 16
+            Universidad Autonoma  & 
+            Ingeniería en Informática  & 
+            32 \finFila
+            
+            \multicolumn{2}{l}{\textbf{Total del Corpus (16 Programas / Planes de Estudio)}} & \textbf{747} \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+% Anexo 4
+\subsection{Protocolo y caracterización de la muestra de datos de LinkedIn}
+\label{app:linkedin_sample}
+
+Con el fin de garantizar la representatividad, validez y reproducibilidad del análisis de pertinencia laboral, se define un protocolo formal para la selección y curaduría de la muestra de ofertas de empleo provenientes de la plataforma LinkedIn:
+
+\begin{enumerate}[label=\alph*.]
+    \item \textbf{Tamaño y estratificación muestral objetivo ($N$)}: Se establece una muestra total de $N = 200$ anuncios de empleo curados y estructurados recopilados en Chile (2024–2026). Para capturar adecuadamente la diversidad de la demanda laboral local, la muestra se divide formalmente en dos estratos:
+    \begin{itemize}
+        \item \textbf{Sector Tecnológico (Mundo TI):} Empresas cuyo giro principal es el desarrollo de software, servicios de consultoría TI, telecomunicaciones y startups tecnológicas.
+        \item \textbf{Sector No-TI (Industria Usuaria):} Empresas de sectores tradicionales (banca e instituciones financieras, minería, retail, salud, energía y servicios públicos) que requieren perfiles informáticos para sus departamentos de tecnología interna y transformación digital.
+    \end{itemize}
+    \item \textbf{Ventana temporal de captura}: Avisos de trabajo publicados activamente entre enero de 2024 y junio de 2026.
+    \item \textbf{Categorías de cargos consideradas}: La selección abarca los perfiles profesionales más representativos del mercado de TI en Chile:
+    \begin{itemize}
+        \item Desarrollador de Software / Ingeniero de Software (\textit{Backend}, \textit{Frontend}, \textit{Fullstack}).
+        \item Ingeniero / Arquitecto de Datos (\textit{Data Engineer / Architect}).
+        \item Científico de Datos / Analista de Inteligencia Artificial (\textit{Data Scientist / AI Specialist}).
+        \item Ingeniero de Infraestructura y Operaciones (\textit{DevOps / Cloud Engineer}).
+        \item Ingeniero en Ciberseguridad y Redes.
+        \item Arquitecto de Software y Sistemas.
+    \end{itemize}
+    \item \textbf{Criterios de inclusión y exclusión}:
+    \begin{itemize}
+        \item \textit{Inclusión}: Ofertas laborales localizadas en Chile (presencial, híbrido o remoto), con descripción detallada de funciones, requisitos técnicos explícitos y nivel de experiencia (junior, semi-senior, senior).
+        \item \textit{Exclusión}: Avisos duplicados, ofertas de pasantías o prácticas profesionales no remuneradas, solicitudes con descripciones genéricas sin requerimientos tecnológicos concretos, y vacantes orientadas puramente a ventas o gestión comercial sin exigencia técnica.
+    \end{itemize}
+    \item \textbf{Protocolo de curaduría y lematización}: Extracción de textos mediante estructuración de secciones de ``Requisitos'' y ``Responsabilidades'', seguida por filtrado de palabras vacías laborales (ej. ``empresa'', ``beneficios'', ``postular'') y extracción de entidades tecnológicas (lenguajes, frameworks, metodologías).
+    \item \textbf{Cumplimiento de Términos de Servicio (ToS)}: La captura de datos se realiza en estricto cumplimiento con los Términos de Servicio de LinkedIn, utilizando información de acceso público de forma manual o mediante APIs de consulta de vacantes públicas para fines exclusivamente de investigación académica sin fines de lucro, sin scraping masivo ni almacenamiento de datos personales identificables de reclutadores o postulantes.
+\end{enumerate}
+
+% Anexo 5
+\subsection{Flujo de procesamiento metodológico}
+\label{app:flujo_metodologico}
+
+\begin{table}[H]
+    \centering
+    \small
+    \renewcommand{\baselinestretch}{1.0}\selectfont
+    \caption{Detalle de entradas, procesos y salidas del flujo metodológico mínimo.}
+    \label{tab:flujo_metodologico_detalle}
+    \captionsetup{skip=8pt}
+    \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+        \toprule
+        \textbf{Fase} & \textbf{Entrada / Fuentes} & \textbf{Resultado / Salida} \\
+        \midrule
+        1. Recolección & Mallas, PDF de asignaturas, estándares, LinkedIn & Documentos crudos en base de datos \\
+        2. Limpieza & Textos crudos extraídos & Textos planos limpios en minúsculas \\
+        3. Normalización & Nombres de asignaturas heterogéneos & Nombres estandarizados y homologados \\
+        4. Construcción Corpus & Textos normalizados y filtrados & Base de datos del corpus estructurado \\
+        5. Rep. Vectorial & Corpus estructurado & Vectores densos (embeddings multilingües) \\
+        6. Reducción Dim. & Vectores de alta dimensionalidad & Vectores en espacio de menor dimensión \\
+        7. Clustering & Vectores de asignaturas/perfiles & Clústeres (K-Means, Jerárquico) y Outliers (DBSCAN) \\
+        8. Similitud & Vectores y centroides de grupos & Índices de brecha y alineación semántica \\
+        9. Visualización & Métricas de alineación y clústeres & Gráficos interactivos y reportes visuales \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+% Anexo 6
+\subsection{Planificación temporal del proyecto (Carta Gantt)}
+\label{app:gantt}
+
+\begin{table}[H]
+    \centering
+    \small
+    \renewcommand{\baselinestretch}{1.0}\selectfont
+    \caption{Carta Gantt con la distribución temporal de las actividades (en semanas).}
+    \label{tab:carta_gantt}
+    \captionsetup{skip=8pt}
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6cm} c c c c c c c c}
+        \toprule
+        \textbf{Actividad / Semana} & \textbf{1-2} & \textbf{3-4} & \textbf{5-6} & \textbf{7-8} & \textbf{9-10} & \textbf{11-12} & \textbf{13-14} & \textbf{15-16} \\
+        \midrule
+        Fase 1: Recolección y comprensión & \cellcolor{gray!40}X & \cellcolor{gray!40}X & & & & & & \\
+        Fase 2: Preparación de datos & & \cellcolor{gray!40}X & \cellcolor{gray!40}X & & & & & \\
+        Fase 3: Modelamiento y embeddings & & & \cellcolor{gray!40}X & \cellcolor{gray!40}X & \cellcolor{gray!40}X & & & \\
+        Fase 4: Evaluación y métricas & & & & & \cellcolor{gray!40}X & \cellcolor{gray!40}X & & \\
+        Fase 5: Despliegue (Dashboard) & & & & & & \cellcolor{gray!40}X & \cellcolor{gray!40}X & \\
+        Redacción informe y validación & \cellcolor{gray!20}X & \cellcolor{gray!20}X & \cellcolor{gray!20}X & \cellcolor{gray!20}X & \cellcolor{gray!20}X & \cellcolor{gray!20}X & \cellcolor{gray!40}X & \cellcolor{gray!40}X \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+

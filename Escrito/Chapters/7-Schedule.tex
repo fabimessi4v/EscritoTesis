@@ -1,0 +1,38 @@
+\section{Plan de trabajo}
+\label{cap:Schedule}
+
+\subsection{Definición de Actividades e Hitos}
+\label{sec:activities_milestones}
+
+Las actividades del proyecto se estructuran temporalmente a lo largo de un semestre académico (16 semanas de trabajo), organizadas según las fases de la metodología CRISP-DM y vinculadas de forma directa con los Objetivos Específicos (OE1 a OE5).
+
+Para garantizar la verificabilidad del avance del proyecto y la entrega oportuna de resultados, se definen cinco \textbf{Hitos de Proyecto (H1 a H5)} con sus correspondientes entregables explícitos y semanas de término, tal como se sintetiza en la Tabla~\ref{tab:hitos_planification}:
+
+\vspace{0.3cm}
+
+\begin{table}[H]
+	\centering
+	\small
+	\renewcommand{\baselinestretch}{1.0}\selectfont
+	\caption{Hitos, entregables explícitos y vinculación con Objetivos Específicos.}
+	\label{tab:hitos_planification}
+	\captionsetup{skip=6pt}
+	\begin{tabularx}{\textwidth}{c p{3.2cm} X c c}
+		\toprule
+		\textbf{Hito} & \textbf{Fase CRISP-DM} & \textbf{Entregable / Resultado Explícito} & \textbf{OE} & \textbf{Semana} \\
+		\midrule
+		\textbf{H1} & 1. Comprensión & Corpus crudo compilado (16 mallas curriculares, 747 asignaturas, perfiles de egreso declarados, ACM, 200 vacantes de LinkedIn). & OE1 & Sem 2 \\
+		\textbf{H2} & 2. Preparación & Dataset de mallas y perfiles estructurado y normalizado en JSON/SQL, y \textit{ground truth} etiquetado de 747 asignaturas. & OE1 & Sem 4 \\
+		\textbf{H3} & 3. Modelamiento & Matriz de \textit{embeddings} SBERT de asignaturas de mallas y modelos de \textit{clustering} (K-Means, Jerárquico, DBSCAN). & OE2, OE3 & Sem 8 \\
+		\textbf{H4} & 4. Evaluación & Reporte cuantitativo de métricas (Silhouette, Davies-Bouldin, ARI, NMI, Pureza), análisis bootstrap y matriz de diferencias de mallas. & OE3, OE4 & Sem 12 \\
+		\textbf{H5} & 5. Despliegue & Dashboard interactivo de comparación de mallas desplegado en React y reporte de validación cualitativa por expertos. & OE4, OE5 & Sem 16 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\vspace{0.3cm}
+
+\subsection{Carta Gantt}
+\label{sec:gantt_chart}
+
+La planificación temporal detallada de las tareas, dependencias entre fases y asignación de semanas a lo largo del periodo académico se presenta en la representación gráfica de la Carta Gantt ubicada en la Tabla del Anexo F.

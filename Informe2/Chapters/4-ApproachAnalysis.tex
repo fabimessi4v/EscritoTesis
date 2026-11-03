@@ -1,0 +1,29 @@
+\section{Análisis del enfoque}
+\label{cap:approachAnalysis}
+
+\subsection{Representación Vectorial Contextual en Espacio Compartido}
+\label{sec:nlp_representation}
+
+Para vectorizar los textos del corpus sin sufrir las limitaciones de los modelos de bolsa de palabras (TF-IDF) ni la falta de contexto de los \textit{word embeddings} estáticos, se seleccionan modelos de lenguaje basados en transformadores multilingües (\textit{Sentence-Transformers} como \textit{paraphrase-multilingual-mpnet-base-v2} o \textit{multilingual-e5-large}). Estos modelos permiten proyectar los títulos y descriptores modulares de las asignaturas de las mallas, las oraciones de los perfiles de egreso declarados, las definiciones de las \textit{Knowledge Areas} de la ACM/IEEE y las secciones de requerimientos de las vacantes de LinkedIn dentro de un \textbf{mismo espacio vectorial latente continuo ($\mathbb{R}^d$)}. Esta proyección homotópica habilita el cálculo directo de distancia euclidiana y similitud de coseno ($\cos \theta$) entre elementos de distintas fuentes de datos en español e inglés.
+
+La alineación y las brechas semánticas entre una malla curricular $M_i$ y una fuente de referencia (ACM o LinkedIn) se cuantifican mediante tres métricas principales:
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{Similitud de Coseno ($\cos \theta$):} Mide la orientación relativa entre el vector de una asignatura $\mathbf{v}_{\text{asig}}$ y el vector de una competencia o área de conocimiento $\mathbf{v}_{\text{ref}}$:
+	      \begin{equation}
+		      \cos(\mathbf{v}_{\text{asig}}, \mathbf{v}_{\text{ref}}) = \frac{\mathbf{v}_{\text{asig}} \cdot \mathbf{v}_{\text{ref}}}{\|\mathbf{v}_{\text{asig}}\| \|\mathbf{v}_{\text{ref}}\|}
+	      \end{equation}
+	\item \textbf{Tasa de Cobertura de la Malla ($\% \text{Cobertura}$):} Representa el porcentaje de conceptos clave o \textit{Knowledge Areas} del estándar internacional o del mercado laboral representados en la malla curricular con una similitud semántica $\cos \theta \ge 0.60$.
+	\item \textbf{Índice de Brecha Semántica ($1 - \cos \theta$):} Cuantifica la distancia vectorial que refleja el déficit o la ausencia explícita de asignaturas en la malla curricular para cubrir requerimientos tecnológicos específicos.
+\end{enumerate}
+
+\subsection{Justificación de la Estrategia Tripartita de Agrupamiento}
+\label{sec:clustering_justification}
+
+Para descubrir la estructura disciplinar de las mallas curriculares y agrupar las asignaturas de forma no supervisada, se adopta una \textbf{estrategia comparativa tripartita} que combina K-Means, Agrupamiento Jerárquico (\textit{Hierarchical Clustering}) y DBSCAN. Esta combinación no es arbitraria; responde a que cada algoritmo resuelve una necesidad analítica complementaria e insustituible sobre los datos curriculares:
+\begin{enumerate}[label=\arabic*.]
+	\item \textbf{K-Means Clustering:} Produce particiones convexas en $k$ grupos maximizando la homogeneidad interna. Su principal ventaja matemática radica en que calcula centroides explícitos $\mathbf{c}_k \in \mathbb{R}^d$ para cada clúster, los cuales actúan como la representación vectorial promedio de un área disciplinar dentro de la malla. El número óptimo de clústeres $k$ se determina mediante la maximización del Coeficiente de Silhouette.
+	\item \textbf{Agrupamiento Jerárquico Aglomerativo (Ward Linkage):} Construye una estructura arborescente o dendrograma que preserva las relaciones de jerarquía y subordinación taxonómica entre asignaturas (e.g., relacionando asignaturas de programación básica con materias de ingeniería de software avanzada). Permite visualizar los niveles de abstracción disciplinar sin prefijar el número de grupos.
+	\item \textbf{DBSCAN (Density-Based Spatial Clustering of Applications with Noise):} Algoritmo basado en densidad que define clústeres como regiones densas de vectores en $\mathbb{R}^d$ separadas por zonas de baja densidad. Su función técnica crucial en este proyecto es la \textbf{detección y aislamiento explícito de asignaturas atípicas o ruido (\textit{outliers})}, es decir, asignaturas singulares presentes en mallas de ciertas universidades que no encajan en las agrupaciones estándar del sistema.
+\end{enumerate}
+
+Para evaluar la validez externa de los clústeres generados frente a un estándar objetivo, se realiza una anotación manual de las 747 asignaturas del corpus clasificándolas en las 18 \textit{Knowledge Areas} de la ACM (CS2013). Esta clasificación actúa como etiqueta de referencia (\textit{ground truth}) para calcular el Índice Rand Ajustado ($\text{ARI} \ge 0.35$), la Información Mutua Normalizada ($\text{NMI} \ge 0.40$) y la Pureza del agrupamiento ($\text{Purity} \ge 0.70$).

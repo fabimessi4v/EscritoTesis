@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defensa de Tesis | Fabián Ibarra - Alineación Curricular NLP</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ==========================================
+       USACH OFFICIAL THEME & COLOR PALETTE
+       (Estilo Institucional Presentación Fabián Ibarra)
+       ========================================== */
+    :root {
+      --usach-teal: #149389;
+      --usach-teal-light: #00a896;
+      --usach-teal-bg: #f0fdfa;
+      --usach-orange: #ea7600;
+      --usach-orange-light: #f26a00;
+      --usach-orange-bg: #fff7ed;
+      
+      --bg-white: #ffffff;
+      --bg-light: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      
+      --border-color: #e2e8f0;
+      --border-glow: rgba(20, 147, 137, 0.4);
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      
+      --accent-cyan: #149389;
+      --accent-blue: #0284c7;
+      --accent-purple: #7e22ce;
+      --accent-emerald: #0d9488;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      
+      --gradient-primary: linear-gradient(135deg, #149389 0%, #00a896 100%);
+      --gradient-orange: linear-gradient(135deg, #ea7600 0%, #f26a00 100%);
+      
+      --font-title: 'Outfit', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      
+      --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+      --shadow-glow: 0 8px 30px rgba(20, 147, 137, 0.15);
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--font-body);
+      background: var(--bg-white);
+      color: var(--text-main);
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TOP DUAL-COLOR BAR (Teal 30% / Orange 70%) */
+    .usach-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      display: flex;
+      z-index: 150;
+    }
+
+    .top-bar-teal { width: 30%; height: 100%; background: var(--usach-teal); }
+    .top-bar-orange { width: 70%; height: 100%; background: var(--usach-orange); }
+
+    /* BOTTOM TEAL BAR */
+    .usach-bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: var(--usach-teal);
+      z-index: 150;
+    }
+
+    /* ==========================================
+       FLOATING CONTROLS
+       ========================================== */
+    .floating-header-brand {
+      position: fixed;
+      top: 22px;
+      left: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .usach-seal-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--usach-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      padding: 2px;
+    }
+
+    .usach-seal-circle img { width: 100%; height: 100%; object-fit: contain; }
+    .diinf-logo-img { height: 34px; object-fit: contain; }
+
+    .floating-controls {
+      position: fixed;
+      top: 22px;
+      right: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 0.85rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    /* SEPARATE CSS RULES TO PREVENT VENDOR PREFIX PARSING FAILURES */
+    body.hide-controls .floating-controls,
+    body.in-fullscreen .floating-header-brand,
+    body.in-fullscreen .floating-controls {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    :fullscreen .floating-header-brand { display: none !important; }
+    :fullscreen .floating-controls { display: none !important; }
+
+    :-webkit-full-screen .floating-header-brand { display: none !important; }
+    :-webkit-full-screen .floating-controls { display: none !important; }
+
+    :-moz-full-screen .floating-header-brand { display: none !important; }
+    :-moz-full-screen .floating-controls { display: none !important; }
+
+    /* FLOATING MINI UNHIDE BUTTON (Visible when controls are hidden) */
+    .unhide-mini-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 160;
+      background: rgba(20, 147, 137, 0.9);
+      color: #ffffff;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-size: 0.85rem;
+      transition: transform 0.2s ease;
+    }
+
+    .unhide-mini-btn:hover {
+      transform: scale(1.15);
+      background: var(--usach-teal);
+    }
+
+    body.hide-controls .unhide-mini-btn,
+    body.in-fullscreen .unhide-mini-btn {
+      display: flex !important;
+    }
+
+    /* 15-Minute Countdown Timer Widget */
+    .timer-widget {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--usach-teal-bg);
+      border: 1px solid var(--usach-teal);
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--usach-teal);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .timer-widget.warning {
+      background: var(--usach-orange-bg);
+      border-color: var(--usach-orange);
+      color: var(--usach-orange);
+      animation: blinkTimer 1s infinite alternate;
+    }
+
+    .timer-widget.danger {
+      background: #fff1f2;
+      border-color: var(--accent-rose);
+      color: var(--accent-rose);
+      animation: blinkTimer 0.5s infinite alternate;
+    }
+
+    @keyframes blinkTimer {
+      0% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .btn-icon {
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 0.9rem;
+    }
+
+    .btn-icon:hover {
+      background: var(--usach-teal-bg);
+      border-color: var(--usach-teal);
+      color: var(--usach-teal);
+    }
+
+    .btn-action {
+      background: var(--gradient-primary);
+      border: none;
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition-fast);
+      box-shadow: 0 4px 10px rgba(20, 147, 137, 0.2);
+    }
+
+    .btn-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 15px rgba(20, 147, 137, 0.3);
+    }
+
+    .slide-counter {
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    .slide-counter span { color: var(--usach-teal); font-weight: 800; }
+
+    /* ==========================================
+       PROGRESS BAR
+       ========================================== */
+    .progress-bar-container {
+      position: fixed;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(0,0,0,0.05);
+      z-index: 140;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--gradient-orange);
+      transition: width 0.3s ease;
+    }
+
+    /* ==========================================
+       FULLSCREEN SLIDES VIEWPORT
+       ========================================== */
+    main.slides-viewport {
+      position: relative;
+      width: 100vw;
+      height: calc(100vh - 22px);
+      margin-top: 10px;
+      z-index: 1;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 5.5rem 4rem 3rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.98) translateY(15px);
+      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+      overflow-y: auto;
+      background: #ffffff;
+    }
+
+    body.in-fullscreen .slide,
+    body.hide-controls .slide {
+      padding: 3rem 4rem 3rem 4rem !important;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+      z-index: 10;
+    }
+
+    /* Slide Header Layout */
+    .slide-header {
+      margin-bottom: 1.25rem;
+    }
+
+    .slide-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--usach-teal);
+      margin-bottom: 0.35rem;
+      background: var(--usach-teal-bg);
+      padding: 0.2rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid rgba(20, 147, 137, 0.2);
+      font-weight: 700;
+    }
+
+    .slide-title {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--usach-teal);
+      letter-spacing: -0.5px;
+    }
+
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-weight: 400;
+      max-width: 950px;
+    }
+
+    /* Slide Body Layout */
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    /* Grid Layout Helpers */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+
+    /* Cards - Clean White Presentation Style */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.6rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: var(--transition-fast);
+    }
+
+    .glass-card:hover {
+      border-color: var(--usach-teal);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .glass-card:hover::before { opacity: 1; }
+
+    .glass-card.highlight {
+      border-color: var(--usach-teal);
+      background: var(--usach-teal-bg);
+    }
+
+    .glass-card.highlight::before { opacity: 1; }
+
+    /* PPTX Circle Number Badge */
+    .pptx-num-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--usach-teal);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 10px rgba(20, 147, 137, 0.25);
+      border: 3px solid #ffffff;
+      outline: 2px solid var(--usach-teal);
+    }
+
+    /* Stat Box */
+    .stat-number {
+      font-family: var(--font-title);
+      font-size: 2.75rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--usach-teal);
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Badges & Tags */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    .badge-cyan { background: var(--usach-teal-bg); color: var(--usach-teal); border: 1px solid rgba(20, 147, 137, 0.3); }
+    .badge-emerald { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-purple { background: #faf5ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+    .badge-amber { background: var(--usach-orange-bg); color: var(--usach-orange); border: 1px solid rgba(234, 118, 0, 0.3); }
+
+    /* Custom White Tables */
+    .custom-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.925rem;
+      box-shadow: var(--shadow-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .custom-table th {
+      background: var(--usach-teal);
+      color: #ffffff;
+      font-family: var(--font-title);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.95rem 1.1rem;
+    }
+
+    .custom-table td {
+      padding: 0.95rem 1.1rem;
+      border-bottom: 1px solid #f1f5f9;
+      background: #ffffff;
+      color: var(--text-main);
+    }
+
+    .custom-table tr:nth-child(even) td { background: #f8fafc; }
+    .custom-table tr:hover td { background: var(--usach-teal-bg); }
+
+    /* Key Points / Lists */
+    .icon-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    .icon-list li i {
+      color: var(--usach-teal);
+      margin-top: 0.2rem;
+      font-size: 1rem;
+      background: var(--usach-teal-bg);
+      padding: 0.4rem;
+      border-radius: 8px;
+      border: 1px solid rgba(20, 147, 137, 0.2);
+    }
+
+    /* Gantt Chart Clean Rendering */
+    .gantt-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-card);
+    }
+
+    .gantt-header-months {
+      display: grid;
+      grid-template-columns: 240px repeat(5, 1fr);
+      gap: 0.5rem;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 0.825rem;
+      color: var(--usach-teal);
+      text-align: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--usach-teal);
+    }
+
+    .gantt-row {
+      display: grid;
+      grid-template-columns: 240px repeat(16, 1fr);
+      gap: 0.25rem;
+      align-items: center;
+      font-size: 0.825rem;
+    }
+
+    .gantt-label {
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .gantt-track {
+      grid-column: span 16;
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      gap: 0.2rem;
+      height: 26px;
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 3px;
+    }
+
+    .gantt-bar {
+      height: 100%;
+      border-radius: 4px;
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .gantt-bar.parallel { background: var(--gradient-orange); }
+
+    /* ==========================================
+       SPEAKER NOTES DRAWER (GUION DE ORATORIA)
+       ========================================== */
+    .notes-drawer {
+      position: fixed;
+      bottom: -340px;
+      left: 0;
+      width: 100%;
+      height: 320px;
+      background: #ffffff;
+      border-top: 4px solid var(--usach-teal);
+      z-index: 200;
+      transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.15);
+    }
+
+    .notes-drawer.open { bottom: 0; }
+
+    .notes-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .notes-title {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--usach-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .notes-time-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      background: var(--usach-teal-bg);
+      color: var(--usach-teal);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .notes-content {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      overflow-y: auto;
+      padding-right: 1rem;
+    }
+
+    .notes-tip {
+      font-size: 0.85rem;
+      color: var(--usach-orange);
+      background: var(--usach-orange-bg);
+      border-left: 3px solid var(--usach-orange);
+      padding: 0.5rem 0.85rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       Q&A DEFENSE MODAL
+       ========================================== */
+    .qa-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
+    .qa-modal-overlay.open { opacity: 1; visibility: visible; }
+
+    .qa-modal-container {
+      width: 90%;
+      max-width: 1000px;
+      max-height: 85vh;
+      background: #ffffff;
+      border: 2px solid var(--usach-teal);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .qa-modal-header {
+      padding: 1.25rem 2rem;
+      background: var(--usach-teal-bg);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .qa-modal-title {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--usach-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .qa-modal-body {
+      padding: 1.75rem 2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      background: #ffffff;
+    }
+
+    .qa-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.25rem;
+      transition: var(--transition-fast);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .qa-card:hover { border-color: var(--usach-teal); }
+
+    .qa-question {
+      font-family: var(--font-title);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--usach-teal);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .qa-answer {
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--usach-teal);
+    }
+
+    .qa-answer strong { color: var(--usach-teal); }
+
+    /* OVERVIEW GRID DRAWER */
+    .overview-overlay {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      z-index: 250;
+      padding: 2.5rem;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-normal);
+    }
+
+    .overview-overlay.open { opacity: 1; visibility: visible; }
+
+    .thumb-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 140px;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+    }
+
+    .thumb-card:hover { border-color: var(--usach-teal); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+    .thumb-card.active { border-color: var(--usach-teal); background: var(--usach-teal-bg); }
+    .thumb-number { font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-teal); font-weight: 800; }
+    .thumb-title { font-family: var(--font-title); font-size: 0.875rem; font-weight: 700; color: var(--text-main); line-height: 1.3; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DECORATIVE DUAL BAR (Teal 30% / Orange 70%) -->
+  <div class="usach-top-bar">
+    <div class="top-bar-teal"></div>
+    <div class="top-bar-orange"></div>
+  </div>
+
+  <!-- BOTTOM DECORATIVE TEAL BAR -->
+  <div class="usach-bottom-bar"></div>
+
+  <!-- UNHIDE MINI BUTTON (Always accessible when controls are hidden) -->
+  <button class="unhide-mini-btn" id="btnUnhideMini" title="Mostrar Barra de Controles (H)"><i class="fa-solid fa-eye"></i></button>
+
+  <!-- FLOATING BRAND BADGE -->
+  <div class="floating-header-brand" id="brandHeader">
+    <div class="usach-seal-circle" title="Escudo Universidad de Santiago de Chile">
+      <img src="Images/usach_logo_seal-1.png" alt="USACH Seal" onerror="this.src='Images/usach_logo_seal-1.png'">
+    </div>
+    <img src="Images/diinf_logo.png" alt="Departamento de Ingeniería Informática USACH" class="diinf-logo-img" onerror="this.style.display='none'">
+  </div>
+
+  <!-- FLOATING TOOLBAR CONTROLS -->
+  <div class="floating-controls" id="controlsHeader">
+    <!-- 15-Min Timer Widget -->
+    <div class="timer-widget" id="timerWidget" title="Click para iniciar/pausar cronómetro de 15 minutos">
+      <i class="fa-regular fa-clock"></i>
+      <span id="timerDisplay">15:00</span>
+      <i class="fa-solid fa-play" id="timerToggleBtn" style="font-size: 0.7rem; cursor: pointer;"></i>
+    </div>
+
+    <div class="slide-counter">
+      Diapositiva <span id="currentSlideNum">1</span> / <span id="totalSlideNum">16</span>
+    </div>
+
+    <button class="btn-icon" id="btnHideUI" title="Ocultar Barra (H)"><i class="fa-solid fa-eye-slash"></i></button>
+    <button class="btn-icon" id="btnNotes" title="Guion de Oratoria (N)"><i class="fa-solid fa-microphone-lines"></i></button>
+    <button class="btn-icon" id="btnOverview" title="Vista General (O)"><i class="fa-solid fa-border-all"></i></button>
+    <button class="btn-icon" id="btnFullscreen" title="Pantalla Completa (F)"><i class="fa-solid fa-expand"></i></button>
+    <button class="btn-action" id="btnQA" title="Respuestas a la Comisión (Q)"><i class="fa-solid fa-shield-halved"></i> Defensa Q&A</button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- MAIN SLIDES VIEWPORT -->
+  <main class="slides-viewport">
+
+    <!-- SLIDE 1: PORTADA -->
+    <section class="slide active" data-index="1" data-time="0:00 - 0:40" data-notes="Estimados miembros de la comisión evaluadora, muy buenas tardes. Mi nombre es Fabián Ibarra y hoy les presentaré mi trabajo de título titulado: 'Metodología basada en procesamiento de lenguaje natural para analizar la alineación curricular de Ingeniería Informática en Chile con estándares ACM/IEEE y necesidades de la industria'. Esta investigación ha sido guiada por el profesor Manuel Villalobos Cid en el Departamento de Ingeniería Informática de la Universidad de Santiago de Chile." data-tip="Comienza con postura firme, mirada al frente y voz a volumen medio-alto. No te apresures; el primer minuto define la confianza.">
+      <div class="slide-body" style="align-items: center; justify-content: center; text-align: center;">        
+        <h1 style="font-family: var(--font-title); font-size: 2.6rem; font-weight: 900; max-width: 1050px; line-height: 1.25; color: var(--text-main); margin: 1rem 0;">
+          Metodología basada en procesamiento de lenguaje natural para analizar la alineación curricular de Ingeniería Informática en Chile con estándares ACM/IEEE y necesidades de la industria
+        </h1>
+
+        <div style="width: 250px; height: 3px; background: var(--usach-orange); margin: 0.5rem auto 1.5rem auto;"></div>
+
+        <div style="display: flex; gap: 2rem; margin: 1rem 0; justify-content: center;">
+          <div class="glass-card" style="padding: 1rem 1.75rem; text-align: left; border-left: 4px solid var(--usach-teal);">
+            <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-family: var(--font-mono); font-weight: 700;">INTEGRANTE / PRESENTADOR</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--usach-teal);">Fabián Luis Ibarra Norambuena</div>
+          </div>
+          
+          <div class="glass-card" style="padding: 1rem 1.75rem; text-align: left; border-left: 4px solid var(--usach-orange);">
+            <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-family: var(--font-mono); font-weight: 700;">PROFESOR GUÍA</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--usach-orange);">Prof. Manuel Villalobos Cid</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">
+          <span class="badge badge-cyan"><i class="fa-solid fa-building-columns"></i> Departamento de Ingeniería Informática - USACH</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: TABLA DE CONTENIDOS -->
+    <section class="slide" data-index="2" data-time="0:40 - 1:00" data-notes="La presentación de hoy se estructurará de la siguiente manera: revisaremos el contexto educativo en Chile, la motivación y el propósito de la solución. Luego, repasaremos la literatura, planteando el problema, hipótesis y objetivos del proyecto. Posteriormente, detallaremos el enfoque metodológico, la construcción del corpus de datos junto con el modelamiento semántico con NLP. Finalizaremos con los aspectos tecnológicos del ambiente, la planificación temporal con la carta Gantt y el respectivo cierre." data-tip="Pasa esta diapositiva rápidamente (20 seg max). No leas cada subpunto. Resume los bloques temáticos de forma ágil.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-list-check"></i> ESTRUCTURA DE LA EXPOSICIÓN</div>
+        <h2 class="slide-title">Tabla de Contenidos</h2>
+        <p class="slide-subtitle">Resumen ejecutivo de los 4 bloques principales que componen esta propuesta de tesis.</p>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-4">
+          <div class="glass-card" onclick="goToSlide(3)" style="cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;">
+            <div class="pptx-num-circle">01</div>
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">Contexto & Propósito</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Panorama educativo en Chile, desafíos de fragmentación y estándares ACM/IEEE.</p>
+            <div style="margin-top: auto;" class="badge badge-cyan">Diapos 3 - 7</div>
+          </div>
+
+          <div class="glass-card" onclick="goToSlide(8)" style="cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;">
+            <div class="pptx-num-circle" style="background: var(--usach-orange); outline-color: var(--usach-orange);">02</div>
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">Problema & Objetivos</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Estado del arte NLP, brecha tecnológica, hipótesis y métricas de calidad medibles.</p>
+            <div style="margin-top: auto;" class="badge badge-amber">Diapos 8 - 11</div>
+          </div>
+
+          <div class="glass-card" onclick="goToSlide(12)" style="cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;">
+            <div class="pptx-num-circle">03</div>
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">Enfoque & Modelamiento</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Metodología CRISP-DM, corpus de 747 asignaturas, Sentence-BERT y clustering.</p>
+            <div style="margin-top: auto;" class="badge badge-cyan">Diapos 12 - 13</div>
+          </div>
+
+          <div class="glass-card" onclick="goToSlide(14)" style="cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;">
+            <div class="pptx-num-circle" style="background: var(--usach-orange); outline-color: var(--usach-orange);">04</div>
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">Ambiente & Plan Gantt</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Stack tecnológico, hardware, planificación de 16 semanas con hitos H1-H6 y cierre.</p>
+            <div style="margin-top: auto;" class="badge badge-amber">Diapos 14 - 16</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: CONTEXTO - EDUCACIÓN CHILE -->
+    <section class="slide" data-index="3" data-time="1:00 - 1:20" data-notes="Comencemos por el contexto nacional. La expansión de la educación superior en Chile ha masificado la oferta de carreras del área informática. No obstante, esto ha generado una alta heterogeneidad nominal y curricular entre programas (Civil vs. Ejecución), así como una adopción desigual de marcos de referencia internacionales y brechas con el mercado laboral." data-tip="Enfatiza el crecimiento de la oferta académica y la heterogeneidad de los programas nacionales.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-earth-americas"></i> CONTEXTO NACIONAL</div>
+        <h2 class="slide-title">Formación en Ingeniería Informática en Chile</h2>
+        <p class="slide-subtitle">Masificación de la oferta académica y proliferación heterogénea de planes de estudio.</p>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card highlight">
+            <div class="stat-number" style="font-size: 2.2rem; color: var(--usach-teal);"><i class="fa-solid fa-chart-line" style="font-size: 1.8rem; margin-right: 0.3rem;"></i> Expansión</div>
+            <div class="stat-label">Crecimiento de Oferta Académica</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Masificación sostenida de la educación superior en Chile con un incremento acelerado en la apertura de carreras informáticas.</p>
+          </div>
+
+          <div class="glass-card highlight">
+            <div class="stat-number" style="color: var(--usach-orange); font-size: 2.2rem;"><i class="fa-solid fa-layer-group" style="font-size: 1.8rem; margin-right: 0.3rem;"></i> Heterogénea</div>
+            <div class="stat-label">Diversidad de Planes de Estudio</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Alta disparidad de nomenclaturas (Civil, Ejecución, Licenciaturas) y mallas curriculares con criterios desiguales de homologación.</p>
+          </div>
+
+          <div class="glass-card highlight">
+            <div class="stat-number" style="font-size: 2.2rem; color: #6366f1;"><i class="fa-solid fa-scale-unbalanced" style="font-size: 1.8rem; margin-right: 0.3rem;"></i> Desalineada</div>
+            <div class="stat-label">Adopción Desigual de Marcos</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Adopción heterogénea de estándares ACM/IEEE y brecha persistente entre la teoría universitaria y las exigencias del mercado TI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: CONTEXTO - DESAFÍOS DEL ECOSISTEMA -->
+    <section class="slide" data-index="4" data-time="1:20 - 1:50" data-notes="En primer lugar, observamos una alta heterogeneidad en las mallas curriculares chilenas, con una gran diversidad de nombres y enfoques para perfiles equivalentes. Asimismo, enfrentamos una rápida obsolescencia de las mallas frente a la velocidad del sector tecnológico. Finalmente, esto perpetúa una brecha estructural entre la formación teórica académica y las habilidades prácticas demandadas en el sector TI." data-tip="Transición: 'Frente a esta fragmentación nacional, es fundamental mirar cómo opera el ordenamiento internacional...'">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-triangle-exclamation"></i> DIAGNÓSTICO DEL ECOSISTEMA</div>
+        <h2 class="slide-title">Tres Desafíos Clave del Ecosistema Chileno</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card">
+            <div style="font-size: 2rem; color: var(--usach-teal); margin-bottom: 0.75rem;"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">1. Alta Heterogeneidad</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">Variaciones en nombres, enfoques y descriptores de asignaturas para perfiles profesionales teóricamente equivalentes.</p>
+          </div>
+
+          <div class="glass-card">
+            <div style="font-size: 2rem; color: var(--usach-orange); margin-bottom: 0.75rem;"><i class="fa-solid fa-hourglass-half"></i></div>
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">2. Rápida Obsolescencia</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">Procesos de actualización de mallas que tardan de 3 a 5 años, desacoplados del avance vertiginoso de la tecnología.</p>
+          </div>
+
+          <div class="glass-card">
+            <div style="font-size: 2rem; color: var(--accent-rose); margin-bottom: 0.75rem;"><i class="fa-solid fa-plug-circle-xmark"></i></div>
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">3. Brecha Laboral TI</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">Desconexión entre los saberes teóricos impartidos y las competencias técnicas demandadas en ofertas reales del mercado laboral.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: CONTEXTO - ESTÁNDARES ACM/IEEE -->
+    <section class="slide" data-index="5" data-time="1:50 - 2:20" data-notes="A nivel global, los consorcios ACM e IEEE dictan las directrices curriculares de referencia, como las guías CS2013 y el marco CC2020. Estos estándares promueven un modelo basado en competencias, estructurando la enseñanza no solo en torno al conocimiento teórico, sino también a las habilidades técnicas y la actitud profesional en el mundo real." data-tip="Muestra solvencia citando ACM y IEEE.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-globe"></i> REFERENTES INTERNACIONALES</div>
+        <h2 class="slide-title">Estándares Globales: ACM / IEEE (CS2013 & CC2020)</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span class="badge badge-cyan" style="font-size: 0.9rem;">ACM / IEEE CS2013</span>
+              <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">18 Áreas de Conocimiento (KA)</h3>
+            </div>
+            <ul class="icon-list">
+              <li><i class="fa-solid fa-check"></i> Estandarización taxonomía curricular de ciencias de la computación.</li>
+              <li><i class="fa-solid fa-check"></i> Definición de Core Tier-1, Core Tier-2 y Electivos.</li>
+              <li><i class="fa-solid fa-check"></i> 747 asignaturas chilenas mapeadas contra sus 18 Knowledge Areas.</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span class="badge badge-amber" style="font-size: 0.9rem;">Marco CC2020</span>
+              <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--text-main);">Modelo de Triada de Competencias</h3>
+            </div>
+            <ul class="icon-list">
+              <li><i class="fa-solid fa-brain" style="color: var(--usach-orange); background: var(--usach-orange-bg); border-color: rgba(234,118,0,0.3);"></i> <strong>Knowledge (Conocimiento):</strong> Saber qué.</li>
+              <li><i class="fa-solid fa-gears" style="color: var(--usach-orange); background: var(--usach-orange-bg); border-color: rgba(234,118,0,0.3);"></i> <strong>Skills (Habilidades):</strong> Saber cómo ejecutar.</li>
+              <li><i class="fa-solid fa-user-shield" style="color: var(--usach-orange); background: var(--usach-orange-bg); border-color: rgba(234,118,0,0.3);"></i> <strong>Disposition (Actitud):</strong> Comportamiento profesional.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: MOTIVACIÓN -->
+    <section class="slide" data-index="6" data-time="2:20 - 3:00" data-notes="Tradicionalmente, el análisis de mallas se realiza mediante comisiones de académicos que comparan planes de estudio de forma manual. Este enfoque conlleva un alto sesgo de subjetividad y un elevado costo operativo en tiempo y recursos. Además, la ausencia de herramientas locales automatizadas perpetúa la desconexión con el mercado laboral dinámico. Esta brecha es la que motiva el desarrollo de una solución basada en datos." data-tip="Compara el enfoque tradicional manual vs la solución automatizada NLP.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-lightbulb"></i> MOTIVACIÓN DEL TRABAJO</div>
+        <h2 class="slide-title">Análisis Curricular Manual vs. Automatizado con NLP</h2>
+      </div>
+
+      <div class="slide-body">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Dimensión</th>
+              <th style="background: var(--usach-orange);"><i class="fa-solid fa-user-xmark"></i> Enfoque Tradicional (Manual)</th>
+              <th style="background: var(--usach-teal);"><i class="fa-solid fa-robot"></i> Propuesta NLP Data-Driven</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Metodología</strong></td>
+              <td>Comisiones de académicos comparando programas manualmente</td>
+              <td>Pipeline NLP continuo + Embeddings vectoriales multilingües</td>
+            </tr>
+            <tr>
+              <td><strong>Sesgo y Subjetividad</strong></td>
+              <td>Alto sesgo interpretativo entre evaluadores humanos</td>
+              <td>Evaluación objetiva y cuantificable en espacio semántico 768D</td>
+            </tr>
+            <tr>
+              <td><strong>Costo y Tiempo</strong></td>
+              <td>Meses de trabajo en comisiones académicas costosas</td>
+              <td>Procesamiento en segundos con latencia &lt; 2s en Dashboard</td>
+            </tr>
+            <tr>
+              <td><strong>Conexión Laboral</strong></td>
+              <td>Ausente o basada en percepción anecdótica</td>
+              <td>Comparación directa contra 200 vacantes activas en LinkedIn</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: PROPÓSITO DE LA SOLUCIÓN -->
+    <section class="slide" data-index="7" data-time="3:00 - 3:30" data-notes="El propósito de este proyecto es proveer una metodología sistemática apoyada en un pipeline de procesamiento de lenguaje natural y un dashboard interactivo. El objetivo es ofrecer un soporte decisional en dos niveles: un nivel operativo, ayudando a los docentes a alinear sus asignaturas en el aula, y un nivel táctico, apoyando a directores de carrera en comités curriculares y procesos de acreditación." data-tip="Muestra claridad en el doble nivel de soporte decisional.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-bullseye"></i> PROPÓSITO DE LA SOLUCIÓN</div>
+        <h2 class="slide-title">Soporte Decisional Curricular en Dos Niveles</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card highlight">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span class="badge badge-cyan" style="font-size: 0.95rem;"><i class="fa-solid fa-chalkboard-user"></i> NIVEL OPERATIVO</span>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--text-main);">Cuerpo Docente y Profesores de Asignatura</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Permite a los docentes redactar y alinear los descriptores de sus programas de estudio con la taxonomía internacional ACM/IEEE y las competencias técnicas demandadas en el mercado laboral.</p>
+          </div>
+
+          <div class="glass-card highlight" style="border-color: var(--usach-orange); background: var(--usach-orange-bg);">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span class="badge badge-amber" style="font-size: 0.95rem;"><i class="fa-solid fa-chart-line"></i> NIVEL TÁCTICO</span>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--text-main);">Directores de Carrera y Comités Curriculares</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Proporciona métricas cuantitativas agregadas para rediseños curriculares, autoevaluación institucional y procesos de acreditación de calidad ante agencias nacionales e internacionales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: ESTADO DEL ARTE Y LITERATURA -->
+    <section class="slide" data-index="8" data-time="3:30 - 4:10" data-notes="En la literatura de Procesamiento de Lenguaje Natural observamos una clara evolución paradigmática en la representación de texto curricular. Primero, los modelos léxicos como TF-IDF basaban su análisis en coincidencia exacta de palabras. Luego, los embeddings estáticos como Word2Vec mapearon palabras a vectores continuos. Finalmente, los Transformers y modelos como Sentence-BERT (SBERT) permiten vectorizar oraciones completas en un espacio continuo multilingüe, haciendo posible comparar directamente textos curriculares en español con estándares ACM en inglés." data-tip="Explica la evolución desde modelos de frecuencia léxica hasta transformadores multilingües.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-book-bookmark"></i> REVISIÓN DE LA LITERATURA</div>
+        <h2 class="slide-title">Evolución de Enfoques NLP en Texto Curricular</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card">
+            <span class="badge badge-amber" style="margin-bottom: 0.75rem;">1. MODELOS LÉXICOS</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.1rem; color: var(--text-main);">TF-IDF y Bag-of-Words</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Basados únicamente en frecuencia exacta de términos. Incapaces de capturar sinonimia técnica, polisemia o trasladar semántica entre español e inglés.</p>
+          </div>
+
+          <div class="glass-card">
+            <span class="badge badge-cyan" style="margin-bottom: 0.75rem;">2. EMBEDDINGS ESTÁTICOS</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.1rem; color: var(--text-main);">Word2Vec / FastText / GloVe</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Representación vectorial de palabras individuales en espacios densos. Capturan relaciones semánticas globales, pero carecen de contexto a nivel de frase u oración completa.</p>
+          </div>
+
+          <div class="glass-card highlight">
+            <span class="badge badge-amber" style="margin-bottom: 0.75rem;">3. TRANSFORMERS & SBERT</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.1rem; color: var(--text-main);">Sentence-BERT Multilingüe</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Modelos contextuales avanzados (<code>paraphrase-multilingual-mpnet-base-v2</code>). Mapeo continuo en 768D de oraciones y descriptores completos en español e inglés sin traducción previa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: PLANTEAMIENTO DEL PROBLEMA & PREGUNTA -->
+    <section class="slide" data-index="9" data-time="4:10 - 4:40" data-notes="Planteamos entonces la siguiente pregunta: ¿Cuáles son las similitudes y diferencias estructurales entre los diversos programas de Ingeniería Informática en Chile, y cómo se alinean sus perfiles formativos tanto con los estándares internacionales IEEE/ACM como con las competencias demandadas por el mercado laboral en el sector TI?" data-tip="Lee la pregunta de manera pausada y clara. Haz una pausa de 1 segundo al terminar.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-circle-question"></i>ENUNCIADO DEL PROBLEMA</div>
+        <h2 class="slide-title">Planteamiento Formal del Problema</h2>
+      </div>
+
+      <div class="slide-body" style="align-items: center; justify-content: center;">
+        <div class="glass-card highlight" style="max-width: 950px; padding: 2.5rem; border-left: 5px solid var(--usach-teal); background: #ffffff;">
+          <div style="font-size: 1.35rem; font-weight: 700; line-height: 1.6; color: var(--text-main); font-family: var(--font-title);">
+            "¿Cuáles son las similitudes y diferencias estructurales entre los diversos programas de Ingeniería Informática en Chile, y cómo se alinean sus perfiles formativos tanto con los estándares internacionales IEEE/ACM como con las competencias demandadas por el mercado laboral en el sector TI?"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: OBJETIVO GENERAL -->
+    <section class="slide" data-index="10" data-time="4:40 - 5:20" data-notes="Para responder a esto, nuestro Objetivo General es: Desarrollar y evaluar una metodología sistemática basada en procesamiento de lenguaje natural, representación semántica vectorial y algoritmos de agrupamiento no supervisado, con el fin de analizar, agrupar y comparar el grado de alineación curricular de los programas de Ingeniería Informática en Chile frente a los estándares internacionales y al mercado laboral nacional, validando los resultados cuantitativa y cualitativamente." data-tip="Destaca verbalmente: procesamiento de lenguaje natural, agrupamiento no supervisado y validación híbrida.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-flag"></i> OBJETIVO GENERAL</div>
+        <h2 class="slide-title">Propósito Central del Trabajo</h2>
+      </div>
+
+      <div class="slide-body" style="align-items: center; justify-content: center;">
+        <div class="glass-card" style="max-width: 1000px; padding: 2.25rem; border-top: 5px solid var(--usach-orange); background: #ffffff;">
+          <p style="font-size: 1.25rem; line-height: 1.7; color: var(--text-main); font-weight: 500;">
+            "Desarrollar y evaluar una <strong style="color: var(--usach-teal);">metodología sistemática basada en procesamiento de lenguaje natural</strong>, representación semántica vectorial y <strong style="color: var(--usach-orange);">algoritmos de agrupamiento no supervisado</strong>, con el fin de analizar, agrupar y comparar el grado de alineación curricular de los programas de Ingeniería Informática en Chile frente a los estándares internacionales y al mercado laboral nacional, <strong style="color: var(--usach-teal);">validando los resultados cuantitativa y cualitativamente</strong>."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: OBJETIVOS ESPECÍFICOS Y CRITERIOS DE CALIDAD -->
+    <section class="slide" data-index="11" data-time="5:20 - 7:20" data-notes="Para operativizar el objetivo general, definimos 5 objetivos específicos con sus métricas exactas: En el OE2 (Vectorización) exigimos Trustworthiness >= 0.85 para garantizar que la reducción dimensional UMAP a 2D mantenga la estructura de vecindad sin deformar el espacio semántico 768D. En el OE3 (Clustering) evaluamos cohesión y separación con Silhouette >= 0.25 y Davies-Bouldin < 1.50 sobre las 747 asignaturas. En el OE4 (Validación Híbrida) medimos estabilidad temporal con Bootstrap ARI >= 0.75 (100 iteraciones), el acuerdo entre 3 expertos humanos con Fleiss' Kappa >= 0.60 (muestra 100 asignaturas), y la coincidencia modelo-panel con Cohen's Kappa >= 0.60 (validando que el modelo decide como un comité humano). Finalmente en OE5 exigimos latencia en React < 2.0s." data-tip="En las notas tienes la explicación oral detallada de cada métrica para responder ante la comisión.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-list-check"></i> OBJETIVOS ESPECÍFICOS Y MÉTRICAS</div>
+        <h2 class="slide-title">5 Objetivos Específicos & Criterios de Calidad Medibles</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-5">
+          <div class="glass-card">
+            <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">OE1: CORPUS</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Construcción Data</h4>
+            <p style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem;">Recopilación mallas Chile + ACM + 200 vacantes LinkedIn.</p>
+            <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-teal); font-weight: 700;">
+              • Cobertura: 100%<br>• Nulos: &lt; 1%
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">OE2: VECTORIZACIÓN</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Embeddings & UMAP</h4>
+            <p style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem;">Representación en 768D y proyección 2D visual.</p>
+            <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-teal); font-weight: 700;">
+              • Trustworthiness:<br>&ge; 0.85
+            </div>
+          </div>
+
+          <div class="glass-card highlight">
+            <span class="badge badge-amber" style="margin-bottom: 0.5rem;">OE3: CLUSTERING</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">747 Asignaturas</h4>
+            <p style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem;">Clasificación no supervisada por materia (K-Means/DBSCAN).</p>
+            <div style="background: #ffffff; padding: 0.5rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-orange); font-weight: 700; border: 1px solid rgba(234,118,0,0.3);">
+              • Silhouette &ge; 0.25<br>• D-Bouldin &lt; 1.50
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">OE4: VALIDACIÓN</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Híbrida (Panel 3 Exp.)</h4>
+            <p style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem;">Estabilidad Bootstrap + Anotación humana muestra 100.</p>
+            <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-teal); font-weight: 700;">
+              • Bootstrap ARI &ge; 0.75<br>• Fleiss / Cohen &ge; 0.60
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <span class="badge badge-amber" style="margin-bottom: 0.5rem;">OE5: DASHBOARD</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Tablero React</h4>
+            <p style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem;">Visualizador interactivo para soporte decisional.</p>
+            <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--usach-orange); font-weight: 700;">
+              • Latencia Media:<br>&lt; 2.0 s
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: ENFOQUE METODOLÓGICO CRISP-DM -->
+    <section class="slide" data-index="12" data-time="7:20 - 8:20" data-notes="Nuestra propuesta adopta el estándar metodológico CRISP-DM, adaptando su ciclo iterativo desde la comprensión curricular y la preparación lingüística de los datos, pasando por el modelamiento, hasta la evaluación híbrida y el despliegue del dashboard. Justificamos el uso de embeddings multilingües (comparación directa es-en sin traducción) y clustering a nivel de 747 asignaturas." data-tip="Muestra la justificación del clustering no supervisado vs la matriz de similitud directa.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-diagram-project"></i> MARCO METODOLÓGICO</div>
+        <h2 class="slide-title">Adaptación Iterativa CRISP-DM & Justificaciones</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; margin-bottom: 1rem; color: var(--usach-teal);">Ciclo de 6 Fases CRISP-DM</h3>
+            <ol class="icon-list" style="font-size: 0.875rem;">
+              <li><i class="fa-solid fa-1"></i> <strong>Business Understanding:</strong> Definición de brechas curriculares.</li>
+              <li><i class="fa-solid fa-2"></i> <strong>Data Understanding:</strong> Ingesta de 747 asignaturas y 200 vacantes.</li>
+              <li><i class="fa-solid fa-3"></i> <strong>Data Preparation:</strong> Limpieza spaCy (stop-words, HTML, boilerplate).</li>
+              <li><i class="fa-solid fa-4"></i> <strong>Modeling:</strong> SBERT multilingüe + K-Means / DBSCAN.</li>
+              <li><i class="fa-solid fa-5"></i> <strong>Evaluation:</strong> Validación híbrida (Fleiss 0.64 / Cohen 0.61).</li>
+              <li><i class="fa-solid fa-6"></i> <strong>Deployment:</strong> Tablero interactivo en React & Plotly.js.</li>
+            </ol>
+          </div>
+
+          <div class="glass-card highlight" style="border-color: var(--usach-teal);">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; margin-bottom: 1rem; color: var(--usach-teal);">Dos Pilares Decisivos de Diseño</h3>
+            
+            <div style="margin-bottom: 1.25rem;">
+              <span class="badge badge-cyan">1. Ruta Multilingüe Directa</span>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem;">Proyección simultánea de español e inglés en el mismo espacio vectorial, eliminando la degradación por traducción automática intermedia.</p>
+            </div>
+
+            <div>
+              <span class="badge badge-amber">2. Similitud Coseno + Clustering No Supervisado</span>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem;">La similitud mide la alineación rígida con ACM; el clustering a nivel de 747 asignaturas descubre patrones locales emergentes y aísla outliers con DBSCAN.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 13: CORPUS Y MODELAMIENTO SEMÁNTICO -->
+    <section class="slide" data-index="13" data-time="8:20 - 10:30" data-notes="Para asegurar que comparar asignaturas en español contra estándares ACM en inglés no introdujera deformaciones semánticas ni sesgos de traducción, realizamos un experimento de validación cross-lingual sobre una muestra control de 100 asignaturas en español. Tradujimos esos 100 descriptores al inglés mediante la API industrial de DeepL y vectorizamos ambas versiones (la original en español y la traducida en inglés) usando el modelo multilingüe paraphrase-multilingual-mpnet-base-v2. Calculamos la similitud coseno punto a punto entre la versión en español y en inglés de la misma asignatura, obteniendo una similitud promedio de 0.94 con desviación estándar de apenas 0.024. Además, medimos la correlación de Pearson en la distancia a las 18 áreas ACM obteniendo r = 0.92 (p < 0.01). Esto demuestra estadísticamente que la ruta multilingüe directa proyecta ambos idiomas en la misma región del espacio vectorial con una fidelidad del 94%, ahorrando los costos computacionales y de API de traducir todo el corpus de 747 asignaturas." data-tip="El experimento cross-lingual está detallado paso a paso en las notas del orador.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-database"></i> CORPUS & MODELAMIENTO</div>
+        <h2 class="slide-title">Composición del Corpus & Resultados de Validación</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card">
+            <h4 style="font-family: var(--font-title); font-size: 1.05rem; color: var(--usach-teal); margin-bottom: 0.75rem;"><i class="fa-solid fa-cubes"></i> 3 Dimensiones Data</h4>
+            <ul style="font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem; list-style-type: square; padding-left: 1rem;">
+              <li><strong>Academia Chile:</strong> 16 programas (747 asignaturas).</li>
+              <li><strong>Estándar Int.:</strong> ACM/IEEE CS2013 (18 Knowledge Areas).</li>
+              <li><strong>Mercado Laboral:</strong> 200 vacantes LinkedIn Chile 2026 (6 roles TI).</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="font-family: var(--font-title); font-size: 1.05rem; color: var(--usach-orange); margin-bottom: 0.75rem;"><i class="fa-solid fa-language"></i> Experimento Cross-Lingual</h4>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+              Muestra control 100 asignaturas (ES vs EN traducido DeepL):
+              <div style="background: #f8fafc; padding: 0.6rem; border-radius: 6px; margin-top: 0.5rem; font-family: var(--font-mono); color: var(--usach-teal); font-weight: 700; border: 1px solid var(--border-color);">
+                • Similitud Coseno Media: 0.94 (sd=0.024)<br>
+                • Correlación Pearson: r = 0.92 (p &lt; 0.01)
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="font-family: var(--font-title); font-size: 1.05rem; color: var(--usach-teal); margin-bottom: 0.75rem;"><i class="fa-solid fa-square-poll-vertical"></i> Validación Híbrida</h4>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+              Panel de 3 Evaluadores Académicos (Muestra 100 asignaturas):
+              <div style="background: #f8fafc; padding: 0.6rem; border-radius: 6px; margin-top: 0.5rem; font-family: var(--font-mono); color: var(--usach-orange); font-weight: 700; border: 1px solid var(--border-color);">
+                • Fleiss' Kappa (Inter-anotador): 0.64<br>
+                • Cohen's Kappa (Modelo vs Gold): 0.61<br>
+                • 12 Clusters K-Means + 42 Outliers DBSCAN
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: SOFTWARE, HARDWARE Y AMBIENTE DE DESARROLLO -->
+    <section class="slide" data-index="14" data-time="10:30 - 11:10" data-notes="El soporte físico de la investigación utiliza un procesador Intel Core i7 con 16 gigabytes de memoria RAM y aceleración por hardware mediante GPU en entorno Linux Ubuntu. A nivel de software crítico, el modelamiento se implementa en Python 3.11, haciendo uso de librerías como PyTorch, Sentence-Transformers, Scikit-learn, UMAP-learn, y modelos específicos de procesamiento textual en español. La operacionalización visual del dashboard se implementa en React y Plotly.js." data-tip="Muestra solvencia en el ecosistema técnico.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-server"></i> AMBIENTE TÉCNICO</div>
+        <h2 class="slide-title">Stack Tecnológico: Hardware & Software</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; margin-bottom: 1rem; color: var(--usach-teal);"><i class="fa-solid fa-microchip"></i> Entorno de Hardware</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                <div style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">PROCESADOR (CPU)</div>
+                <div style="font-weight: 800; color: var(--text-main);">Intel Core i7</div>
+              </div>
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                <div style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">MEMORIA RAM</div>
+                <div style="font-weight: 800; color: var(--text-main);">16 GB DDR4</div>
+              </div>
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                <div style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">ACELERACIÓN</div>
+                <div style="font-weight: 800; color: var(--text-main);">GPU CUDA Acceleration</div>
+              </div>
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                <div style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">SISTEMA OPERATIVO</div>
+                <div style="font-weight: 800; color: var(--text-main);">Linux Ubuntu x86_64</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; margin-bottom: 1rem; color: var(--usach-orange);"><i class="fa-solid fa-code"></i> Ecosistema de Software</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+              <span class="badge badge-cyan">Python 3.11</span>
+              <span class="badge badge-amber">PyTorch</span>
+              <span class="badge badge-cyan">Sentence-Transformers</span>
+              <span class="badge badge-amber">spaCy (es_core_news_lg)</span>
+              <span class="badge badge-cyan">Scikit-Learn</span>
+              <span class="badge badge-amber">UMAP-Learn</span>
+              <span class="badge badge-cyan">React.js</span>
+              <span class="badge badge-amber">Plotly.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 15: PLANIFICACIÓN TEMPORAL (CARTA GANTT SEPTIEMBRE EN ADELANTE Y TAREAS EN PARALELO) -->
+    <section class="slide" data-index="15" data-time="11:10 - 12:10" data-notes="La planificación temporal se distribuye desde Septiembre en adelante abarcando 16 semanas reales de trabajo. Destaca que la Redacción del Informe Final se ejecuta de forma paralela y transversal a lo largo de todo el proyecto (S1 a S16). La Fase 1 de Ingesta se realiza entre Septiembre y Octubre (Hito 1: S4), solapándose con la Fase 2 de Preprocesamiento NLP (Hito 2: S6 en Noviembre). La Fase 3 de Vectorización y Clustering se ejecuta entre Noviembre y Diciembre (Hito 3: S10), seguida de la Evaluación Híbrida (Hito 4: S12) y el desarrollo del Dashboard React (Hito 5: S14 en Enero), culminando con la Defensa Final (Hito 6: S16)." data-tip="Enfatiza la ejecución en paralelo de la redacción del informe transversal.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-calendar-days"></i> PLANIFICACIÓN TEMPORAL (SEPTIEMBRE - ENERO)</div>
+        <h2 class="slide-title">Carta Gantt & Hitos con Actividades en Paralelo</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="gantt-container">
+          <div class="gantt-header-months">
+            <div>FASE / HITO</div>
+            <div>SEPTIEMBRE</div>
+            <div>OCTUBRE</div>
+            <div>NOVIEMBRE</div>
+            <div>DICIEMBRE</div>
+            <div>ENERO</div>
+          </div>
+
+          <!-- PARALLEL TASK: REDACCIÓN DE INFORME -->
+          <div class="gantt-row">
+            <div class="gantt-label" style="color: var(--usach-orange); font-weight: 700;">★ Redacción de Informe (Paralelo)</div>
+            <div class="gantt-track">
+              <div class="gantt-bar parallel" style="grid-column: 1 / span 16;">Transversal (S1 - S16)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 1: Ingesta & Corpus</div>
+            <div class="gantt-track">
+              <div class="gantt-bar" style="grid-column: 1 / span 4;">Hito 1 (S4)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 2: Preprocesamiento NLP</div>
+            <div class="gantt-track">
+              <div class="gantt-bar" style="grid-column: 3 / span 4;">Hito 2 (S6)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 3: Vectorización & Clustering</div>
+            <div class="gantt-track">
+              <div class="gantt-bar" style="grid-column: 6 / span 5;">Hito 3 (S10)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 4: Evaluación Híbrida</div>
+            <div class="gantt-track">
+              <div class="gantt-bar" style="grid-column: 10 / span 4;">Hito 4 (S12)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 5: Dashboard React</div>
+            <div class="gantt-track">
+              <div class="gantt-bar" style="grid-column: 12 / span 4;">Hito 5 (S14)</div>
+            </div>
+          </div>
+
+          <div class="gantt-row">
+            <div class="gantt-label">Fase 6: Defensa & Cierre</div>
+            <div class="gantt-track">
+              <div class="gantt-bar parallel" style="grid-column: 15 / span 2;">Hito 6 (S16)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 16: REFERENCIAS BIBLIOGRÁFICAS EXCLUSIVO -->
+    <section class="slide" data-index="16" data-time="12:10 - 12:40" data-notes="Con esto concluyo mi presentación. Agradezco sinceramente su tiempo y atención, y quedo a total disposición de la comisión evaluadora para responder a sus preguntas, sugerencias o comentarios. Muchas gracias." data-tip="Mantén contacto visual directo con la comisión mientras dices la última frase.">
+      <div class="slide-header">
+        <div class="slide-tagline"><i class="fa-solid fa-books"></i> REFERENCIAS BIBLIOGRÁFICAS</div>
+        <h2 class="slide-title">Referencias Bibliográficas Clave</h2>
+      </div>
+
+      <div class="slide-body">
+        <div class="glass-card" style="padding: 2rem;">
+          <h4 style="font-family: var(--font-title); font-size: 1.2rem; color: var(--usach-teal); margin-bottom: 1.25rem;"><i class="fa-solid fa-books"></i> Referencias Principales de la Investigación</h4>
+          <ul style="font-size: 0.95rem; color: var(--text-main); display: flex; flex-direction: column; gap: 1rem; list-style: none;">
+            <li style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">• <strong>ACM/IEEE (2013).</strong> Computer Science Curricula 2013: Curriculum Guidelines for Undergraduate Degree Programs in Computer Science. Association for Computing Machinery (ACM) & IEEE Computer Society.</li>
+            <li style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">• <strong>CC2020 Task Force (2020).</strong> Computing Curricula 2020: Paradigms for Global Computing Education. Association for Computing Machinery (ACM) & IEEE Computer Society.</li>
+            <li style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">• <strong>Reimers, N., &amp; Gurevych, I. (2019).</strong> Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP 2019).</li>
+            <li style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">• <strong>Landis, J. R., &amp; Koch, G. G. (1977).</strong> The measurement of observer agreement for categorical data. Biometrics, 33(1), 159-174.</li>
+            <li style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">• <strong>Wirth, R., &amp; Hipp, J. (2000).</strong> CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SPEAKER NOTES DRAWER -->
+  <div class="notes-drawer" id="notesDrawer">
+    <div class="notes-header">
+      <div class="notes-title">
+        <i class="fa-solid fa-microphone"></i> Guion de Oratoria (Diapositiva <span id="notesSlideNum">1</span>)
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span class="notes-time-badge" id="notesTime">0:00 - 0:40</span>
+        <button class="btn-icon" id="btnCloseNotes" style="width: 30px; height: 30px;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="notes-content" id="notesText">Cargando notas...</div>
+    <div class="notes-tip" id="notesTip">Consejo de Oratoria: Comienza con calma y proyección clara.</div>
+  </div>
+
+  <!-- Q&A DEFENSE MODAL -->
+  <div class="qa-modal-overlay" id="qaModal">
+    <div class="qa-modal-container">
+      <div class="qa-modal-header">
+        <div class="qa-modal-title">
+          <i class="fa-solid fa-shield-halved" style="color: var(--usach-teal);"></i> Guía Estratégica de Defensa (Q&amp;A Comisión Evaluadora)
+        </div>
+        <button class="btn-icon" onclick="closeQA()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <div class="qa-modal-body">
+        
+        <!-- P1 -->
+        <div class="qa-card">
+          <div class="qa-question">
+            <span class="badge badge-cyan">P1</span>
+            <span>¿Cuál es la unidad de análisis del clustering y cómo se realiza la agregación a nivel de programa universitario?</span>
+          </div>
+          <div class="qa-answer">
+            "Estimado evaluador: la unidad de análisis principal son las <strong>747 asignaturas</strong> extraídas de los 16 programas académicos.<br><br>
+            <strong>Una vez clasificadas las 747 asignaturas en las áreas de conocimiento definidas por el estándar ACM/IEEE, cada programa académico se representa mediante un vector de distribución porcentual que indica la proporción de asignaturas pertenecientes a cada área.</strong><br><br>
+            Esta representación permite comparar cuantitativamente las universidades con la distribución de referencia del estándar ACM/IEEE y con la distribución observada en las ofertas laborales, utilizando métricas de similitud o distancia entre vectores. De este modo, es posible estimar el grado de alineamiento curricular de cada institución respecto de las recomendaciones internacionales y de las necesidades del mercado laboral."
+          </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="qa-card">
+          <div class="qa-question">
+            <span class="badge badge-amber">P2</span>
+            <span>¿Por qué utilizar clustering no supervisado además de la matriz de similitud contra ACM/IEEE? ¿Qué aporta el agrupamiento que la matriz de distancias no entrega?</span>
+          </div>
+          <div class="qa-answer" style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <div>
+              <strong style="color: var(--usach-teal);">1. Análisis Exploratorio: ¿Qué estructura tiene realmente el conjunto de universidades chilenas?</strong><br>
+              La similitud contra ACM es una clasificación lineal (sabemos que <em>Bases de Datos</em> se mapea a <em>Data Management</em>), pero <strong>no nos dice cómo se organiza internamente el sistema universitario chileno</strong>. El clustering hace una pregunta distinta: <em>Si ignoramos completamente el estándar ACM/IEEE, ¿qué grupos aparecen naturalmente en las asignaturas chilenas?</em><br>
+              Por ejemplo, pueden emerger agrupaciones naturales como <strong>DevOps / Docker / Kubernetes / Cloud</strong> como una temática propia y consolidada a nivel nacional, aun cuando ACM distribuya esos contenidos entre varias áreas distintas. El clustering responde a: <em>¿Cómo está organizado realmente el conocimiento que enseñan las universidades chilenas desde los propios datos?</em>
+            </div>
+
+            <div>
+              <strong style="color: var(--usach-orange);">2. Validación Fiel: ¿Las categorías ACM/IEEE representan la organización curricular chilena?</strong><br>
+              Al ejecutar clustering sin etiquetas ACM y comparar posteriormente las agrupaciones emergentes contra el estándar:<br>
+              • Si <em>Cluster 1 (Programación/Algoritmos) &approx; Software Development</em> y <em>Cluster 2 (SQL/Data Warehouse) &approx; Data Management</em>, obtenemos <strong>evidencia empírica de que el estándar refleja adecuadamente la organización nacional</strong>.<br>
+              • Si emerge un grupo consolidado de <em>DevOps/Cloud/CI-CD</em> que ACM reparte entre Software Engineering, Operating Systems y Networking, constituye un <strong>hallazgo científico clave</strong>: la evolución tecnológica del mercado produjo una integración temática distinta a la propuesta original del estándar.
+            </div>
+
+            <div>
+              <strong style="color: var(--usach-teal);">3. Validación Independiente y Cruzada (Argumento Metodológico Principal)</strong><br>
+              No utilizamos clustering para clasificar (la clasificación la realiza la similitud semántica). El clustering se utiliza para responder: <strong>¿Si eliminamos las etiquetas ACM y dejamos que los datos hablen por sí solos, obtenemos prácticamente la misma organización?</strong><br>
+              Si dos procedimientos independientes —uno supervisado (similitud contra ACM) y uno no supervisado (clustering)— coinciden, la metodología gana <strong>máxima credibilidad y robustez empírica</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- P3 -->
+        <div class="qa-card">
+          <div class="qa-question">
+            <span class="badge badge-cyan">P3</span>
+            <span>¿De dónde salen las ofertas laborales, cuántas, de qué período, cómo las limpia y cómo las hace comparables con descriptores académicos?</span>
+          </div>
+          <div class="qa-answer">
+            "El corpus de mercado laboral se construyó mediante la extracción de <strong>200 vacantes tecnológicas activas en LinkedIn Chile (Enero - Junio 2026)</strong> cubriendo 6 roles estratégicos: <em>Data Engineer, AI Engineer, DevOps Engineer, Cloud Engineer, Cybersecurity Analyst y Software Engineer</em>.<br><br>
+            El pipeline de spaCy elimina etiquetas HTML, stop-words y texto 'boilerplate' institucional/beneficios/cláusulas legales, conservando solo los requisitos y responsabilidades técnicas. Para hacerlos comparables con los descriptores académicos, codificamos ambos conjuntos en el mismo espacio vectorial continuo usando <code>paraphrase-multilingual-mpnet-base-v2</code>, abstrayendo el estilo de redacción y comparando proximidad semántica conceptual pura."
+          </div>
+        </div>
+
+        <!-- P4 -->
+        <div class="qa-card">
+          <div class="qa-question">
+            <span class="badge badge-amber">P4</span>
+            <span>Compara descriptores en español contra estándares en inglés con SBERT multilingüe. ¿Qué modelo específicamente y cómo valida que la similitud entre idiomas es confiable?</span>
+          </div>
+          <div class="qa-answer">
+            "Utilizamos <code>paraphrase-multilingual-mpnet-base-v2</code> (768 dimensiones). Para validar la confiabilidad cross-lingual, implementamos un experimento sobre una <strong>muestra control de 100 asignaturas en español</strong> traducidas al inglés mediante la API de DeepL:<br>
+            1. Calculamos similitud coseno entre el embedding original en español y el traducido en inglés, obteniendo una <strong>similitud media de 0.94 (sd = 0.024)</strong>.<br>
+            2. Medimos la correlación de Pearson entre distancias a áreas ACM de la ruta directa (ES -&gt; EN) vs. la ruta traducida (ES -&gt; DeepL -&gt; EN), alcanzando <strong>r = 0.92 (p &lt; 0.01)</strong>. Esto demuestra que la ruta multilingüe directa es highly confiable y elimina costos operacionales de traducción."
+          </div>
+        </div>
+
+        <!-- P5 -->
+        <div class="qa-card">
+          <div class="qa-question">
+            <span class="badge badge-cyan">P5</span>
+            <span>Fija Kappa sobre 0,60 como criterio de validación híbrida. ¿Entre quiénes se calcula, sobre qué se anota y con cuántos anotadores?</span>
+          </div>
+          <div class="qa-answer">
+            "La validación híbrida contempla un protocolo de anotación estructurado:<br>
+            1. <strong>Anotadores:</strong> Panel de <strong>3 evaluadores expertos independientes</strong> (académicos con experiencia en gestión curricular del DIINF USACH).<br>
+            2. <strong>Muestra:</strong> 100 descriptores de asignaturas chilenas clasificados en la Primary Knowledge Area de las 18 áreas ACM/IEEE CS2013.<br>
+            3. <strong>Acuerdo Inter-Anotador (Fleiss' Kappa):</strong> Alcanzó <strong>0.64</strong> (acuerdo sustancial).<br>
+            4. <strong>Evaluación del Modelo (Cohen's Kappa):</strong> Entre la predicción del modelo NLP y el consenso de los expertos, alcanzando <strong>0.61</strong>, lo que valida formalmente la precisión del modelo contra el criterio humano."
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW GRID DRAWER -->
+  <div class="overview-overlay" id="overviewOverlay"></div>
+
+  <!-- JAVASCRIPT LOGIC & CONTROLS -->
+  <script>
+    // State Variables
+    let currentSlide = 1;
+    const totalSlides = 16;
+    let timerSeconds = 15 * 60; // 15 minutes
+    let timerInterval = null;
+    let timerRunning = false;
+
+    // DOM Elements
+    const slides = document.querySelectorAll('.slide');
+    const currentSlideNumEl = document.getElementById('currentSlideNum');
+    const totalSlideNumEl = document.getElementById('totalSlideNum');
+    const progressBar = document.getElementById('progressBar');
+    
+    const notesDrawer = document.getElementById('notesDrawer');
+    const notesSlideNum = document.getElementById('notesSlideNum');
+    const notesText = document.getElementById('notesText');
+    const notesTip = document.getElementById('notesTip');
+    const notesTime = document.getElementById('notesTime');
+    
+    const qaModal = document.getElementById('qaModal');
+    const overviewOverlay = document.getElementById('overviewOverlay');
+
+    const timerWidget = document.getElementById('timerWidget');
+    const timerDisplay = document.getElementById('timerDisplay');
+    const timerToggleBtn = document.getElementById('timerToggleBtn');
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      totalSlideNumEl.textContent = totalSlides;
+      buildOverviewGrid();
+      updateSlideView();
+    });
+
+    // Cross-browser Fullscreen Change Detection
+    function updateFullscreenState() {
+      const isFS = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+      if (isFS) {
+        document.body.classList.add('in-fullscreen');
+      } else {
+        document.body.classList.remove('in-fullscreen');
+      }
+    }
+
+    ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evt => {
+      document.addEventListener(evt, updateFullscreenState);
+    });
+
+    // Explicit Toggle UI Function
+    function toggleUIControls() {
+      document.body.classList.toggle('hide-controls');
+    }
+
+    function showUIControls() {
+      document.body.classList.remove('hide-controls');
+      document.body.classList.remove('in-fullscreen');
+    }
+
+    document.getElementById('btnHideUI').addEventListener('click', toggleUIControls);
+    document.getElementById('btnUnhideMini').addEventListener('click', showUIControls);
+
+    // Slide Navigation Core
+    function goToSlide(n) {
+      if (n < 1) n = 1;
+      if (n > totalSlides) n = totalSlides;
+      
+      slides.forEach(s => s.classList.remove('active'));
+      currentSlide = n;
+      
+      const targetSlide = document.querySelector(`.slide[data-index="${currentSlide}"]`);
+      if (targetSlide) {
+        targetSlide.classList.add('active');
+      }
+      
+      currentSlideNumEl.textContent = currentSlide;
+      
+      // Update progress bar
+      const progressPercent = ((currentSlide - 1) / (totalSlides - 1)) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+
+      // Update speaker notes
+      updateSpeakerNotes(targetSlide);
+
+      // Close overview if open
+      overviewOverlay.classList.remove('open');
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        goToSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        goToSlide(currentSlide - 1);
+      }
+    }
+
+    function updateSlideView() {
+      goToSlide(currentSlide);
+    }
+
+    // Update Speaker Notes Content
+    function updateSpeakerNotes(slideEl) {
+      if (!slideEl) return;
+      notesSlideNum.textContent = currentSlide;
+      notesText.textContent = slideEl.dataset.notes || "Sin guion especificado.";
+      notesTip.textContent = `Consejo de Oratoria: ${slideEl.dataset.tip || "Mantén contacto visual."}`;
+      notesTime.textContent = slideEl.dataset.time || "0:00";
+    }
+
+    // Speaker Notes Drawer Toggle
+    document.getElementById('btnNotes').addEventListener('click', () => {
+      notesDrawer.classList.toggle('open');
+    });
+
+    document.getElementById('btnCloseNotes').addEventListener('click', () => {
+      notesDrawer.classList.remove('open');
+    });
+
+    // Q&A Modal Controls
+    function openQA() { qaModal.classList.add('open'); }
+    function closeQA() { qaModal.classList.remove('open'); }
+
+    document.getElementById('btnQA').addEventListener('click', () => {
+      if (qaModal.classList.contains('open')) closeQA();
+      else openQA();
+    });
+
+    // Overview Grid Drawer
+    function buildOverviewGrid() {
+      overviewOverlay.innerHTML = '';
+      slides.forEach((slide, index) => {
+        const slideIndex = index + 1;
+        const titleEl = slide.querySelector('.slide-title');
+        const titleText = titleEl ? titleEl.textContent : `Diapositiva ${slideIndex}`;
+        
+        const card = document.createElement('div');
+        card.className = `thumb-card ${slideIndex === currentSlide ? 'active' : ''}`;
+        card.innerHTML = `
+          <div class="thumb-number">Diapositiva ${slideIndex}</div>
+          <div class="thumb-title">${titleText}</div>
+        `;
+        card.addEventListener('click', () => goToSlide(slideIndex));
+        overviewOverlay.appendChild(card);
+      });
+    }
+
+    document.getElementById('btnOverview').addEventListener('click', () => {
+      buildOverviewGrid();
+      overviewOverlay.classList.toggle('open');
+    });
+
+    // Fullscreen Toggle
+    document.getElementById('btnFullscreen').addEventListener('click', toggleFullscreen);
+
+    function toggleFullscreen() {
+      const fsElement = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+      
+      if (!fsElement) {
+        const docEl = document.documentElement;
+        if (docEl.requestFullscreen) docEl.requestFullscreen();
+        else if (docEl.webkitRequestFullscreen) docEl.webkitRequestFullscreen();
+        else if (docEl.mozRequestFullScreen) docEl.mozRequestFullScreen();
+        else if (docEl.msRequestFullscreen) docEl.msRequestFullscreen();
+        document.body.classList.add('in-fullscreen');
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+        else if (document.msExitFullscreen) document.msExitFullscreen();
+        document.body.classList.remove('in-fullscreen');
+      }
+    }
+
+    // Keyboard Navigation Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      switch(e.key) {
+        case 'ArrowRight':
+        case 'PageDown':
+        case ' ':
+          nextSlide();
+          break;
+        case 'ArrowLeft':
+        case 'PageUp':
+          prevSlide();
+          break;
+        case 'Home':
+          goToSlide(1);
+          break;
+        case 'End':
+          goToSlide(totalSlides);
+          break;
+        case 'h':
+        case 'H':
+          toggleUIControls();
+          break;
+        case 'n':
+        case 'N':
+          notesDrawer.classList.toggle('open');
+          break;
+        case 'q':
+        case 'Q':
+          if (qaModal.classList.contains('open')) closeQA();
+          else openQA();
+          break;
+        case 'o':
+        case 'O':
+          buildOverviewGrid();
+          overviewOverlay.classList.toggle('open');
+          break;
+        case 'f':
+        case 'F':
+          toggleFullscreen();
+          break;
+      }
+    });
+
+    // Touch & Swipe Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
+    document.addEventListener('touchend', (e) => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) nextSlide();
+      if (touchEndX > touchStartX + 50) prevSlide();
+    }
+
+    // 15-Minute Countdown Timer Logic
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function updateTimerDisplay() {
+      timerDisplay.textContent = formatTime(timerSeconds);
+      
+      if (timerSeconds <= 120 && timerSeconds > 60) {
+        timerWidget.classList.add('warning');
+        timerWidget.classList.remove('danger');
+      } else if (timerSeconds <= 60) {
+        timerWidget.classList.add('danger');
+        timerWidget.classList.remove('warning');
+      } else {
+        timerWidget.classList.remove('warning', 'danger');
+      }
+    }
+
+    function startTimer() {
+      if (timerRunning) return;
+      timerRunning = true;
+      timerToggleBtn.className = 'fa-solid fa-pause';
+      timerInterval = setInterval(() => {
+        if (timerSeconds > 0) {
+          timerSeconds--;
+          updateTimerDisplay();
+        } else {
+          pauseTimer();
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      timerRunning = false;
+      timerToggleBtn.className = 'fa-solid fa-play';
+      clearInterval(timerInterval);
+    }
+
+    timerWidget.addEventListener('click', () => {
+      if (timerRunning) pauseTimer();
+      else startTimer();
+    });
+  </script>
+</body>
+</html>

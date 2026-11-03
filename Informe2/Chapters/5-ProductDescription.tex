@@ -1,0 +1,86 @@
+\section{Descripción del producto}
+\label{cap:productDescription}
+
+Esta sección detalla la arquitectura del producto desarrollado, el cual comprende el pipeline del método computacional de análisis semántico y el tablero de control interactivo (\textit{dashboard}) para la comparación visual de mallas curriculares.
+
+\subsection{Flujo Metodológico e Insumos}
+\label{sec:flow_inputs}
+
+El producto se estructura en un pipeline computacional compuesto por cinco fases correlativas (detalladas en el Anexo E):
+\begin{enumerate}[label=\arabic*.]
+	\item \textbf{Fase 1: Adquisición y Preprocesamiento:} Ingesta de mallas curriculares, perfiles de egreso declarados, estándares y vacantes; limpieza de texto, remoción de \textit{stop words} académicas y lematización.
+	\item \textbf{Fase 2: Generación de Embeddings Contextuales:} Vectorización multilingüe mediante \textit{Sentence-Transformers} (SBERT/MPNet) proyectando los textos en un espacio vectorial común $\mathbb{R}^d$, y reducción dimensional con UMAP/t-SNE.
+	\item \textbf{Fase 3: Modelamiento y Agrupamiento Semántico:} Ejecución de la estrategia tripartita de \textit{clustering} (K-Means, Jerárquico y DBSCAN) para la identificación de patrones estructurales y asignaturas atípicas.
+	\item \textbf{Fase 4: Comparación y Cálculo de Brechas:} Generación de matrices de similitud de coseno ($\cos \theta$), tasas de cobertura ($\% \text{Cobertura}$) e índices de brecha semántica.
+	\item \textbf{Fase 5: Despliegue en Dashboard React:} Exportación de matrices en formato JSON y renderización de mapas semánticos e indicadores interactivos.
+\end{enumerate}
+
+La recolección de insumos contempla tres dimensiones rigurosamente delimitadas:
+\begin{itemize}
+	\item \textbf{Dimensión Académica Nacional:} 16 mallas curriculares (747 asignaturas) e itinerarios formativos vigentes (2018–2026), junto a los perfiles de egreso declarados por las universidades (Anexo C).
+	\item \textbf{Dimensión Normativa Internacional:} Las 18 \textit{Knowledge Areas} y taxonomías de los estándares ACM/IEEE CS2013 y CC2020 \citep{cc2020_task_force_computing_2020}.
+	\item \textbf{Dimensión Mercado Laboral:} $N = 200$ convocatorias de empleo recolectadas de LinkedIn (2024–2026), estratificadas formalmente entre empresas del \textit{Sector Tecnológico (Mundo TI)} y empresas del \textit{Sector No-TI} (banca, minería, retail, servicios públicos) (Anexo D).
+\end{itemize}
+
+\subsection{Algoritmo del Método Computacional}
+\label{sec:algorithm_pseudocode}
+
+A continuación se presenta el pseudocódigo formal que describe el funcionamiento secuencial del método computacional propuesto:
+
+\vspace{0.3cm}
+
+\begin{algorithm}[H]
+	\caption{Pipeline Computacional de Análisis Semántico y Comparación de Mallas Curriculares}
+	\label{alg:pipeline_mallas_doc}
+	\small
+	\begin{algorithmic}[1]
+		\Require Corpus de mallas $\mathcal{M} = \{M_1, M_2, \dots, M_n\}$, Perfiles de Egreso $\mathcal{P}$, Estándares $\mathcal{S}$ (ACM/IEEE KAs), Vacantes LinkedIn $\mathcal{L}$, Modelo SBERT $\mathcal{E}$
+		\Ensure Representaciones vectoriales, Clústeres de mallas, Matrices de Similitud $S$ y Dashboard en React
+		\Statex
+		\Procedure{PipelineAnalisisCurricular}{$\mathcal{M}, \mathcal{P}, \mathcal{S}, \mathcal{L}, \mathcal{E}$}
+			\State \textbf{Fase 1: Preprocesamiento y Limpieza}
+			\For{cada asignatura $a \in M_i \in \mathcal{M}$}
+				\State $a_{\text{clean}} \leftarrow \text{NormalizarOrtografia}(\text{RemoverStopWords}(a.\text{nombre} \cup a.\text{descriptor}))$
+			\EndFor
+			\For{cada $p \in \mathcal{P}$, $s \in \mathcal{S}$, $l \in \mathcal{L}$}
+				\State $p_{\text{clean}} \leftarrow \text{LimpiezaTexto}(p)$, \quad $s_{\text{clean}} \leftarrow \text{LimpiezaTexto}(s)$, \quad $l_{\text{clean}} \leftarrow \text{LimpiezaTexto}(l)$
+			\EndFor
+			
+			\Statex
+			\State \textbf{Fase 2: Generación de Embeddings Multilingües}
+			\State $\mathbf{V}_{\mathcal{M}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{M}_{\text{clean}})$, \quad $\mathbf{V}_{\mathcal{P}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{P}_{\text{clean}})$
+			\State $\mathbf{V}_{\mathcal{S}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{S}_{\text{clean}})$, \quad $\mathbf{V}_{\mathcal{L}} \leftarrow \mathcal{E}.\text{encode}(\mathcal{L}_{\text{clean}})$
+			
+			\Statex
+			\State \textbf{Fase 3: Modelamiento y Agrupamiento Semántico (Clustering)}
+			\State $\mathcal{C}_{\text{kmeans}} \leftarrow \text{KMeans}(\mathbf{V}_{\mathcal{M}}, k)$, \quad $\mathcal{C}_{\text{hier}} \leftarrow \text{HierarchicalClustering}(\mathbf{V}_{\mathcal{M}})$
+			\State $\mathcal{O}_{\text{dbscan}} \leftarrow \text{DBSCAN}(\mathbf{V}_{\mathcal{M}}, \epsilon, \text{min\_pts})$ \Comment{Aislamiento de asignaturas atípicas}
+			
+			\Statex
+			\State \textbf{Fase 4: Comparación y Alineación Vectorial}
+			\For{cada programa $M_i \in \mathcal{M}$}
+				\State $S_{\text{ACM}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{\mathcal{S}})$ \Comment{Alineación con Estándar ACM/IEEE}
+				\State $S_{\text{LinkedIn}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{\mathcal{L}})$ \Comment{Alineación con Mercado TI / No-TI}
+				\State $S_{\text{Perfil}}[i] \leftarrow \text{SimilitudCoseno}(\mathbf{V}_{M_i}, \mathbf{V}_{P_i})$ \Comment{Alineación Malla vs Perfil}
+			\EndFor
+			
+			\Statex
+			\State \textbf{Fase 5: Despliegue en Dashboard React}
+			\State Exportar matrices $\{S_{\text{ACM}}, S_{\text{LinkedIn}}, S_{\text{Perfil}}\}$ y coordenadas UMAP a formato JSON
+			\State Renderizar mapas semánticos interactivos y matrices de diferencias de mallas en React
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\vspace{0.3cm}
+
+\subsection{Marco de Evaluación Híbrido}
+\label{sec:evaluation_framework}
+
+El marco de validación se compone de cuatro componentes complementarios:
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{Evaluación Cuantitativa Intrínseca y Externa:} Validación geométrica con Silhouette ($\ge 0.25$) y Davies-Bouldin ($< 1.50$), y validación externa contra las 18 áreas del estándar ACM mediante el curado manual de las 747 asignaturas como etiqueta de referencia (\textit{ground truth}), exigiendo $\text{ARI} \ge 0.35$, $\text{NMI} \ge 0.40$ y $\text{Purity} \ge 0.70$.
+	\item \textbf{Análisis de Estabilidad por Bootstrap:} Evaluación de consistencia algorítmica ($B = 100$ iteraciones sobre subconjuntos aleatorios del 80\%–90\% del corpus) asegurando $\text{ARI}_{\text{estabilidad}} \ge 0.75$.
+	\item \textbf{Evaluación Cualitativa por Panel de Expertos:} Revisión por un panel independiente de 3 expertos académicos/industriales evaluando la coherencia pedagógica con una concordancia inter-evaluador $\kappa \ge 0.60$.
+	\item \textbf{Evaluación de Usabilidad y Despliegue del Dashboard:} Verificación de latencia interactiva $< 2.0$ segundos en la plataforma React para garantizar su efectividad en reuniones de comisiones académicas.
+\end{enumerate}

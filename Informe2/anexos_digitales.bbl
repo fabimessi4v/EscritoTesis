@@ -1,0 +1,58 @@
+\begin{thebibliography}{}
+
+\bibitem[Constantinov et~al., 2015]{constantinov_preliminary_2015}
+Constantinov, C., Popescu, P.~S., Poteras, C.~M., and Mocanu, M.~L. (2015).
+\newblock Preliminary results of a curriculum adjuster based on professional
+  network analysis.
+\newblock In {\em 2015 19th {International} {Conference} on {System} {Theory},
+  {Control} and {Computing} ({ICSTCC})}, pages 860--865, Cheile Gradistei,
+  Romania. IEEE.
+
+\bibitem[Duarte et~al., 2023]{duarte_broader_2023}
+Duarte, R., Lacerda~Nobre, {\^A}., Pimentel, F., and Jacquinet, M. (2023).
+\newblock Broader {Terms} {Curriculum} {Mapping}: {Using} {Natural} {Language}
+  {Processing} and {Visual}-{Supported} {Communication} to {Create}
+  {Representative} {Program} {Planning} {Experiences}.
+\newblock {\em Applied System Innovation}, 7(1):7.
+
+\bibitem[Fan and Chiong, 2023]{fan_identifying_2023}
+Fan, Z. and Chiong, R. (2023).
+\newblock Identifying digital capabilities in university courses: {An}
+  automated machine learning approach.
+\newblock {\em Education and Information Technologies}, 28(4):3937--3952.
+
+\bibitem[Miura et~al., 2021]{miura_automated_2021}
+Miura, K., Saito, D., Washizaki, H., and Fukazawa, Y. (2021).
+\newblock Automated {Educational} {Program} {Mapping} on {Learning} {Standards}
+  in {Computer} {Science}.
+\newblock In {\em 2021 {IEEE} 45th {Annual} {Computers}, {Software}, and
+  {Applications} {Conference} ({COMPSAC})}, pages 1405--1406, Madrid, Spain.
+  IEEE.
+
+\bibitem[Russell~E., 2024]{russell_e_mapping_2024}
+Russell~E., W. (2024).
+\newblock Mapping {Curricula} to {Skills} and {Occupations} {Using} {Course}
+  {Descriptions}.
+\newblock In {\em 2024 {IEEE} {World} {Engineering} {Education} {Conference}
+  ({EDUNINE})}, pages 1--6, Guatemala City, Guatemala. IEEE.
+
+\bibitem[Xu et~al., 2025a]{cristea_course_2025}
+Xu, Z., Li, X., Huan, Y., Minaya, V., and Yu, R. (2025a).
+\newblock From {Course} to {Skill}: {Evaluating} {Large} {Language} {Model}
+  {Performance} in {Curricular} {Analytics}.
+\newblock In Cristea, A.~I., Walker, E., Lu, Y., Santos, O.~C., and Isotani,
+  S., editors, {\em Artificial {Intelligence} in {Education}}, volume 15882,
+  pages 203--211. Springer Nature Switzerland, Cham.
+\newblock Series Title: Lecture Notes in Computer Science.
+
+\bibitem[Xu et~al., 2025b]{cristea_artificial_2025}
+Xu, Z., Minaya, V., Cristea, A.~I., and Yu, R. (2025b).
+\newblock Generative {AI} as a {Curriculum} {Co-Reviewer}: {Evaluating} {LLM}
+  {Skill} {Mapping} in {Higher} {Education}.
+\newblock In Cristea, A.~I., Walker, E., Lu, Y., Santos, O.~C., and Isotani,
+  S., editors, {\em Artificial {Intelligence} in {Education}: 26th
+  {International} {Conference}, {AIED} 2025, {Palermo}, {Italy}, {July}
+  22–26, 2025, {Proceedings}}, volume 15877, pages 180--195, Cham. Springer
+  Nature Switzerland.
+
+\end{thebibliography}

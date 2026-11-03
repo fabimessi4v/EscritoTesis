@@ -1,0 +1,34 @@
+\section{Plan de trabajo}
+\label{cap:Schedule}
+
+\subsection{Definición de actividades}
+\label{sec:activitiesDefinition}
+
+A continuación se detallarán las actividades del proyecto de título, las cuales se estructuran en tres etapas principales basadas en el ciclo de diseño, modelamiento y validación del pipeline propuesto. Cabe mencionar que de forma transversal se contempla la redacción de la memoria de título.
+
+\begin{itemize}
+    \item \textbf{Etapa 1 - Diseño e implementación del pipeline de datos}
+        \begin{enumerate}
+            \item \textbf{Recopilación e ingesta}: Desarrollo y ejecución de scripts para la extracción automatizada (parsing y scraping) de planes de estudio y perfiles curriculares de universidades chilenas, directrices de la ACM/IEEE y ofertas de empleo en LinkedIn.
+            \item \textbf{Preprocesamiento y normalización}: Implementación de los filtros de limpieza textual (stop words, minúsculas, lematización) y diseño del diccionario léxico-semántico para la normalización de los nombres de asignaturas.
+        \end{enumerate}
+    
+    \item \textbf{Etapa 2 - Modelamiento, agrupamiento y evaluación}
+        \begin{enumerate}
+            \item \textbf{Vectorización y embeddings}: Evaluación empírica de las representaciones textuales vectoriales comparando representaciones dispersas (TF-IDF) y densas (FastText, BETO, Sentence-Transformers).
+            \item \textbf{Agrupamiento (Clustering)}: Calibración y ejecución de algoritmos K-Means, DBSCAN y agrupamiento jerárquico sobre el corpus de asignaturas normalizadas.
+            \item \textbf{Evaluación de clústeres}: Medición de la calidad de los agrupamientos aplicando métricas de evaluación intrínseca (coeficiente de Silueta e índice de Davies-Bouldin) y análisis de estabilidad ante perturbaciones.
+        \end{enumerate}
+    
+    \item \textbf{Etapa 3 - Alineación, visualización y validación final}
+        \begin{enumerate}
+            \item \textbf{Cálculo de alineación y brechas}: Cálculo de similitud del coseno entre las asignaturas, áreas del conocimiento internacionales ACM/IEEE y las demandas laborales de LinkedIn.
+            \item \textbf{Desarrollo de la interfaz visual}: Implementación de un prototipo de dashboard interactivo (utilizando Streamlit o Dash) para facilitar la exploración de las brechas y clústeres.
+            \item \textbf{Validación experta y cierre}: Evaluación cualitativa de las agrupaciones y métricas de alineación mediante paneles con comités curriculares y profesor guía, finalizando con la redacción del informe final.
+        \end{enumerate}
+\end{itemize}
+
+\subsection{Carta Gantt}
+\label{sec:ganttChart}
+
+Para el desarrollo del proyecto de título se estiman 632 horas de trabajo a lo largo de 4 meses. Esto considera una dedicación diaria promedio orientada a cumplir de manera factible con las fases del pipeline metodológico. Los detalles de las fechas e hitos de entrega asociados a cada etapa se detallan en el Anexo~\ref{app:schedule}.

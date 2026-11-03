@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: memoria.aux
+A level-1 auxiliary file: Chapters/1-Introduction.aux
+A level-1 auxiliary file: Chapters/2-ProblemStatement.aux
+A level-1 auxiliary file: Chapters/3-ProposalObjectives.aux
+A level-1 auxiliary file: Chapters/4-ApproachAnalysis.aux
+A level-1 auxiliary file: Chapters/5-ProductDescription.aux
+A level-1 auxiliary file: Chapters/6-Methodology.aux
+A level-1 auxiliary file: Chapters/7-Schedule.aux
+The style file: apalike.bst
+Database file #1: References/references.bib
+You've used 17 entries,
+            1935 wiz_defined-function locations,
+            589 strings with 8870 characters,
+and the built_in function-call counts, 8088 in all, are:
+= -- 800
+> -- 366
+< -- 16
++ -- 127
+- -- 124
+* -- 661
+:= -- 1358
+add.period$ -- 58
+call.type$ -- 17
+change.case$ -- 142
+chr.to.int$ -- 16
+cite$ -- 17
+duplicate$ -- 326
+empty$ -- 546
+format.name$ -- 145
+if$ -- 1648
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 89
+num.names$ -- 55
+pop$ -- 142
+preamble$ -- 1
+purify$ -- 142
+quote$ -- 0
+skip$ -- 252
+stack$ -- 0
+substring$ -- 524
+swap$ -- 83
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 0
+while$ -- 67
+width$ -- 0
+write$ -- 239

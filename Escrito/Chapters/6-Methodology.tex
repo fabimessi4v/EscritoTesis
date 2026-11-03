@@ -1,0 +1,20 @@
+\section{Metodología, herramientas y ambiente de desarrollo}
+\label{cap:Methodology}
+
+\subsection{Justificación de la metodología a utilizar}
+\label{sec:crisp_dm}
+Para estructurar y guiar el desarrollo de este proyecto, se ha seleccionado la metodología CRISP-DM (\textit{Cross-Industry Standard Process for Data Mining}). La elección de este marco de trabajo se justifica por su enfoque iterativo y su probada eficacia en proyectos de ciencia de datos y minería de texto. CRISP-DM proporciona un ciclo de vida claro que abarca desde la comprensión del dominio educativo e industrial hasta el despliegue del \textit{dashboard} interactivo, asegurando que cada fase del procesamiento de lenguaje natural y modelamiento no supervisado responda de manera directa a los objetivos y necesidades del problema planteado.
+
+\subsection{Herramientas de desarrollo}
+\label{sec:tools}
+El procesamiento analítico y la implementación tecnológica se llevarán a cabo utilizando el lenguaje de programación Python, debido a su robusto ecosistema orientado al procesamiento de lenguaje natural y aprendizaje automático. Entre las principales librerías a utilizar destacan:
+\begin{itemize}
+    \item \textbf{Procesamiento de Lenguaje Natural (NLP)}: \textit{spaCy} y \textit{NLTK} para las tareas de limpieza, tokenización, remoción de palabras vacías y lematización.
+    \item \textbf{Representación Vectorial}: \textit{Sentence-Transformers} (basado en la biblioteca \textit{Hugging Face Transformers}) para la generación de \textit{embeddings} semánticos.
+    \item \textbf{Agrupamiento y Reducción de Dimensionalidad}: \textit{scikit-learn} para algoritmos como K-Means, DBSCAN y cálculo de similitud del coseno; junto con librerías especializadas como \textit{UMAP} y \textit{t-SNE} para la proyección espacial de los datos.
+    \item \textbf{Visualización y Despliegue}: \textit{Matplotlib} y \textit{Seaborn} para el análisis exploratorio, y \textit{React} para la construcción de la interfaz gráfica y el tablero interactivo final.
+\end{itemize}
+
+\subsection{Ambiente de desarrollo}
+\label{sec:environment}
+El entorno de trabajo estará centralizado de forma nativa en el sistema operativo \textit{Ubuntu 24.04 LTS}. Todo el desarrollo del código fuente, el diseño del \textit{pipeline} y el empaquetado de la solución se realizarán utilizando \textit{Visual Studio Code} (VS Code) como entorno de desarrollo integrado (IDE). Además, para garantizar la trazabilidad íntegra del proyecto, la totalidad de los archivos (tanto el código como la documentación) quedarán estrictamente versionados utilizando el sistema \textit{Git}, con el repositorio central alojado en la plataforma \textit{GitHub}.

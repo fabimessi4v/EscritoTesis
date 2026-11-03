@@ -1,0 +1,24 @@
+\section{Introducción}
+\label{cap:introduction}
+
+\subsection{Contexto y Motivación}
+\label{sec:context_motivation}
+
+En las últimas décadas, el sistema de educación superior en Chile ha alcanzado una alta cobertura y diversidad institucional en la formación en tecnología \citep{subsecretaria_de_educacion_superior_evidencias_2025}. Esta expansión ha generado una marcada heterogeneidad nominal y de estructuración modular entre los planes de estudio dictados por las distintas universidades, coexistiendo programas tradicionales de ciclo largo (e.g., \textit{Ingeniería Civil en Informática}) con carreras de corte tecnológico y de ejecución (e.g., \textit{Ingeniería de Ejecución en Computación e Informática}) \citep{subsecretaria_de_educacion_superior_evidencias_2025,latuz_pina_2024}. Esta diversidad curricular responde de manera legítima a la autonomía de las instituciones de educación superior, a sus distintos sellos formativos y a sus modelos pedagógicos orientados a diversos nichos del mercado laboral.
+
+No obstante, esta variabilidad estructural dificulta la comparación cuantitativa de la oferta nacional frente a marcos de referencia internacionales. Para responder a este desafío, organizaciones como ACM e IEEE han promulgado directrices curriculares de validez global, tales como CS2013 y CC2020 \citep{cc2020_task_force_computing_2020}. Si bien estos estándares proporcionan taxonomías claras de áreas del conocimiento (\textit{Knowledge Areas}), su adopción e integración en las mallas de las universidades chilenas ha sido desigual \citep{diaz-quezada_rediseno_2019}. A su vez, la rápida evolución tecnológica exige contrastar de forma continua las asignaturas de las mallas con la demanda técnica real del mercado laboral local.
+
+En este escenario, los diagnósticos y rediseños curriculares han dependido tradicionalmente de revisiones manuales por comisiones académicas o encuestas de percepción cualitativas \citep{contreras_diseno_nodate,diaz-quezada_rediseno_2019}, procesos laboriosos y susceptibles a sesgos informativos. Para apoyar esta labor, se requiere un \textbf{método computacional analítico y bidireccional} que permita procesar objetivamente los datos textuales de la oferta educativa y contrastarlos dinámicamente. El carácter \textbf{bidireccional} de este enfoque abarca dos vertientes analíticas complementarias:
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{Vertiente Académico-Normativa (Top-Down):} Evalúa cuantitativamente la densidad y cobertura disciplinar de las asignaturas de las mallas curriculares frente a las directrices de los estándares internacionales ACM/IEEE CS2013 y CC2020.
+	\item \textbf{Vertiente Mercado-Laboral (Bottom-Up):} Mide la alineación semántica entre las mallas curriculares y las demandas tecnológicas extraídas en tiempo real desde 200 vacantes laborales de LinkedIn, estratificadas formalmente entre empresas del sector tecnológico (Mundo TI) e industrias usuarias no tecnológicas (banca, minería, retail, servicios públicos).
+\end{enumerate}
+
+Para asegurar un análisis delimitado y transparente, el método computacional procesa \textbf{única y exclusivamente dos objetos curriculares declarados}: (1) las \textbf{mallas curriculares} (títulos, descriptores modulares, distribución de créditos y prerrequisitos de 747 asignaturas), y (2) los \textbf{perfiles de egreso declarados} por cada una de las 16 carreras universitarias que componen el corpus de estudio (Anexo C).
+
+\subsection{Propósito de la solución}
+\label{sec:purpose}
+
+El propósito de este trabajo es proyectar y desarrollar un \textbf{método computacional} basado en procesamiento de lenguaje natural (\textit{Sentence-Transformers}) y algoritmos de agrupamiento no supervisado (\textit{clustering} K-Means, Jerárquico y DBSCAN) proyectados dentro de un mismo espacio vectorial latente ($\mathbb{R}^d$). Este método permite caracterizar, mapear y cuantificar numéricamente las diferencias de mallas y los grados de alineación respecto a estándares y vacantes de empleo de LinkedIn (Anexo D).
+
+El producto final operacionaliza el pipeline computacional mediante un tablero de control interactivo (\textit{dashboard}) en React. Este sistema está diseñado bajo una filosofía de soporte a la decisión (\textit{Human-in-the-Loop}), entregando a docentes, coordinadores de carrera y comisiones de rediseño curricular evidencia analítica objetiva —a través de mapas semánticos, matrices de distancia vectorial e índices de brechas— para respaldar la toma de decisiones pedagógicas sin reemplazar el juicio evaluativo humano.

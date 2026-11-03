@@ -1,0 +1,34 @@
+\begin{algorithm}
+	\caption{MO memetic algorithm (MO-MA) \citep{VillalobosCid2019}}
+	\label{alg:memetic}
+	\begin{algorithmic}[1]
+		\fontsize{12}{12}\selectfont
+
+		\State \textbf{Input:} $D,ps,cr,mr,ls$
+		\State \textbf{Output:} A $P$ population of trees (Pareto frontier).
+
+		\Comment{\textbf{Initialise population}}\;
+		\State $P \gets initialise\_population(D,ps)$
+
+		\While{\textbf{stop} condition is not reached}
+
+		\For{\text{\textbf{each}} $p \in P$}
+
+		%                \Comment{\textbf{Secondary population}}\;
+		%                \State $Q \gets secondary\_population(P)$  
+
+		\Comment{\textbf{Genetic operations}}\;
+		\State  $[T_1,T_2]  \gets binary\_tournament\_selection(P)$
+		\State  $Q[p] \gets crossover(T_1,T_2,cr)$
+		\State $Q[p] \gets mutation(Q[p],mr)$
+		\EndFor
+
+		\Comment{\textbf{Update Pareto-frontier population}}\;
+		\State $P \gets non\_dominated\_sorting(P,Q,ps)$
+
+		\Comment{\textbf{Local search application}}\;
+		\State $P \gets local\_search\_strategy(P,ls)$
+		\EndWhile
+		\State \Return (P)
+	\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Anexos}{1}{section*.2}%
+\renewcommand {\numberline }{\appendixnumberline }
+\contentsline {subsection}{\numberline {Anexo A}Glosario}{1}{subsection.Anexo.1}%
+\contentsline {subsection}{\numberline {Anexo B}Resumen comparativo de trabajos relacionados sobre alineación curricular automatizada.}{3}{subsection.Anexo.2}%
+\contentsline {subsection}{\numberline {Anexo C}Descripción del corpus de datos}{6}{subsection.Anexo.3}%
+\contentsline {subsection}{\numberline {Anexo D}Protocolo y caracterización de la muestra de datos de LinkedIn}{6}{subsection.Anexo.4}%
+\contentsline {subsection}{\numberline {Anexo E}Flujo de procesamiento metodológico}{8}{subsection.Anexo.5}%
+\contentsline {subsection}{\numberline {Anexo F}Planificación temporal del proyecto (Carta Gantt)}{8}{subsection.Anexo.6}%
+\contentsline {section}{Referencias de Anexos}{9}{table.caption.5}%
