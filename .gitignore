@@ -1,0 +1,13 @@
+# TeX / LaTeX auxiliary and log files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.bak*
+_minted*
+indent.log

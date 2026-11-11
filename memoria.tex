@@ -1,0 +1,179 @@
+\documentclass[12pt,letterpaper]{article}
+
+% Librerías a utilizar
+\usepackage[utf8]{inputenc}	% Codificación 
+\usepackage[spanish]{babel}	% Idioma
+\usepackage{natbib}			% Bibliografía
+\usepackage{graphicx}		% Imagenes
+\usepackage{indentfirst}		% Sangría
+\usepackage{amsmath, amsfonts, amssymb}	% Figuras matemáticas
+\usepackage{url}							% URL
+\usepackage{subfigure}
+\usepackage{svg}
+\usepackage{algpseudocode,algorithm}
+\floatname{algorithm}{Algoritmo}
+\usepackage[toc,titletoc,title]{appendix}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{xltabular}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{array}\setlength{\extrarowheight}{1pt}
+\usepackage{rotating}
+\usepackage{stfloats}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+\fancypagestyle{cartastyle}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+	\fancyfoot[C]{\footnotesize \color{gray} * Nota: Se utilizó el modelo Gemini 3.6 Flash (Medium) para la redacción del texto y no para el proceso de pensamiento/razonamiento.}
+}
+
+% Enlaces cliqueables en el PDF (citas, índice, figuras, etc.)
+\usepackage[hidelinks]{hyperref}
+\newcommand{\appendixnumberline}[1]{\makebox[5.5em][l]{#1}}
+
+
+
+%\usepackage[nonumberlist]{glossaries}
+%\makeglossaries
+
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\renewcommand{\theenumi}{\alph{enumi}} %Enumerar Letras minúsculas 
+
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+
+\setlength{\parindent}{2cm}	% Sangría en los párrafos
+\renewcommand{\baselinestretch}{1.5}	% Interlineado
+
+% Renombrar ciertos títulos del texto
+\renewcommand\spanishcontentsname{Tabla de contenidos}
+\renewcommand\spanishlisttablename{Índice de tablas}
+\renewcommand\spanishrefname{Referencias}
+\renewcommand\spanishtablename{Tabla}
+
+% Inicio del documento
+\begin{document}
+%
+
+% Carta de Respuesta a la Comisión Evaluadora
+\input{carta_respuesta}
+
+%%%%%%%% PORTADA %%%%%%%%%
+
+\newpage
+\vspace*{-.5cm}
+% Logo institucional
+\begin{picture}(18,4)(0,30)
+	\put(350,-20){\includegraphics[scale=0.25]{Images/LogoUsach.pdf}}
+\end{picture}
+
+\sloppy
+\thispagestyle{empty}
+\vspace*{-1.6cm}
+
+% Datos institucionales
+\begin{center}
+	{\bf \mbox{\large UNIVERSIDAD DE SANTIAGO DE CHILE}}\\
+	{\bf \mbox{FACULTAD DE INGENIERÍA}}\\
+	{\bf \mbox{DEPARTAMENTO DE INGENIERÍA INFORMÁTICA}}\\
+\end{center}
+
+\vspace{5cm}
+%Título del trabajo
+\begin{center}
+	\Large
+	\textbf{Método computacional basado en procesamiento de lenguaje natural para analizar la alineación curricular de Ingeniería Informática en Chile con estándares ACM/IEEE y necesidades de la industria}
+\end{center}
+
+
+
+% Datos personales
+\vspace*{1.25cm}
+\begin{flushright}
+	\begin{tabular}[t]{l l}
+		Estudiante:
+		               & Fabián Ibarra Norambuena \\
+		Profesor guía: & Manuel Villalobos Cid    \\
+	\end{tabular}
+\end{flushright}
+\begin{center}
+	\vspace{1.85cm}
+	Santiago - Chile\\
+	2026
+\end{center}
+
+
+
+\newpage
+\pagenumbering{gobble}
+
+
+\section*{Resumen}
+
+El presente trabajo corresponde a un proyecto de \textbf{desarrollo} enfocado en caracterizar y analizar cuantitativamente las diferencias existentes en los programas de Ingeniería Informática en Chile mediante un enfoque de análisis computacional de mallas curriculares y perfiles de egreso declarados. Se propone un método computacional basado en procesamiento de lenguaje natural (Sentence-BERT) para la representación vectorial semántica de las asignaturas de las mallas y las competencias declaradas en los perfiles de egreso, junto con una estrategia tripartita de aprendizaje no supervisado (\textit{clustering} K-Means, Jerárquico y DBSCAN) para identificar patrones estructurales de distribución disciplinar y perfiles formativos entre carreras. Adicionalmente, se incorporan métricas de similitud de coseno y tasa de cobertura proyectando en un mismo espacio vectorial latente ($\mathbb{R}^d$) los dos objetos curriculares declarados, las \textit{Knowledge Areas} de los estándares internacionales de referencia (ACM/IEEE CS2013 y CC2020) y las competencias demandadas por el mercado laboral local extraídas de 200 vacantes de LinkedIn estratificadas entre empresas del sector tecnológico y empresas no-TI. Para evaluar la validez del agrupamiento y la alineación, se establece un marco de evaluación híbrido basado en métricas intrínsecas (Silhouette y Davies-Bouldin), validación externa contra las 18 áreas del estándar ACM mediante el curado manual de 747 asignaturas como etiqueta de referencia (\textit{ground truth}) calculando ARI, NMI y Pureza, análisis de estabilidad mediante bootstrap y evaluación cualitativa por un panel independiente de 3 expertos. Finalmente, el pipeline algorítmico y sus resultados analíticos se operacionalizan en un tablero de control interactivo (\textit{dashboard}) en React concebido como una herramienta de apoyo a la toma de decisiones para comités y gestores académicos.\\
+
+\noindent
+\textbf{Palabras claves}: Educación en Ingeniería, Algoritmos de agrupamiento, Procesamiento de lenguaje natural, Mallas curriculares, Minería de textos, Alineación curricular.
+
+\newpage
+\tableofcontents
+
+% \listoffigures
+% 
+% \newpage
+% \listoftables
+% 
+% \newpage
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+% Capítulos
+
+% Entrega 1
+\include{Chapters/1-Introduction}
+\include{Chapters/2-ProblemStatement}
+\include{Chapters/3-ProposalObjectives}
+
+% Entrega 2
+\include{Chapters/4-ApproachAnalysis}
+\include{Chapters/5-ProductDescription}
+
+% Entrega 3
+\include{Chapters/6-Methodology}
+\include{Chapters/7-Schedule}
+
+
+
+\newpage
+\addcontentsline{toc}{section}{Bibliografía}
+\bibliographystyle{apalike}
+\bibliography{References/references.bib}
+
+\newpage
+\section*{Anexos}
+\addcontentsline{toc}{section}{Anexos}
+\setcounter{subsection}{0}
+\renewcommand{\thesubsection}{Anexo \Alph{subsection}}
+\renewcommand{\theHsubsection}{Anexo.\arabic{subsection}}
+\addtocontents{toc}{\string\renewcommand{\string\numberline}{\string\appendixnumberline}}
+
+\input{glosario}
+\input{anexos}
+
+\end{document}
